@@ -1,0 +1,7 @@
+1, introduction to programming
+2, different commands
+3, web development
+4, draw snow man
+5, snow man with javascript
+
+6, wengi is awesome
