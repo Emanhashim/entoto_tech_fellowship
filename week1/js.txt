@@ -1,0 +1,30 @@
+//var weatherTemprature=20
+
+// console.log(weatherTemprature)
+
+// if(weatherTemprature=<10)
+//   {
+//     console.log("It's cold outside")
+//   }
+// else if(weatherTemprature>=20)
+//   {
+//     console.log("It's warm outside")
+//   }
+// else if(weatherTemprature>10 && weatherTemprature<20)
+//   {
+//     console.log("It's nice weather")
+//   }
+  
+function temprature(weatherTemprature) {
+  if (weatherTemprature <= 10) {
+    return "It's cold outside"
+  } else if (weatherTemprature >= 20) {
+    return "It's warm outside"
+  } else if (weatherTemprature > 10 && weatherTemprature < 20) {
+    return "It's nice weather"
+  } else {
+    return  "It's good to be inside"
+  }
+}
+
+console.log(temprature(25))
