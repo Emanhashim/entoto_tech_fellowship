@@ -1,0 +1,7 @@
+SELECT Employee.LastName, COUNT(Orders.Order_ID) AS NumberOfOrders FROM (Orders
+INNER JOIN Employee
+ON Orders.Employee_ID=Employee.Employee_ID)
+GROUP BY LastName
+HAVING COUNT(Orders.Order_ID) > 10;
+
+ths combine latname from employee and numberof orders

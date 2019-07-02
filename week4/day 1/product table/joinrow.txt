@@ -1,0 +1,6 @@
+SELECT products.ProductID, Customer.CustomerName
+FROM customer
+INNER JOIN products
+ON products.ProductID=Customer.CustomerID; 
+
+this one combines the rows bettwen customer and produts table already

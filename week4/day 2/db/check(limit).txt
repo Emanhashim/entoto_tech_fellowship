@@ -1,0 +1,11 @@
+CREATE TABLE person
+(
+P_Id int NOT NULL CHECK (Pd>0),
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)
+
+this creates a table and make the p_id to input a value >0
+check is a value , limit the value range that can be placed in a column

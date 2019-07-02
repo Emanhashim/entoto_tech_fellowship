@@ -1,0 +1,4 @@
+CREATE DATABASE eman
+;
+
+this creates a db named by eman

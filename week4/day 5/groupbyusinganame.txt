@@ -1,0 +1,9 @@
+SELECT Shippers.shippers_name,COUNT(Orders.Order_ID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers
+ON Orderas.order_ID=Shippers.Shippers_ID
+GROUP BY Shippers_Name;
+
+after creating a table orders,shippers,and employee
+now i join them and it output's 
+shippersname = null
+and numberof orders =3

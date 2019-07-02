@@ -1,0 +1,3 @@
+SELECT AVG(Price) AS PriceAverage FROM Products;
+
+this bring me teh average price from my product table

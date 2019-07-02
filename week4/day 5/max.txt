@@ -1,0 +1,3 @@
+SELECT MAX(Price) AS HighestPrice FROM Products;
+this bring me the highest price from my produsts table which is
+=21.35

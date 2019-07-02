@@ -1,0 +1,6 @@
+SELECT CustomerName,Contactname FROM Customer
+;SELECT * FROM `Customer` WHERE 1
+
+
+
+this one selects all of my customername and contactname from my customer table.

@@ -1,0 +1,4 @@
+SELECT shipped_id, customer_id, FORMAT(Now(),'YYYY-MM-DD') AS PerDate
+FROM orders;
+
+it gives a format as a y-m-d style

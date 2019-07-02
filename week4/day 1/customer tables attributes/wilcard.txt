@@ -1,0 +1,4 @@
+SELECT * FROM Customer
+WHERE City LIKE 'L_n_on'; 
+
+this one selects all cities that starts with letter l,n

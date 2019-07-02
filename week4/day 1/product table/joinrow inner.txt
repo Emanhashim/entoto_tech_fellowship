@@ -1,0 +1,8 @@
+SELECT Customer.CustomerName, products.ProductID
+FROM Customer
+INNER JOIN Products
+ON Customer.CustomerID=products.ProductID
+ORDER BY Customer.CustomerName;
+
+
+this it resembles with the word join but a bit different cause it matches data inside

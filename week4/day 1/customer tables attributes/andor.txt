@@ -1,0 +1,6 @@
+SELECT * FROM Customer
+WHERE Country='ethiopia'
+AND (City='aa' OR City='au');
+
+this one show me the whole row where counctry is ethiopia
+also it circles around the area that city and country matchs

@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    margin: 8px;
+}
+
+.container-fluid {
+    display: block;
+}
+.text-primary text-center{
+    display: flex;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.row {
+    display: flex;
+    width: 400px;
+    height: 200px;
+}
+.col-xs-6 {
+    display: block;
+}
+#left-well{
+    display: block;
+}
+#target.btn.btn-default.target {
+    padding: 1px 6px;
+}
+#target.btn.btn-default.target  {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    /* color: buttontext; */
+    /* background-color: buttonface; */
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    /* border-color: buttonface; */
+    border-image: initial;
+}
+#target.btn.btn-default.target {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+#target.btn.btn-default.target {
+    -webkit-writing-mode: horizontal-tb 
+    !important;
+}
+#target.btn.btn-default.target {
+    -webkit-appearance: button;
+}

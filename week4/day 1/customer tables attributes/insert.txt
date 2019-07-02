@@ -1,0 +1,4 @@
+INSERT INTO Customer (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('lidya','girma. aware','newyork','Stavanger','4006','usa'); 
+
+this one inserts all data that i typed on my table

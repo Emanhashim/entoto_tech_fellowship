@@ -1,0 +1,5 @@
+ALTER TABLE Persons
+DROP CONSTRAINT pk_PersonID
+
+
+this aint work on my browser however it will destroy the primary key i assum earlier

@@ -1,0 +1,8 @@
+SELECT customer.customerID, products.SupplierID
+FROM products
+RIGHT JOIN customer
+ON products.CategoryID=products.SupplierID
+ORDER BY customer.CustomerID;
+
+
+this one brings me supplier id. from products table and custsomer id from cusstomer table at the right side which is really cool

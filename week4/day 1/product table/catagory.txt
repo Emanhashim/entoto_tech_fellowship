@@ -1,0 +1,15 @@
+SELECT * FROM Products
+WHERE (Price BETWEEN 10 AND 20)
+AND NOT CategoryID IN (1,2,3); 
+
+
+
+tihs selects from product between 10 and 20.
+now it showed me nothing because the id is 10 and 20 which has a price 10 and 20 so.
+
+
+
+SELECT * FROM Products
+WHERE ProductName BETWEEN 'C' AND 'M';
+
+this one also showed me all PN with c and m

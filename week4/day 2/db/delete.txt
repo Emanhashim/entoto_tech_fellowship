@@ -1,0 +1,3 @@
+DROP TABLE pers
+
+this completely delets my pers table and also there are different tools to delete 

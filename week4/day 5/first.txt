@@ -1,0 +1,5 @@
+SELECT ProductName FROM products
+ORDER BY ProductID ASC
+LIMIT 1;
+
+this bring me the first name only one

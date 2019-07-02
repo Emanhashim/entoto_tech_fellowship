@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+<!-- Mirrored from mdbootstrap.com/docs/vue/layout/overview/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 16:20:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#33b5e5">
+    <link rel="manifest" href="../../../../manifest.json">
+
+    
+      <title>Vue Layout - Bootstrap 4 &amp; Material Design. Examples &amp; tutorial. - Material Design for Bootstrap</title>
+    
+    <link rel="shortcut icon" href="../../../../wp-content/themes/mdbootstrap4/favicon.ico" />
+
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../../wp-load.html';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../../wp-load.html';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../../wp-load.html';</script>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	var gtm4wp_use_sku_instead        = 0;
+	var gtm4wp_id_prefix              = '';
+	var gtm4wp_remarketing            = false;
+	var gtm4wp_eec                    = 1;
+	var gtm4wp_classicec              = 1;
+	var gtm4wp_currency               = 'EUR';
+	var gtm4wp_product_per_impression = 0;
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO plugin v11.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Vue Bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content."/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Vue Layout - Bootstrap 4 &amp; Material Design. Examples &amp; tutorial." />
+<meta property="og:description" content="Vue Bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content." />
+<meta property="og:url" content="https://mdbootstrap.com/docs/vue/layout/overview/" />
+<meta property="og:site_name" content="Material Design for Bootstrap" />
+<meta property="article:publisher" content="https://www.facebook.com/mdbootstrap" />
+<meta property="article:author" content="https://www.facebook.com/themattonit" />
+<meta property="og:image" content="https://mdbootstrap.com/wp-content/uploads/2017/06/bootstrap-layout-2.jpg" />
+<meta property="og:image:secure_url" content="https://mdbootstrap.com/wp-content/uploads/2017/06/bootstrap-layout-2.jpg" />
+<meta property="og:image:width" content="1604" />
+<meta property="og:image:height" content="842" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Vue Bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content." />
+<meta name="twitter:title" content="Vue Layout - Bootstrap 4 &amp; Material Design. Examples &amp; tutorial." />
+<meta name="twitter:site" content="@MDBootstrap" />
+<meta name="twitter:image" content="https://mdbootstrap.com/wp-content/uploads/2017/06/bootstrap-layout-2.jpg" />
+<meta name="twitter:creator" content="@Mattonit_PL" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='http://chimpstatic.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mdbootstrap.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../../../wp-includes/css/dist/block-library/style.min7752.css?ver=5.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='../../../../wp-content/plugins/woocommerce/assets/css/blocks/style5aed.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='../../../../wp-content/plugins/contact-form-7/includes/css/stylesbdeb.css?ver=5.1.3' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='wsl-widget-css'  href='../../../../wp-content/plugins/wordpress-social-login/assets/css/style7752.css?ver=5.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='compiled.css-css'  href='../../../../wp-content/themes/mdbootstrap4/css/compiled-4.8.2.min4a41.css?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mdw_search_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","search_tree":{"45253":{"title":"vue close icon - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap close icon is an element which is used for dismissing components like modals and alerts. see how easy implementation is.","link":"https:\/\/mdbootstrap.com?page_id=45253","wptitle":"Icon"},"48947":{"title":"mdbootstrap vue newsletter - most important news, updates & tutorials","description":"md bootstrap vue newsletter - easy unsubscription, no spam messages. we'll write rarely, but only the best content. specify your preferences and stay up to date","link":"https:\/\/mdbootstrap.com?page_id=48947","wptitle":"Newsletter"},"49034":{"title":"getting started with vue material design for bootstrap","description":"see how easy it is to install and use free vue material design for bootstrap ui kit. you need only 5 minutes to start creating stunning websites with no effort.","link":"https:\/\/mdbootstrap.com?page_id=49034","wptitle":"Bootstrap Getting Started"},"49569":{"title":"vue css - visual guide to css classes & components of bootstrap 4","description":"learn how to use bootstrap css at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4 and vue.","link":"https:\/\/mdbootstrap.com?page_id=49569","wptitle":"CSS"},"49570":{"title":"vue bootstrap components - visual guide to components of bootstrap 4","description":"learn how to use bootstrap components at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4 and vue.","link":"https:\/\/mdbootstrap.com?page_id=49570","wptitle":"Components"},"49573":{"title":"vue borders - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap borders are lines placed on the edges of buttons, images, and other web elements. additionally, border-radius class rounds the elements corners.","link":"https:\/\/mdbootstrap.com?page_id=49573","wptitle":"Borders"},"49574":{"title":"vue clearfix - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap clearfix is a utility which to automatically clear child elements, so a user doesn't have to add additional markup.","link":"https:\/\/mdbootstrap.com?page_id=49574","wptitle":"Clearfix"},"49575":{"title":"vue display - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap display is a property which applies to many elements and specifies the type of rendering box used for an element.","link":"https:\/\/mdbootstrap.com?page_id=49575","wptitle":"Display"},"49576":{"title":"vue embeds - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap embeds is a utility which helps you insert video or slideshow in the page keeping width of the parent and scales on any device.","link":"https:\/\/mdbootstrap.com?page_id=49576","wptitle":"Embeds"},"49577":{"title":"vue flexbox - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap flexbox is a utility for managing position of the items in a container and distributes space between them in a more efficient way.","link":"https:\/\/mdbootstrap.com?page_id=49577","wptitle":"Flexbox"},"49578":{"title":"vue float - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap float is a utility which specified whether an element will be placed on the right or left side of a container. floating may be also disabled.","link":"https:\/\/mdbootstrap.com?page_id=49578","wptitle":"Float"},"49579":{"title":"vue image replacement - bootstrap 4 & material design. examples & tutorial.","description":"vue image replacement is a utility that lets you swap text for background images by adding a single class.","link":"https:\/\/mdbootstrap.com?page_id=49579","wptitle":"Image replacement"},"49580":{"title":"vue position - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap position utilities are helpful for quickly placing a component outside the normal document flow. see a handful of fixed position classes.","link":"https:\/\/mdbootstrap.com?page_id=49580","wptitle":"Position"},"49581":{"title":"vue screenreaders - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap screenreaders is an assistive technology which hides elements on every device except screen readers with a single class.","link":"https:\/\/mdbootstrap.com?page_id=49581","wptitle":"Screenreaders"},"49582":{"title":"vue sizing - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap sizing is a utility which allows you to adjust elements width or height. there are 4 available values: 25%, 50%, 75% and 100%.","link":"https:\/\/mdbootstrap.com?page_id=49582","wptitle":"Sizing"},"49583":{"title":"vue spacing - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap spacing is a utility which assigns responsive margin or padding classes to elements to modify its display position.","link":"https:\/\/mdbootstrap.com?page_id=49583","wptitle":"Spacing"},"49584":{"title":"vue text - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap text utilities are a group of text modifiers which change text alignment, wrapping, letter capitalization, weight, and italics.","link":"https:\/\/mdbootstrap.com?page_id=49584","wptitle":"Text"},"49585":{"title":"vue vertical align - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap vertical align is a utility that specifies the alignment of elements. works with inline, inline-block, inline-table, and table cell elements only.","link":"https:\/\/mdbootstrap.com?page_id=49585","wptitle":"Vertical Align"},"49586":{"title":"vue visibility - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap visibility class allows controlling the visibility of elements without changing the display. this utility keep content visible for screen readers.","link":"https:\/\/mdbootstrap.com?page_id=49586","wptitle":"Visibility"},"49587":{"title":"vue breadcrumbs - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap breadcrumbs are navigation elements which indicate a current location on the website. breadcrumbs show a hierarchy of the current location as well.","link":"https:\/\/mdbootstrap.com?page_id=49587","wptitle":"Breadcrumb"},"49588":{"title":"vue buttons - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap buttons are components which are triggering a desirable user interaction. easy to customize in terms of size, shape, and color.","link":"https:\/\/mdbootstrap.com?page_id=49588","wptitle":"Buttons"},"49589":{"title":"vue cards - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap cards are components which display content build of different elements with characteristic shadows, depth and hover effects.","link":"https:\/\/mdbootstrap.com?page_id=49589","wptitle":"Cards"},"49590":{"title":"vue dropdown - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap dropdown is a toggleable menu embedding additional links or content. it allows you to construct advanced navigation and link categorization","link":"https:\/\/mdbootstrap.com?page_id=49590","wptitle":"Dropdowns"},"49591":{"title":"vue grid usage - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap grid is a system of columns and rows which is used for creating a page layout. mobile-friendly, responsive and can be rearranged depends on screen.","link":"https:\/\/mdbootstrap.com?page_id=49591","wptitle":"Grid usage"},"49592":{"title":"vue inputs - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap input is a special field which is used in order to receive data from the user. used mostly in a variety of web-based forms.","link":"https:\/\/mdbootstrap.com?page_id=49592","wptitle":"Inputs"},"49593":{"title":"vue tags, labels & badges - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap tags, labels & badges categorize content with use of a text or icons, making it easier to browse throughout articles, comments or pages.","link":"https:\/\/mdbootstrap.com?page_id=49593","wptitle":"Tags, Labels &amp; Badges"},"49594":{"title":"vue layout - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content.","link":"https:\/\/mdbootstrap.com?page_id=49594","wptitle":"Layout overview"},"49595":{"title":"vue grid examples - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap grid system allows you to create multiple combinations of columns and rows, changing the overall feeling of your project and its ui structure.","link":"https:\/\/mdbootstrap.com?page_id=49595","wptitle":"Grid examples"},"49596":{"title":"vue media queries - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap media queries are queries use for applying styles determined by the general type of the device, browsers characteristics or environment.","link":"https:\/\/mdbootstrap.com?page_id=49596","wptitle":"Media Queries"},"49597":{"title":"vue utilities - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap utilities for layout are a group of helpers, which is useful in showing, hiding, aligning, and spacing content.","link":"https:\/\/mdbootstrap.com?page_id=49597","wptitle":"Utilities for layout"},"49598":{"title":"vue navbar - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap navbar is a horizontal navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com?page_id=49598","wptitle":"Navbar"},"49848":{"title":"vue pagination - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap pagination is a component used to indicate existance of a series of related content across multiple pages and enables navigation across them.","link":"https:\/\/mdbootstrap.com?page_id=49848","wptitle":"Pagination"},"50030":{"title":"vue code - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap code is a set of classes class which is used for styling text as inline codes, variables, users inputs, sample outputs or blocks of code.","link":"https:\/\/mdbootstrap.com?page_id=50030","wptitle":"Code"},"50031":{"title":"vue figures - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap figures are commonly used elements for displaying images with the caption. a caption can be left-aligned or right-align.","link":"https:\/\/mdbootstrap.com?page_id=50031","wptitle":"Figures"},"50032":{"title":"vue icons - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap icon list is a number of 600 scalable vector icons called font awesome which covers multiple topics and use cases.","link":"https:\/\/mdbootstrap.com?page_id=50032","wptitle":"Icons List"},"50033":{"title":"vue icons - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap icons usage is a quick tutorial which describes the proper way of using font awesome icons in bootstrap framework.","link":"https:\/\/mdbootstrap.com?page_id=50033","wptitle":"Icons Usage"},"50034":{"title":"vue images - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap images are automatically adjusted to all screen sizes - image will never be larger than parent elements. its styles can be changed via classes.","link":"https:\/\/mdbootstrap.com?page_id=50034","wptitle":"Images"},"50035":{"title":"vue typography - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap typography is the style and appearance of headings, lists, body text and basic paragraphs - 14 examples coming along with descriptions.","link":"https:\/\/mdbootstrap.com?page_id=50035","wptitle":"Typography"},"50036":{"title":"vue tables - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap tables present data in a system of columns and rows. used for various purposes like time pickers and calendars.","link":"https:\/\/mdbootstrap.com?page_id=50036","wptitle":"Tables"},"50037":{"title":"vue carousel - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap carousel is responsive and interactive slideshow which is created for presenting content, especially images and videos.","link":"https:\/\/mdbootstrap.com?page_id=50037","wptitle":"Carousel"},"50038":{"title":"vue charts - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap charts are graphical representations of data. charts come in different sizes and shapes: bar, line, pie, radar, polar and more.","link":"https:\/\/mdbootstrap.com?page_id=50038","wptitle":"Charts"},"50039":{"title":"vue collapse - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap collapse is a component which toggles content. useful for grouping great amount of texts and\/or graphics into expanding and collapsing items.","link":"https:\/\/mdbootstrap.com?page_id=50039","wptitle":"Collapse"},"50040":{"title":"vue panels - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap panels are bordered boxes where you can place texts, lists, tables and other content. panels are similar to cards, but they don't include media.","link":"https:\/\/mdbootstrap.com?page_id=50040","wptitle":"Panels"},"50041":{"title":"vue list group - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap list group is a flexible component which displays not only simple list of elements but complex custom content.","link":"https:\/\/mdbootstrap.com?page_id=50041","wptitle":"List Group"},"50042":{"title":"vue progress bar - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap progress bar is a component which displays a progress of a process in which user is involved. their color, shape, and animation can be customized.","link":"https:\/\/mdbootstrap.com?page_id=50042","wptitle":"Progress bars"},"50043":{"title":"vue tooltips - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap tooltips are little clouds with a brief text message, triggered by clicking on a specific element or hovering over it.","link":"https:\/\/mdbootstrap.com?page_id=50043","wptitle":"Tooltips"},"50044":{"title":"vue popovers - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap popover is a component which displays a box with a content after a click on an element - similar to the tooltip but can contain more content.","link":"https:\/\/mdbootstrap.com?page_id=50044","wptitle":"Popovers"},"50046":{"title":"vue animations - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap animations are illusions of motions for web elements. +70 animations generated by css only, work properly on every browser.","link":"https:\/\/mdbootstrap.com?page_id=50046","wptitle":"Animations"},"50047":{"title":"vue colors - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap colors is a sensational palette of 300 delightful colors, which will aid you in creating inviting, consistent design.","link":"https:\/\/mdbootstrap.com?page_id=50047","wptitle":"Colors"},"50048":{"title":"vue hover effects - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap hover effect appears when a user positions computer cursor over an element without activating it. hover effects make a website more interactive.","link":"https:\/\/mdbootstrap.com?page_id=50048","wptitle":"Hover Effects"},"50049":{"title":"vue masks - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap masks alter the visibility of an element by either partially or fully hiding it. masks are used to make content more visible in the picture.","link":"https:\/\/mdbootstrap.com?page_id=50049","wptitle":"Masks"},"50050":{"title":"vue shadows - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap shadow is an effect used in web elements which provides important visual cues about objects' depth and directional movement.","link":"https:\/\/mdbootstrap.com?page_id=50050","wptitle":"Shadows"},"54476":{"title":"md bootstrap vue changelog - list of changes in the latest release","description":"vue material design for bootstrap provides a detailed list of changes in each release. read it carefully to do not miss any important update.","link":"https:\/\/mdbootstrap.com?page_id=54476","wptitle":"Changelog"},"55564":{"title":"vue tabs - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap tabs are components which separate content placed in the same wrapper, but in the separate pane. only one pane can be displayed at the time.","link":"https:\/\/mdbootstrap.com?page_id=55564","wptitle":"Tabs"},"55569":{"title":"vue select - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap material select is a form control which after a click displays a collapsable list of multiple values which can be used in forms, menus or surveys.","link":"https:\/\/mdbootstrap.com?page_id=55569","wptitle":"Select"},"55571":{"title":"vue scrollspy - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap scrollspy is a plugin which shows on the navigation list current position on the page depends on the scroll position defined by the user.","link":"https:\/\/mdbootstrap.com?page_id=55571","wptitle":"Scrollspy"},"55701":{"title":"vue skins - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap skins are basic color schemes which can be applied for the website providing ready to use full-page web design.","link":"https:\/\/mdbootstrap.com?page_id=55701","wptitle":"Skins"},"55710":{"title":"vue sidenav - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap sidenav is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com?page_id=55710","wptitle":"SideNav"},"55801":{"title":"vue timepicker - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap time picker is a component which allows user to select a time in the bootstrap form.","link":"https:\/\/mdbootstrap.com?page_id=55801","wptitle":"Time Picker"},"55806":{"title":"vue datepicker - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap date picker is a plugin that adds a function of selecting date in a user-friendly way.","link":"https:\/\/mdbootstrap.com?page_id=55806","wptitle":"Date Picker"},"56922":{"title":"vue sticky content - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap sticky content (affix) is a plugin which allows elements to be locked in the particular area of the page. often used in navigation menus.","link":"https:\/\/mdbootstrap.com?page_id=56922","wptitle":"StickyContent"},"56965":{"title":"vue lightbox - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap lightbox is a group of images combined in one responsive gallery. elements are grouped in thumbnail grid, which can be displayed as a slideshow.","link":"https:\/\/mdbootstrap.com?page_id=56965","wptitle":"Lightbox"},"57024":{"title":"vue navigation - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap navigation is a combination of navbar, sidenav, and footer in various forms and different functionalities like non-fixed navbar or hidden sidenav.","link":"https:\/\/mdbootstrap.com?page_id=57024","wptitle":"Navigation"},"57027":{"title":"vue modals - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap modal is lightweight, but powerful & multipurpose popup. learn how to manipulate size, styles & position. multiple examples and detailed tutorial.","link":"https:\/\/mdbootstrap.com?page_id=57027","wptitle":"Modals"},"58475":{"title":"vue blog sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap blog sections provide you multiple templates and components typical for blogs.","link":"https:\/\/mdbootstrap.com?page_id=58475","wptitle":"Blog"},"58503":{"title":"vue magazine sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap magazine sections provide you multiple sections and components typical for magazines.","link":"https:\/\/mdbootstrap.com?page_id=58503","wptitle":"Magazine"},"58519":{"title":"vue features sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap features sections help you to highlight the best features of your project.","link":"https:\/\/mdbootstrap.com?page_id=58519","wptitle":"Features"},"58521":{"title":"vue ecommerce sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap ecommerce sections allow you to present your products and pricing in neat, clear and outstanding way.","link":"https:\/\/mdbootstrap.com?page_id=58521","wptitle":"Commerce"},"58523":{"title":"vue contact sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap contact sections provide you a necessary information for your users to get in touch with you.","link":"https:\/\/mdbootstrap.com?page_id=58523","wptitle":"Contact"},"58525":{"title":"vue testimonials sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap testimonials can be used to present what people say about your project.","link":"https:\/\/mdbootstrap.com?page_id=58525","wptitle":"Testimonials"},"58527":{"title":"vue projects sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap project sections help you to present your achievements and experience.","link":"https:\/\/mdbootstrap.com?page_id=58527","wptitle":"Projects"},"58532":{"title":"vue social sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap social sections enhance your project with a variety of elements such as news feed, comments, and post cards.","link":"https:\/\/mdbootstrap.com?page_id=58532","wptitle":"Social"},"58538":{"title":"vue team sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap team sections provide you multiple sections and components to present your team.","link":"https:\/\/mdbootstrap.com?page_id=58538","wptitle":"Team"},"58539":{"title":"vue intro sections - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap intro sections are full-page templates which can make your website outstanding.","link":"https:\/\/mdbootstrap.com?page_id=58539","wptitle":"Intros"},"58642":{"title":"md bootstrap vue 5 min quick start","description":"get started with mdbootstrap vue, the world's most popular material design framework for building responsive, mobile-first sites.","link":"https:\/\/mdbootstrap.com?page_id=58642","wptitle":" 5 min Quick Start"},"60019":{"title":"vue autocomplete - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap autocomplete is a component which predicts the words basing on the first few letters given by a user, while one is typing it.","link":"https:\/\/mdbootstrap.com?page_id=60019","wptitle":"Autocomplete"},"60063":{"title":"vue footer - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap footer is an additional navigation for the website. it can hold links, buttons, company info, copyrights, forms and many other elements.","link":"https:\/\/mdbootstrap.com?page_id=60063","wptitle":"Footer"},"60065":{"title":"vue forms - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap forms are input-based components which are designed to collect users data. used as login, subscribe or contact form, all can be easily customized.","link":"https:\/\/mdbootstrap.com?page_id=60065","wptitle":"Forms"},"60067":{"title":"vue search - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap search is a component which enables a process of finding words, sentences, and numbers in the collection of documents, web pages or other sources.","link":"https:\/\/mdbootstrap.com?page_id=60067","wptitle":"Search"},"61332":{"title":"bootstrap vue steps (stepper) - examples & tutorial. basic & advanced usage","description":"bootstrap vue stepper is a component that displays content as a process with defined by user milestones. following steps are separated and connected by buttons.","link":"https:\/\/mdbootstrap.com?page_id=61332","wptitle":"Stepper"},"61490":{"title":"vue datatables - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap 4 integration with the most popular plugin enhancing the possibilities of standard tables. available in material design or default bootstrap style.","link":"https:\/\/mdbootstrap.com?page_id=61490","wptitle":"Bootstrap datatables"},"61495":{"title":"vue tables - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap tables - basic and advanced usage. fully functional, responsive examples with search and sort options & pagination, buttons & icons elements.","link":"https:\/\/mdbootstrap.com?page_id=61495","wptitle":"Bootstrap table"},"61497":{"title":"vue table styles - bootstrap 4 & material design. examples & tutorial.","description":"extended vue bootstrap tables with additional elements like buttons, checkboxes, icons, panels & more.","link":"https:\/\/mdbootstrap.com?page_id=61497","wptitle":"Bootstrap table styles & examples"},"61499":{"title":"vue table pagination - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap table pagination is a simple navigation which lets you split a huge amount of content within the tables into smaller parts.","link":"https:\/\/mdbootstrap.com?page_id=61499","wptitle":"Bootstrap table pagination"},"61501":{"title":"vue table responsive - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap responsive tables allow tables to be scrolled horizontally with ease. that means they can be comfortably used both on desktops and mobile devices.","link":"https:\/\/mdbootstrap.com?page_id=61501","wptitle":"Bootstrap table responsive"},"61504":{"title":"vue table scroll - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap table scroll functionality works vertically (y axis) and horizontally (x axis). you can use it as an alternative for the pagination.","link":"https:\/\/mdbootstrap.com?page_id=61504","wptitle":"Bootstrap table scroll"},"61507":{"title":"vue table search - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap table search - super fast and easy to use searching functionality dedicated to bootstrap tables.","link":"https:\/\/mdbootstrap.com?page_id=61507","wptitle":"Bootstrap table search"},"61511":{"title":"vue table sort - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap table sort functionality lets you sort the data of the tables according to any specific columns. it's easy to implement and use.","link":"https:\/\/mdbootstrap.com?page_id=61511","wptitle":"Bootstrap table sort"},"61515":{"title":"vue form validation - bootstrap 4 & material design. examples & tutorial.","description":"provide valuable, actionable feedback to your users with html5 form validation \u2013 available in all our supported browsers. choose from the browser default validation feedback, or implement custom messages with our built-in classes.","link":"https:\/\/mdbootstrap.com?page_id=61515","wptitle":"Bootstrap form validation"},"61542":{"title":"vue table editable - bootstrap 4 & material design. examples & tutorial","description":"with vue bootstrap table editable, you can add and remove rows and change text and information within cells.","link":"https:\/\/mdbootstrap.com?page_id=61542","wptitle":"Bootstrap table editable"},"61544":{"title":"vue stepper - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap stepper is a component that displays content as a process with defined by user milestones. following steps are separated and connected by buttons.","link":"https:\/\/mdbootstrap.com?page_id=61544","wptitle":"Stepper"},"75569":{"title":"vue checkbox - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap checkbox is a component used for allowing a user to make a multiple choice. broadly used in the forms and surveys.","link":"https:\/\/mdbootstrap.com?page_id=75569","wptitle":"Checkbox"},"79361":{"title":"vue radio button - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap radio buttons are option buttons, which allows users to choose one of a predefined set of two or more options. commonly used in forms and surveys.","link":"https:\/\/mdbootstrap.com?page_id=79361","wptitle":"Radio Button"},"79362":{"title":"vue modal generator - free, online editor for bootstrap 4 modals","description":"vue modal generator - a simple and fast way to create a bootstrap 4 modals with custom styles, sizes, animations and positions.","link":"https:\/\/mdbootstrap.com?page_id=79362","wptitle":"Modal Generator"},"79366":{"title":"vue textarea - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap textarea is an input dedicated for a large volume of text. it may be used in a variety of components like forms, comment sections, and forums.","link":"https:\/\/mdbootstrap.com?page_id=79366","wptitle":"Textarea"},"79684":{"title":"vue timeline - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap timeline is a component which can be used to display content in chronological order. listed items may contain not only text but also images.","link":"https:\/\/mdbootstrap.com?page_id=79684","wptitle":"Timeline"},"79829":{"title":"vue chat - bootstrap 4 & material design. examples & tutorial.","description":"%%excerpt%% bootstrap vue chat is a component dedicated for text-based communication between two or more users in real time. build with conversations list sidebar.","link":"https:\/\/mdbootstrap.com?page_id=79829","wptitle":"Chat"},"80101":{"title":"vue accordion - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap accordion is a component which organizes content within collapsable items. accordion allows showing only one collapsed item at the same time.","link":"https:\/\/mdbootstrap.com?page_id=80101","wptitle":"Accordion"},"80127":{"title":"vue alerts - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap alerts are feedback messages which are displayed after specific actions preceded by the user. length of the text is not limited.","link":"https:\/\/mdbootstrap.com?page_id=80127","wptitle":"Alerts"},"80534":{"title":"vue background image - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap background image is an illustration chosen by a user placed behind all other objects on the website. it may be full or partially visible.","link":"https:\/\/mdbootstrap.com?page_id=80534","wptitle":"Background Image"},"80555":{"title":"vue mega menu - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap mega menu is a navigation component which enhance standard navbar features. extended dropdown contains images and categorized links.","link":"https:\/\/mdbootstrap.com?page_id=80555","wptitle":"Mega Menu"},"80560":{"title":"vue video - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap video is a component which embeds a video file in dom. it can be used in carousels, modals, pages backgrounds or iframes.","link":"https:\/\/mdbootstrap.com?page_id=80560","wptitle":"Video"},"80562":{"title":"vue gradient - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap gradient is a linear color progression - a transition between two colors is fluent. gradient can be used in various of components.","link":"https:\/\/mdbootstrap.com?page_id=80562","wptitle":"Gradient"},"80564":{"title":"vue gallery - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap gallery is a component which compiles a number of media in one interactive collection presented in basic or more advanced lightboxes.","link":"https:\/\/mdbootstrap.com?page_id=80564","wptitle":"Gallery"},"80566":{"title":"vue hamburger menu - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap hamburger menu is a navigation with additional hamburger looks like icon which activates hidden menu elements in navbar or sidenav.","link":"https:\/\/mdbootstrap.com?page_id=80566","wptitle":"Hamburger Menu"},"80578":{"title":"vue google maps - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap google map is a component which displays a map of an area defined by a user. maps can be used in components like forms and modals.","link":"https:\/\/mdbootstrap.com?page_id=80578","wptitle":"Google Maps"},"80582":{"title":"vue iframe - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap iframe is an html document which is embedded in another html doc on a web page. iframes are used to insert content from another source.","link":"https:\/\/mdbootstrap.com?page_id=80582","wptitle":"Iframe"},"80628":{"title":"vue slider - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap slider is an interactive component that lets the user swiftly slide through possible values spread on the desired range.","link":"https:\/\/mdbootstrap.com?page_id=80628","wptitle":"Slider (range input)"},"80640":{"title":"vue streak - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap streak is a horizontal block containing text, uses to separate content sections or highlight some piece of information.","link":"https:\/\/mdbootstrap.com?page_id=80640","wptitle":"Streak"},"80975":{"title":"vue bootstrap with material design - powerful and free ui kit","description":"vue 2, bootstrap 4 & material design. 400+ material ui elements, 600+ material icons, 74 css animations, sass files and many more. no jquery.","link":"https:\/\/mdbootstrap.com?page_id=80975","wptitle":"Material Design for Bootstrap (Vue version)"},"81339":{"title":"","description":"%%excerpt%% %%excerpt%% multiple plugins for vue.js, addons which enhance your vue bootstrap project. quick install, easy to use & customize. huge community and fast support.","link":"https:\/\/mdbootstrap.com?page_id=81339","wptitle":"MDB Vue plugins & addons"},"81594":{"title":"vue switch - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap switch is a simple component used for activating one of two predefined options. commonly used as an on\/off button.","link":"https:\/\/mdbootstrap.com?page_id=81594","wptitle":"Switch"},"81596":{"title":"vue file input - bootstrap 4 & material desing. examples & tutorial.","description":"vue bootstrap file input is a field which user can use to upload one or more files (photos, documents or any other file type) from the local storage","link":"https:\/\/mdbootstrap.com?page_id=81596","wptitle":"File Input"},"81850":{"title":"mdbootstrap vue - frequently asked questions","description":"here you can find all the answers to the most frequently asked questions related to mdbootstrap vue. write to us if you need more information.","link":"https:\/\/mdbootstrap.com?page_id=81850","wptitle":"FAQ"},"81979":{"title":"vue pills - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap pills are simple navigation components that expedite browsing through various options in the layout.","link":"https:\/\/mdbootstrap.com?page_id=81979","wptitle":"Pills"},"82510":{"title":"vue media - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap media provides you with various ways of presenting images and videos to your audience thanks to bootstrap way of handling those elements.","link":"https:\/\/mdbootstrap.com?page_id=82510","wptitle":"Media Object"},"82943":{"title":"vue multiselect - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap multiselect allows users to tick multiple options from a standard vue bootstrap select.","link":"https:\/\/mdbootstrap.com?page_id=82943","wptitle":"Multiselect"},"83051":{"title":"vue notifications - bootstrap 4 & material design","description":"vue bootstrap notifications are feedback messages which are displayed after specific actions preceded by the user. length of the text is not limited.","link":"https:\/\/mdbootstrap.com?page_id=83051","wptitle":"Notifications"},"84161":{"title":"vue jumbotron - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap jumbotron is a responsive component which the main goal is to focus visitor's attention or highlight the special piece of information.","link":"https:\/\/mdbootstrap.com?page_id=84161","wptitle":"Jumbotron"},"84163":{"title":"vue social buttons - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap social buttons are buttons which are dedicated for social media usage. font awesome covers icons for all major platforms.","link":"https:\/\/mdbootstrap.com?page_id=84163","wptitle":"Social Buttons"},"84167":{"title":"vue buttons group - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap button groups are buttons grouped together in a single line with no space between them. they can be grouped both vertically and horizontally.","link":"https:\/\/mdbootstrap.com?page_id=84167","wptitle":"Button Group"},"84169":{"title":"vue navs - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap navs is a class which can transform a list of items into navigation components or tabs\/pills. navs helps to build more advanced components.","link":"https:\/\/mdbootstrap.com?page_id=84169","wptitle":"Navs"},"84191":{"title":"vue parallax - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap parallax is a design effect visible while scrolling down - background image is moving with a different speed than the foreground content.","link":"https:\/\/mdbootstrap.com?page_id=84191","wptitle":"Parallax"},"84198":{"title":"vue bootstrap modal styles - bootstrap 4 & material design. examples & tutorial.","description":"by using our predefined modal styles you can add some emotional weight to your information, ranging from a simple warning to critical system failure or from an operation success to a neutral information.","link":"https:\/\/mdbootstrap.com?page_id=84198","wptitle":"Modal Styles"},"84201":{"title":"vue bootstrap modal examples & templates - bootstrap 4 & material design. examples & tutorial.","description":"multiple examples and advanced usage. modal cookies, coupon, discount, abandoned card, related content, poll, cart, youtube, product and many more.","link":"https:\/\/mdbootstrap.com?page_id=84201","wptitle":"Modal Examples & Templates"},"84206":{"title":"vue bootstrap modal form - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap modal forms are displayed-on-action pop-up forms that used for gathering data from a website visitors and register or log users.","link":"https:\/\/mdbootstrap.com?page_id=84206","wptitle":"Modals Forms"},"84242":{"title":"vue bootstrap modal events - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap modal events are emitted by the component on consecutive stages of its life cycle. use them to hook in custom handlers and orchestrate modals in a wider user experience context.","link":"https:\/\/mdbootstrap.com?page_id=84242","wptitle":"Modal Events"},"84481":{"title":"vue bootstrap input group - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap input group is used for collecting data entered by users. it usually contains buttons, text areas or other inputs. with this component, your forms are attractive and easy to customize.","link":"https:\/\/mdbootstrap.com?page_id=84481","wptitle":"Input Group"},"84484":{"title":"vue advanced demo - bootstrap 4 & material design. examples & tutorial.","description":"learn how to use material design for bootstrap vue using javascript at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com?page_id=84484","wptitle":"Advanced Demo"},"84501":{"title":"vue edge header - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap edge header is a full-width block located on the top of a page as a part of a background for a card. it is a component unique for material design.","link":"https:\/\/mdbootstrap.com?page_id=84501","wptitle":"Edge Header"},"84517":{"title":"vue bootstrap waves effect - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap waves effect is an impression of circular overlay movement, triggered by clicking the object, flowing from the center of the click.","link":"https:\/\/mdbootstrap.com?page_id=84517","wptitle":"Waves Effect"},"84601":{"title":"vue blog components - bootstrap 4 & material design. examples & tutorial","description":"vue bootstrap blog components is a set of components which are dedicated to building a blog or any other content-oriented website.","link":"https:\/\/mdbootstrap.com?page_id=84601","wptitle":"Blog Components"},"84603":{"title":"vue e-commerce components - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap e-commerce components is a set of components which are necessary to build online stores and any other e-commerce business.","link":"https:\/\/mdbootstrap.com?page_id=84603","wptitle":"Commerce Components"},"84605":{"title":"vue loader\/spinner - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap preloaders (also known as loaders) are simple animations that are used to keep visitors entertained while the page is still loading, which helps to increase the user experience.","link":"https:\/\/mdbootstrap.com?page_id=84605","wptitle":"Loader \/ Spinner"},"84607":{"title":"vue mobile - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap mobile gestures are touch-based interactions with mobile devices. various of different fingers movements indicate particular components responses.","link":"https:\/\/mdbootstrap.com?page_id=84607","wptitle":"Mobile"},"84609":{"title":"vue overflow - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap overflow are lines placed on the edges of buttons, images, and other web elements. additionally, border-radius class rounds the elements corners.","link":"https:\/\/mdbootstrap.com?page_id=84609","wptitle":"Overflow"},"84611":{"title":"vue bootstrap sections - blog, e-commerce, contact & many more","description":"plenty of predefined sections dedicated for various website - blog, e-commerce, magazine, contact, testimonials, social, team and much more.","link":"https:\/\/mdbootstrap.com?page_id=84611","wptitle":"Sections"},"84621":{"title":"vue smooth scroll - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap smooth scroll is an animated movement from a trigger - button, link or any other clickable element - to another place of the same page.","link":"https:\/\/mdbootstrap.com?page_id=84621","wptitle":"Scrollbar & smooth scroll"},"85636":{"title":"vue bootstrap drag and drop file upload - bootstrap 4 & material design. examples & tutorial.","description":"md bootstrap vue file upload plugin is an extension that allows you to upload files by using drag and drop functionality. easy to use, setup and customize.","link":"https:\/\/mdbootstrap.com?page_id=85636","wptitle":"Drag and Drop File Upload"},"85733":{"title":"vue calendar plugin - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap calendar plugin is an extension that allows you to create calendar functionality.","link":"https:\/\/mdbootstrap.com?page_id=85733","wptitle":"Calendar"},"85735":{"title":"vue wysiwyg plugin - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap wysiwyg editor is a lightweight plugin that enables rich text editing on your website.","link":"https:\/\/mdbootstrap.com?page_id=85735","wptitle":"WYSIWYG"},"85753":{"title":"vue table editor plugin - bootstrap 4 & material design. examples & tutorial.","description":"vue table editor is an extension that allows you to create customized, fully editable tables. easy to use, setup and customize.","link":"https:\/\/mdbootstrap.com?page_id=85753","wptitle":"Table Editor"},"86979":{"title":"vue masonry - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap masonry is a grid layout based on columns.","link":"https:\/\/mdbootstrap.com?page_id=86979","wptitle":"Masonry"},"86985":{"title":"vue stretched link - bootstrap 4 & material design. examples & tutorial","description":"vue stretched link can make any html element or vue component clickable by \u201cstretching\u201d a nested link via css.","link":"https:\/\/mdbootstrap.com?page_id=86985","wptitle":"Stretched Link"},"87577":{"title":"vue sortable plugin - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap sortable plugin is an extension that allows you to move, reorder, sort and organize elements on your website by using drag and drop functionality.","link":"https:\/\/mdbootstrap.com?page_id=87577","wptitle":"Sortable"},"87579":{"title":"vue color picker - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap color picker plugin allows you to select different colors. you can successfully use it in various product wizards, clothing sales, or other situations where you need to be able to choose a color.","link":"https:\/\/mdbootstrap.com?page_id=87579","wptitle":"Color Picker"},"87689":{"title":"vue filter plugin - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap filter plugin is an extension perfect for introducing vistors to a number of images, which can be freely filtered depending on the category. easy to use, setup and customize.","link":"https:\/\/mdbootstrap.com?page_id=87689","wptitle":"Filter"}}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_auth_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","redirecturl":"https:\/\/mdbootstrap.com","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shareCountsData = {"oldShareCounts":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-admin/load-scriptsb4bc.php?c=gzip&amp;load%5B%5D=jquery-core,jquery-migrate&amp;ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-classic2c00.js?ver=1.9.2'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-enhanced2c00.js?ver=1.9.2'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/mdb-searchfe9d.js?ver=4.7.3'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/jquery.validate7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/ajax-auth-script7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/tutorial-share-countsf0af.js?ver=4.8.2-update.3'></script>
+<link rel='https://api.w.org/' href='../../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.1" />
+<meta name="generator" content="WooCommerce 3.6.4" />
+<link rel='shortlink' href='../../../../indexd8c1.html?p=49594' />
+<link rel="alternate" type="application/json+oembed" href="../../../../wp-json/oembed/1.0/embedee2b.json?url=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../../../wp-json/oembed/1.0/embed03ab?url=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F&amp;format=xml" />
+
+        <!-- Push Notifications user -->
+
+        <script>
+
+            var wp_ajaxurl = "../../../../wp-admin/admin-ajax.html";
+
+
+
+            
+                var pnu = true;
+
+            
+
+
+        </script>
+
+        <!--/.Push Notifications user -->
+
+    
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"customerTotalOrders":0,"customerTotalOrderValue":"0.00","customerFirstName":"","customerLastName":"","customerBillingFirstName":"","customerBillingLastName":"","customerBillingCompany":"","customerBillingAddress1":"","customerBillingAddress2":"","customerBillingCity":"","customerBillingPostcode":"","customerBillingCountry":"","customerBillingEmail":"","customerBillingPhone":"","customerShippingFirstName":"","customerShippingLastName":"","customerShippingCompany":"","customerShippingAddress1":"","customerShippingAddress2":"","customerShippingCity":"","customerShippingPostcode":"","customerShippingCountry":""});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7MBMN');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="referrer" content="always"/>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="icon" href="../../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-180x180.png" />
+<meta name="msapplication-TileImage" content="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-270x270.png" />
+        <script type="text/javascript">
+            var woocs_is_mobile = 0;
+            var woocs_drop_down_view = "ddslick";
+            var woocs_current_currency = {"name":"EUR","rate":1,"symbol":"&euro;","position":"left_space","is_etalon":0,"hide_cents":1,"decimals":0,"description":"European Euro","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+            var woocs_default_currency = {"name":"USD","rate":1,"symbol":"&#36;","position":"left","is_etalon":1,"hide_cents":1,"decimals":0,"description":"USA dollar","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+            var woocs_array_of_get = '{}';
+        
+            woocs_array_no_cents = '["JPY","TWD"]';
+
+            var woocs_ajaxurl = "../../../../wp-admin/admin-ajax.html";
+            var woocs_lang_loading = "loading";
+            var woocs_shop_is_cached =0;
+        </script>
+            <script> var currency = '€'; </script>
+    <meta name="p:domain_verify" content="ba4bb1f26dcf05eadc4ea92722eca381"/>
+
+
+<!-- Ahref verification -->
+<meta name="ahrefs-site-verification" content="cd945a30a32beb9f20f22626c5f801f2063a726c6fd9af1db55ce27eafaa1e45">
+
+</head>
+
+<body class="fixed-sn mdb-skin-custom" data-spy="scroll" data-target="#scrollspy" data-offset="15">
+
+
+
+<header>
+  
+<!-- Sidebar navigation -->
+<div id="slide-out" class="side-nav sn-bg-4 mdb-sidenav fixed">
+  <ul class="custom-scrollbar list-unstyled" style="max-height:100vh; padding-bottom:90px">
+    <!-- Logo -->
+    <li class="logo-sn d-block waves-effect">
+      <div class="text-center">
+        <a class="pl-0" href="../../../../index.html"><img id="MDB-logo" src="../../../../img/Marketing/other/logo/logo-mdb-vue-small.png" alt="MDB Logo"></a>
+      </div>
+    </li>
+    <!--/. Logo -->
+    <!--Search Form-->
+    <li>
+      <form class="search-form" onkeypress="return event.keyCode != 13;" role="search" method="GET" autocomplete="off">
+        <div class="form-group md-form mt-0 d-block waves-light">
+          <input type="text" class="form-control pb-1 pt-2 mb-0" name="mdw_serach" placeholder="Search"
+                 id="mdb_main_search">
+          <label for="mdb_main_search" class="sr-only">Search</label>
+        </div>
+        <div class="dropdown-wrapper"></div>
+      </form>
+    </li>
+    <!--/.Search Form-->
+    <!-- Side navigation links -->
+    <li>
+      <ul id="side-menu" class="collapsible collapsible-accordion"><li id="menu-item-81308" class="menu-item menu-item-type-post_type menu-item-object-product  menu-item-81308"><a class="collapsible-header waves-effect" id="link-menu-item-81308"  href="../../../../products/vue-ui-kit/index.html"><i class="far fa-gem"></i>MDB Vue Pro</a></li>
+<li id="menu-item-88070" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-88070"><a class="collapsible-header waves-effect" id="link-menu-item-88070"  href="../../../../products/index.html"><i class="fas fa-gem"></i>Products</a></li>
+<li id="menu-item-59486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-59486"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-download"></i> Getting started<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81325" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor  menu-item-81325"><a class="collapsible-header waves-effect" id="link-menu-item-81325"  href="../../index.html">About MDB Vue</a></li>
+	<li id="menu-item-49186" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49186"><a class="collapsible-header waves-effect" id="link-menu-item-49186"  href="../../getting-started/download/index.html">Download</a></li>
+	<li id="menu-item-59488" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59488"><a class="collapsible-header waves-effect" id="link-menu-item-59488"  href="../../getting-started/quick-start/index.html">Quick start</a></li>
+	<li id="menu-item-85137" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-85137"><a class="collapsible-header waves-effect" id="link-menu-item-85137"  href="../../../../education/vue/index.html">Full tutorial</a></li>
+	<li id="menu-item-87549" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-87549"><a class="collapsible-header waves-effect" id="link-menu-item-87549"  href="../../../../cli/index.html">MDB CLI</a></li>
+	<li id="menu-item-81532" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81532"><a class="collapsible-header waves-effect" id="link-menu-item-81532"  href="../../../jquery/index.html">MDB jQuery</a></li>
+	<li id="menu-item-81533" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81533"><a class="collapsible-header waves-effect" id="link-menu-item-81533"  href="../../../angular/index.html">MDB Angular</a></li>
+	<li id="menu-item-81534" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81534"><a class="collapsible-header waves-effect" id="link-menu-item-81534"  href="../../../react/index.html">MDB React</a></li>
+	<li id="menu-item-59492" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59492"><a class="collapsible-header waves-effect" id="link-menu-item-59492"  href="../../../../publications/front-end/bootstrap-news/index.html">News</a></li>
+	<li id="menu-item-59493" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-59493"><a class="collapsible-header waves-effect" id="link-menu-item-59493"  href="../../../../index.html">Home page</a></li>
+</ul></div>
+</li>
+<li id="menu-item-49600" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children  menu-item-49600"><a class="collapsible-header waves-effect arrow-r active"><i class="fas fa-th-large"></i>Layout<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body"  style="display: block;"> <ul class="sub-menu">
+	<li id="menu-item-49604" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-49594 current_page_item  menu-item-49604"><a class="collapsible-header waves-effect" id="link-menu-item-49604"  href="index.html">Layout overview</a></li>
+	<li id="menu-item-49605" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49605"><a class="collapsible-header waves-effect" id="link-menu-item-49605"  href="../grid-usage/index.html">Grid usage</a></li>
+	<li id="menu-item-49606" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49606"><a class="collapsible-header waves-effect" id="link-menu-item-49606"  href="../grid-examples/index.html">Grid examples</a></li>
+	<li id="menu-item-87056" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-87056"><a class="collapsible-header waves-effect" id="link-menu-item-87056"  href="../masonry/index.html">Masonry</a></li>
+	<li id="menu-item-82512" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82512"><a class="collapsible-header waves-effect" id="link-menu-item-82512"  href="../media-object/index.html">Media object</a></li>
+	<li id="menu-item-82517" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82517"><a class="collapsible-header waves-effect" id="link-menu-item-82517"  href="../media-queries/index.html">Media queries</a></li>
+	<li id="menu-item-49608" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49608"><a class="collapsible-header waves-effect" id="link-menu-item-49608"  href="../utilities/index.html">Utilities for layout</a></li>
+</ul></div>
+</li>
+<li id="menu-item-49601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-49601"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-object-ungroup"></i>Utilities<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-49616" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49616"><a class="collapsible-header waves-effect" id="link-menu-item-49616"  href="../../utilities/borders/index.html">Borders</a></li>
+	<li id="menu-item-49617" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49617"><a class="collapsible-header waves-effect" id="link-menu-item-49617"  href="../../utilities/clearfix/index.html">Clearfix</a></li>
+	<li id="menu-item-49618" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49618"><a class="collapsible-header waves-effect" id="link-menu-item-49618"  href="../../utilities/close-icon/index.html">Close-icon</a></li>
+	<li id="menu-item-49619" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49619"><a class="collapsible-header waves-effect" id="link-menu-item-49619"  href="../../utilities/display/index.html">Display</a></li>
+	<li id="menu-item-49620" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49620"><a class="collapsible-header waves-effect" id="link-menu-item-49620"  href="../../utilities/embeds/index.html">Embeds</a></li>
+	<li id="menu-item-49621" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49621"><a class="collapsible-header waves-effect" id="link-menu-item-49621"  href="../../utilities/flexbox/index.html">Flexbox</a></li>
+	<li id="menu-item-49622" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49622"><a class="collapsible-header waves-effect" id="link-menu-item-49622"  href="../../utilities/float/index.html">Float</a></li>
+	<li id="menu-item-49623" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49623"><a class="collapsible-header waves-effect" id="link-menu-item-49623"  href="../../utilities/image-replacement/index.html">Image replacement</a></li>
+	<li id="menu-item-84684" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84684"><a class="collapsible-header waves-effect" id="link-menu-item-84684"  href="../../utilities/overflow/index.html">Overflow</a></li>
+	<li id="menu-item-49624" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49624"><a class="collapsible-header waves-effect" id="link-menu-item-49624"  href="../../utilities/position/index.html">Position</a></li>
+	<li id="menu-item-49625" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49625"><a class="collapsible-header waves-effect" id="link-menu-item-49625"  href="../../utilities/screenreaders/index.html">Screenreaders</a></li>
+	<li id="menu-item-49626" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49626"><a class="collapsible-header waves-effect" id="link-menu-item-49626"  href="../../utilities/sizing/index.html">Sizing</a></li>
+	<li id="menu-item-49627" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49627"><a class="collapsible-header waves-effect" id="link-menu-item-49627"  href="../../utilities/spacing/index.html">Spacing</a></li>
+	<li id="menu-item-87057" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-87057"><a class="collapsible-header waves-effect" id="link-menu-item-87057"  href="../../utilities/stretched-link/index.html">Stretched Link</a></li>
+	<li id="menu-item-49628" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49628"><a class="collapsible-header waves-effect" id="link-menu-item-49628"  href="../../utilities/text/index.html">Text</a></li>
+	<li id="menu-item-49629" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49629"><a class="collapsible-header waves-effect" id="link-menu-item-49629"  href="../../utilities/vertical-align/index.html">Vertical Align</a></li>
+	<li id="menu-item-49630" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49630"><a class="collapsible-header waves-effect" id="link-menu-item-49630"  href="../../utilities/visibility/index.html">Visibility</a></li>
+</ul></div>
+</li>
+<li id="menu-item-50053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-50053"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-indent"></i>Content<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-50056" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50056"><a class="collapsible-header waves-effect" id="link-menu-item-50056"  href="../../content/code/index.html">Code</a></li>
+	<li id="menu-item-50057" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50057"><a class="collapsible-header waves-effect" id="link-menu-item-50057"  href="../../content/figures/index.html">Figures</a></li>
+	<li id="menu-item-50058" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50058"><a class="collapsible-header waves-effect" id="link-menu-item-50058"  href="../../content/icons-list/index.html">Icons List</a></li>
+	<li id="menu-item-50059" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50059"><a class="collapsible-header waves-effect" id="link-menu-item-50059"  href="../../content/icons-usage/index.html">Icons Usage</a></li>
+	<li id="menu-item-50060" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50060"><a class="collapsible-header waves-effect" id="link-menu-item-50060"  href="../../content/images/index.html">Images</a></li>
+	<li id="menu-item-50062" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50062"><a class="collapsible-header waves-effect" id="link-menu-item-50062"  href="../../content/typography/index.html">Typography</a></li>
+</ul></div>
+</li>
+<li id="menu-item-50054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-50054"><a class="collapsible-header waves-effect arrow-r "><i class="fab fa-css3"></i>CSS<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81439" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81439"><a class="collapsible-header waves-effect" id="link-menu-item-81439"  href="../../css/demo/index.html">Demo</a></li>
+	<li id="menu-item-50063" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50063"><a class="collapsible-header waves-effect" id="link-menu-item-50063"  href="../../css/animations/index.html">Animations</a></li>
+	<li id="menu-item-82046" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82046"><a class="collapsible-header waves-effect" id="link-menu-item-82046"  href="../../css/background-image/index.html">Background Image</a></li>
+	<li id="menu-item-50064" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50064"><a class="collapsible-header waves-effect" id="link-menu-item-50064"  href="../../css/colors/index.html">Colors</a></li>
+	<li id="menu-item-80622" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80622"><a class="collapsible-header waves-effect" id="link-menu-item-80622"  href="../../css/gradients/index.html">Gradient</a></li>
+	<li id="menu-item-50065" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50065"><a class="collapsible-header waves-effect" id="link-menu-item-50065"  href="../../css/hover-effects/index.html">Hover Effects</a></li>
+	<li id="menu-item-55793" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55793"><a class="collapsible-header waves-effect" id="link-menu-item-55793"  href="../../css/masks/index.html">Masks</a></li>
+	<li id="menu-item-84313" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84313"><a class="collapsible-header waves-effect" id="link-menu-item-84313"  href="../../css/parallax/index.html">Parallax</a></li>
+	<li id="menu-item-55792" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55792"><a class="collapsible-header waves-effect" id="link-menu-item-55792"  href="../../css/shadows/index.html">Shadows</a></li>
+	<li id="menu-item-55703" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55703"><a class="collapsible-header waves-effect" id="link-menu-item-55703"  href="../../css/skins/index.html">Skins</a></li>
+</ul></div>
+</li>
+<li id="menu-item-49603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-49603"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-cubes"></i>Components<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81440" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81440"><a class="collapsible-header waves-effect" id="link-menu-item-81440"  href="../../components/demo/index.html">Demo</a></li>
+	<li id="menu-item-80199" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80199"><a class="collapsible-header waves-effect" id="link-menu-item-80199"  href="../../components/alerts/index.html">Alerts</a></li>
+	<li id="menu-item-49648" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49648"><a class="collapsible-header waves-effect" id="link-menu-item-49648"  href="../../components/buttons/index.html">Buttons</a></li>
+	<li id="menu-item-84325" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84325"><a class="collapsible-header waves-effect" id="link-menu-item-84325"  href="../../components/button-group/index.html">Buttons group</a></li>
+	<li id="menu-item-84324" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84324"><a class="collapsible-header waves-effect" id="link-menu-item-84324"  href="../../components/buttons-social/index.html">Buttons social</a></li>
+	<li id="menu-item-49649" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49649"><a class="collapsible-header waves-effect" id="link-menu-item-49649"  href="../../components/cards/index.html">Cards</a></li>
+	<li id="menu-item-49651" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49651"><a class="collapsible-header waves-effect" id="link-menu-item-49651"  href="../../components/dropdowns/index.html">Dropdowns</a></li>
+	<li id="menu-item-84687" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84687"><a class="collapsible-header waves-effect" id="link-menu-item-84687"  href="../../components/edge-header/index.html">Edge Header</a></li>
+	<li id="menu-item-84323" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84323"><a class="collapsible-header waves-effect" id="link-menu-item-84323"  href="../../components/jumbotron/index.html">Jumbotron</a></li>
+	<li id="menu-item-60000" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60000"><a class="collapsible-header waves-effect" id="link-menu-item-60000"  href="../../components/list-group/index.html">List Group</a></li>
+	<li id="menu-item-84686" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84686"><a class="collapsible-header waves-effect" id="link-menu-item-84686"  href="../../components/spinners/index.html">Loader / Spinner</a></li>
+	<li id="menu-item-81990" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81990"><a class="collapsible-header waves-effect" id="link-menu-item-81990"  href="../../components/pagination/index.html">Pagination</a></li>
+	<li id="menu-item-60232" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60232"><a class="collapsible-header waves-effect" id="link-menu-item-60232"  href="../../components/panels/index.html">Panels</a></li>
+	<li id="menu-item-81989" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81989"><a class="collapsible-header waves-effect" id="link-menu-item-81989"  href="../../components/pills/index.html">Pills</a></li>
+	<li id="menu-item-55794" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55794"><a class="collapsible-header waves-effect" id="link-menu-item-55794"  href="../../components/progress-bar/index.html">Progress bars</a></li>
+	<li id="menu-item-55707" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55707"><a class="collapsible-header waves-effect" id="link-menu-item-55707"  href="../../components/tabs/index.html">Tabs</a></li>
+	<li id="menu-item-49654" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49654"><a class="collapsible-header waves-effect" id="link-menu-item-49654"  href="../../components/badges/index.html">Tags, Labels &#038; Badges</a></li>
+	<li id="menu-item-61549" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61549"><a class="collapsible-header waves-effect" id="link-menu-item-61549"  href="../../components/stepper/index.html">Stepper</a></li>
+</ul></div>
+</li>
+<li id="menu-item-50055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-50055"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-code"></i>Advanced<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-84696" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84696"><a class="collapsible-header waves-effect" id="link-menu-item-84696"  href="../../advanced/demo/index.html">Demo</a></li>
+	<li id="menu-item-80200" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80200"><a class="collapsible-header waves-effect" id="link-menu-item-80200"  href="../../advanced/accordion/index.html">Accordion</a></li>
+	<li id="menu-item-50068" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50068"><a class="collapsible-header waves-effect" id="link-menu-item-50068"  href="../../advanced/carousel/index.html">Carousel</a></li>
+	<li id="menu-item-50069" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50069"><a class="collapsible-header waves-effect" id="link-menu-item-50069"  href="../../advanced/charts/index.html">Charts</a></li>
+	<li id="menu-item-50070" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50070"><a class="collapsible-header waves-effect" id="link-menu-item-50070"  href="../../advanced/collapse/index.html">Collapse</a></li>
+	<li id="menu-item-80623" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80623"><a class="collapsible-header waves-effect" id="link-menu-item-80623"  href="../../advanced/gallery/index.html">Gallery</a></li>
+	<li id="menu-item-80621" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80621"><a class="collapsible-header waves-effect" id="link-menu-item-80621"  href="../../advanced/google-maps/index.html">Google Maps</a></li>
+	<li id="menu-item-81670" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81670"><a class="collapsible-header waves-effect" id="link-menu-item-81670"  href="../../advanced/lightbox/index.html">Lightbox</a></li>
+	<li id="menu-item-84685" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84685"><a class="collapsible-header waves-effect" id="link-menu-item-84685"  href="../../advanced/mobile/index.html">Mobile</a></li>
+	<li id="menu-item-83054" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83054"><a class="collapsible-header waves-effect" id="link-menu-item-83054"  href="../../advanced/notifications/index.html">Notifications</a></li>
+	<li id="menu-item-50071" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50071"><a class="collapsible-header waves-effect" id="link-menu-item-50071"  href="../../advanced/popovers/index.html">Popovers</a></li>
+	<li id="menu-item-84693" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84693"><a class="collapsible-header waves-effect" id="link-menu-item-84693"  href="../../advanced/scroll/index.html">Scrollbar &#038; smooth scroll</a></li>
+	<li id="menu-item-81671" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81671"><a class="collapsible-header waves-effect" id="link-menu-item-81671"  href="../../advanced/sticky-content/index.html">Sticky Content</a></li>
+	<li id="menu-item-50072" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-50072"><a class="collapsible-header waves-effect" id="link-menu-item-50072"  href="../../advanced/tooltips/index.html">Tooltips</a></li>
+	<li id="menu-item-84695" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84695"><a class="collapsible-header waves-effect" id="link-menu-item-84695"  href="../../advanced/waves-effect/index.html">Waves Effect</a></li>
+</ul></div>
+</li>
+<li id="menu-item-61531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-61531"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-bars"></i>Navigation<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-49647" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49647"><a class="collapsible-header waves-effect" id="link-menu-item-49647"  href="../../navigation/breadcrumb/index.html">Breadcrumb</a></li>
+	<li id="menu-item-61532" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61532"><a class="collapsible-header waves-effect" id="link-menu-item-61532"  href="../../navigation/compositions/index.html">Compositions</a></li>
+	<li id="menu-item-60228" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60228"><a class="collapsible-header waves-effect" id="link-menu-item-60228"  href="../../navigation/footer/index.html">Footer</a></li>
+	<li id="menu-item-80619" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80619"><a class="collapsible-header waves-effect" id="link-menu-item-80619"  href="../../navigation/hamburger-menu/index.html">Hamburger Menu</a></li>
+	<li id="menu-item-80617" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80617"><a class="collapsible-header waves-effect" id="link-menu-item-80617"  href="../../navigation/mega-menu/index.html">Mega Menu</a></li>
+	<li id="menu-item-49653" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49653"><a class="collapsible-header waves-effect" id="link-menu-item-49653"  href="../../navigation/navbar/index.html">Navbar</a></li>
+	<li id="menu-item-84326" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84326"><a class="collapsible-header waves-effect" id="link-menu-item-84326"  href="../../navigation/navs/index.html">Navs</a></li>
+	<li id="menu-item-55709" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55709"><a class="collapsible-header waves-effect" id="link-menu-item-55709"  href="../../navigation/scrollspy/index.html">Scrollspy</a></li>
+	<li id="menu-item-55712" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55712"><a class="collapsible-header waves-effect" id="link-menu-item-55712"  href="../../navigation/sidenav/index.html">SideNav</a></li>
+</ul></div>
+</li>
+<li id="menu-item-61530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-61530"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-edit"></i>Forms<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-60229" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60229"><a class="collapsible-header waves-effect" id="link-menu-item-60229"  href="../../forms/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-60231" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60231"><a class="collapsible-header waves-effect" id="link-menu-item-60231"  href="../../forms/autocomplete/index.html">Autocomplete</a></li>
+	<li id="menu-item-75573" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75573"><a class="collapsible-header waves-effect" id="link-menu-item-75573"  href="../../forms/checkbox/index.html">Checkbox</a></li>
+	<li id="menu-item-55882" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55882"><a class="collapsible-header waves-effect" id="link-menu-item-55882"  href="../../forms/date-picker/index.html">Date Picker</a></li>
+	<li id="menu-item-81669" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81669"><a class="collapsible-header waves-effect" id="link-menu-item-81669"  href="../../forms/file-input/index.html">File Input</a></li>
+	<li id="menu-item-49652" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-49652"><a class="collapsible-header waves-effect" id="link-menu-item-49652"  href="../../forms/inputs/index.html">Inputs</a></li>
+	<li id="menu-item-84698" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84698"><a class="collapsible-header waves-effect" id="link-menu-item-84698"  href="../../forms/input-group/index.html">Input Group</a></li>
+	<li id="menu-item-83045" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83045"><a class="collapsible-header waves-effect" id="link-menu-item-83045"  href="../../forms/multiselect/index.html">Multiselect</a></li>
+	<li id="menu-item-79371" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-79371"><a class="collapsible-header waves-effect" id="link-menu-item-79371"  href="../../forms/radio-button/index.html">Radio Button</a></li>
+	<li id="menu-item-60230" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60230"><a class="collapsible-header waves-effect" id="link-menu-item-60230"  href="../../forms/search/index.html">Search</a></li>
+	<li id="menu-item-55708" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55708"><a class="collapsible-header waves-effect" id="link-menu-item-55708"  href="../../forms/select/index.html">Select</a></li>
+	<li id="menu-item-80632" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-80632"><a class="collapsible-header waves-effect" id="link-menu-item-80632"  href="../../forms/slider/index.html">Slider</a></li>
+	<li id="menu-item-81668" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81668"><a class="collapsible-header waves-effect" id="link-menu-item-81668"  href="../../forms/switch/index.html">Switch</a></li>
+	<li id="menu-item-79372" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-79372"><a class="collapsible-header waves-effect" id="link-menu-item-79372"  href="../../forms/textarea/index.html">Textarea</a></li>
+	<li id="menu-item-55883" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-55883"><a class="collapsible-header waves-effect" id="link-menu-item-55883"  href="../../forms/time-picker/index.html">Time Picker</a></li>
+	<li id="menu-item-61534" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61534"><a class="collapsible-header waves-effect" id="link-menu-item-61534"  href="../../forms/validation/index.html">Validation</a></li>
+</ul></div>
+</li>
+<li id="menu-item-61529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-61529"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-table"></i>Tables<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-61545" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61545"><a class="collapsible-header waves-effect" id="link-menu-item-61545"  href="../../tables/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-61540" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61540"><a class="collapsible-header waves-effect" id="link-menu-item-61540"  href="../../tables/additional/index.html">Additional examples</a></li>
+	<li id="menu-item-61541" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61541"><a class="collapsible-header waves-effect" id="link-menu-item-61541"  href="../../tables/datatables/index.html">Datatables</a></li>
+	<li id="menu-item-61561" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61561"><a class="collapsible-header waves-effect" id="link-menu-item-61561"  href="../../tables/editable/index.html">Editable</a></li>
+	<li id="menu-item-61539" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61539"><a class="collapsible-header waves-effect" id="link-menu-item-61539"  href="../../tables/pagination/index.html">Pagination</a></li>
+	<li id="menu-item-61538" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61538"><a class="collapsible-header waves-effect" id="link-menu-item-61538"  href="../../tables/responsive/index.html">Responsive</a></li>
+	<li id="menu-item-61537" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61537"><a class="collapsible-header waves-effect" id="link-menu-item-61537"  href="../../tables/scroll/index.html">Scroll</a></li>
+	<li id="menu-item-61536" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61536"><a class="collapsible-header waves-effect" id="link-menu-item-61536"  href="../../tables/search/index.html">Search</a></li>
+	<li id="menu-item-61535" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-61535"><a class="collapsible-header waves-effect" id="link-menu-item-61535"  href="../../tables/sort/index.html">Sort</a></li>
+</ul></div>
+</li>
+<li id="menu-item-61528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-61528"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-window-restore"></i>Modals<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-58430" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58430"><a class="collapsible-header waves-effect" id="link-menu-item-58430"  href="../../modals/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-84312" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84312"><a class="collapsible-header waves-effect" id="link-menu-item-84312"  href="../../modals/additional/index.html">Advanced examples</a></li>
+	<li id="menu-item-84309" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84309"><a class="collapsible-header waves-effect" id="link-menu-item-84309"  href="../../modals/events/index.html">Events</a></li>
+	<li id="menu-item-84310" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84310"><a class="collapsible-header waves-effect" id="link-menu-item-84310"  href="../../modals/forms/index.html">Forms</a></li>
+	<li id="menu-item-79368" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-79368"><a class="collapsible-header waves-effect" id="link-menu-item-79368"  href="../../modals/generator/index.html">Generator</a></li>
+	<li id="menu-item-84311" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84311"><a class="collapsible-header waves-effect" id="link-menu-item-84311"  href="../../modals/customization/index.html">Styles</a></li>
+</ul></div>
+</li>
+<li id="menu-item-58726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-58726"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-th"></i>Sections<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-84683" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84683"><a class="collapsible-header waves-effect" id="link-menu-item-84683"  href="../../sections/demo/index.html">Demo</a></li>
+	<li id="menu-item-58736" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58736"><a class="collapsible-header waves-effect" id="link-menu-item-58736"  href="../../sections/blog/index.html">Blog</a></li>
+	<li id="menu-item-58732" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58732"><a class="collapsible-header waves-effect" id="link-menu-item-58732"  href="../../sections/contact/index.html">Contact</a></li>
+	<li id="menu-item-58733" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58733"><a class="collapsible-header waves-effect" id="link-menu-item-58733"  href="../../sections/e-commerce/index.html">E-commerce</a></li>
+	<li id="menu-item-58734" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58734"><a class="collapsible-header waves-effect" id="link-menu-item-58734"  href="../../sections/features/index.html">Features</a></li>
+	<li id="menu-item-58728" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58728"><a class="collapsible-header waves-effect" id="link-menu-item-58728"  href="../../sections/intros/index.html">Intros</a></li>
+	<li id="menu-item-58735" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58735"><a class="collapsible-header waves-effect" id="link-menu-item-58735"  href="../../sections/magazine/index.html">Magazine</a></li>
+	<li id="menu-item-58730" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58730"><a class="collapsible-header waves-effect" id="link-menu-item-58730"  href="../../sections/projects/index.html">Projects</a></li>
+	<li id="menu-item-58729" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58729"><a class="collapsible-header waves-effect" id="link-menu-item-58729"  href="../../sections/social/index.html">Social</a></li>
+	<li id="menu-item-58727" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58727"><a class="collapsible-header waves-effect" id="link-menu-item-58727"  href="../../sections/team/index.html">Team</a></li>
+	<li id="menu-item-58731" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58731"><a class="collapsible-header waves-effect" id="link-menu-item-58731"  href="../../sections/testimonials/index.html">Testimonials</a></li>
+</ul></div>
+</li>
+<li id="menu-item-81343" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81343"><a class="collapsible-header waves-effect" id="link-menu-item-81343"  href="../../../../plugins/vue/index.html"><i class="fas fa-plus-square"></i>Plugins &#038; addons</a></li>
+<li id="menu-item-58590" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58590"><a class="collapsible-header waves-effect" id="link-menu-item-58590"  href="../../../../freebies/vue/admin-dashboard/index.html"><i class="fas fa-tachometer-alt"></i>Admin Dashboard Free</a></li>
+<li id="menu-item-82161" class="menu-item menu-item-type-post_type menu-item-object-product  menu-item-82161"><a class="collapsible-header waves-effect" id="link-menu-item-82161"  href="../../../../products/vue-admin-dashboard/index.html"><i class="fas fa-tachometer-alt"></i>Admin Dashboard Pro</a></li>
+</ul>    </li>
+    <!-- /. Side navigation links -->
+  </ul>
+  <div class="sidenav-bg mask-strong"></div>
+</div>
+<!--/. Sidebar navigation -->
+<!--/.SideNav-->
+<div class="modal fade" id="navbarLogin" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!-- Pills navs -->
+        <ul class="nav md-pills nav-justified pills-info">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#navbarLogin-login" role="tab" aria-selected="true">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#navbarLogin-signup" role="tab" aria-selected="false">Register</a>
+          </li>
+        </ul>
+
+        <!-- Pills panels -->
+        <div class="tab-content py-0">
+
+          <!--Panel 1-->
+          <div class="tab-pane fade in active show" id="navbarLogin-login" role="tabpanel">
+
+            <!-- Default form login -->
+            <form id="login" class="text-center" action="https://mdbootstrap.com/docs/vue/layout/overview/login" method="post">
+
+              <input type="hidden" id="security" name="security" value="aa47966a6c" /><input type="hidden" name="_wp_http_referer" value="/docs/vue/layout/overview/" />
+              <p class="status"></p>
+
+              <!-- Social login -->
+              <div class="my-3">
+                
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.3.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="../../../../wp-login8007.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="../../../../wp-logina14d.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+		<a rel="nofollow" href="../../../../wp-loginb915.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+	</div>
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+              </div>
+              <!-- Social login -->
+
+              <!-- Default input -->
+              <label class="grey-text" for="username">Your e-mail or username</label>
+              <input type="text" id="username" class="form-control" name="username">
+
+              <br>
+
+              <!-- Default input password -->
+              <label class="grey-text" for="password">Your password</label>
+              <input type="password" id="password" class="form-control" name="password">
+
+              <div class="mt-4">
+                <a href="../../../../my-account/lost-password/index.html" class="btn btn-outline-info btn-md mb-4 waves-effect waves-light" type="submit">Forgot password?</a>
+                <button class="btn btn-info btn-md mb-4 waves-effect waves-light" type="submit" value="LOGIN">Login</button>
+              </div>
+
+            </form>
+            <!-- Default form login -->
+
+          </div>
+          <!--/.Panel 1-->
+
+          <!--Panel 2-->
+          <div class="tab-pane fade" id="navbarLogin-signup" role="tabpanel">
+
+            <!-- Default form register  -->
+            <form id="register" class="text-center" action="https://mdbootstrap.com/docs/vue/layout/overview/register" method="post">
+
+              <input type="hidden" id="signonsecurity" name="signonsecurity" value="d3a7631bdd" /><input type="hidden" name="_wp_http_referer" value="/docs/vue/layout/overview/" />
+              <!-- Social login -->
+
+              <p class="status"></p>
+
+              <div class="my-3">
+                
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.3.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="../../../../wp-login8007.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="../../../../wp-logina14d.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+		<a rel="nofollow" href="../../../../wp-loginb915.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fvue%2Flayout%2Foverview%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+	</div>
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+              </div>
+              <!-- Social login -->
+
+              <!-- Default input name -->
+              <input type="text" id="signonname" class="form-control" name="signonname">
+              <label for="signonname">Your name</label>
+
+              <br>
+
+              <!-- Default input username -->
+              <input type="text" id="signonusername" class="form-control" name="signonusername">
+              <label for="signonusername">Your username</label>
+
+              <br>
+
+              <!-- Default input email -->
+              <input type="text" id="email" class="form-control" name="email">
+              <label for="email">Your email</label>
+
+              <br>
+              <!-- Default input password -->
+              <input type="password" id="signonpassword" class="form-control" name="signonpassword">
+              <label for="signonpassword">Your password</label>
+
+              <br>
+
+              <!-- Default input password -->
+              <input type="password" id="password2" class="form-control" name="password2">
+              <label for="password2">Repeat password</label>
+
+              <div class="mt-4">
+              <p class="small grey-text">By signing up you agree to data processing by the administrator: StartupFlow s.c. located in Kijowska 7, Warsaw. The administrator processes data following the <a target="_blank" href="../../../../privacy-policy/index.html">Privacy Policy</a>.
+              </p>
+                <button class="btn btn-info btn-md mb-4 waves-effect waves-light" id="AJAXAuthRegisterBtn" type="submit" value="SIGNUP">Sign up</button>
+              </div>
+
+            </form>
+            <!-- Default form register  -->
+
+          </div>
+          <!--/.Panel 2-->
+
+        </div>
+        <!-- Pills panels -->
+
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info btn-md waves-effect waves-light" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+
+
+<!-- Navbar-->
+<nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+  <!-- SideNav slide-out button -->
+  <div class="float-left">
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i><span class="sr-only" aria-hidden="true">Toggle side navigation</span></a>
+  </div>
+  <!-- Navbar links-->
+  <div class="mr-auto pl-2">
+    <span class="d-none d-md-inline-block">
+
+    <!-- Dynamic content wrapper -->
+    <span id="dynamicContentWrapper-mainNavbar" class="dynamic-content d-none d-lg-inline-block"></span>
+
+    <!--Angular-->
+            <a id="navbar-category-gettingstarted-vue" class="btn btn-info btn-sm my-0" href="../../getting-started/download/index.html" role="button">
+        <span class="d-none d-lg-inline-block mr-1">Getting started</span>
+        <i class="fa fa-download"></i>
+      </a>
+      <a id="navbar-category-tutorial-vue" class="btn btn-info btn-sm my-0" href="../../../../education/vue/index.html" role="button">
+        <span class="d-none d-lg-inline-block mr-1">Tutorial</span>
+        <i class="fa fa-graduation-cap"></i>
+      </a>
+      <span id="dynamicContentWrapper-mainNavbar3" class="dynamic-content"></span>
+      <a id="navbar-category-bundle-angular" class="btn btn-info btn-sm my-0" href="../../../../products/vue-small-bundle/index.html" role="button">
+      <span class="badge red">New</span>
+        <span class="d-none d-xl-inline-block mr-1">Vue Bundle</span>
+        <i class="fa fa-gift"></i>
+      </a>
+
+      <!--jQuery-->
+          </span>
+  </div>
+
+    <!--Navigation icons-->
+    <ul class="nav navbar-nav nav-flex-icons ml-auto">
+      
+        
+        <li class="nav-item">
+          <a href="../../../../general/contact/index.html" class="nav-link waves-effect">
+          <i  id="navbar-static-contact" alt="Contact us" class="fas fa-envelope"></i><span class="sr-only">Contact us</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="../../../../general/support/index.html" class="nav-link waves-effect">
+          <i  id="navbar-static-contact" alt="Contact us" class="fas fa-question-circle"></i><span class="d-none d-xl-inline-block ml-1">Support</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item ">
+          <a href="/profile/?id=0#messages" class="nav-link waves-effect headerNotifCountBadge">
+            <i class="fas fa-comments"></i><span class="sr-only">Direct messages</span>
+          </a>
+        </li> -->
+
+        
+        <!-- Tools -->
+         <li id="navbar-static-tools" class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" id="navbar-tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-wrench"></i><span class="d-none d-lg-inline-block ml-1">Tools</span></a>
+           <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbar-tools">
+             <a class="dropdown-item" href="../../../../snippets/index.html">Editor & Snippets</a>
+             <a class="dropdown-item" href="../../../../articles/index.html">Articles</a>
+             <a class="dropdown-item" href="../../../../news/frontend/index.html">News</a>
+             <a class="dropdown-item" href="../../../../cli/index.html">MDB CLI <span class="badge badge-danger rounded">New</span></a>
+           </div>
+         </li>
+
+      <!-- Login / register -->
+              <a id="navbar-static-login" class="btn btn-info btn-rounded btn-sm waves-effect waves-light" data-toggle="modal" data-target="#navbarLogin">Log In
+          <i class="fas fa-sign-in-alt ml-2"></i>
+        </a>
+          </ul>
+</nav>
+<!-- /.Navbar-->
+</header>
+
+<!-- Angular or not Angular? -->
+<div class="switch-version d-none d-md-block">
+  <a id="switch-mdb-jquery" href="../../../jquery/index.html"><span class="switch-to mdb-jquery " id="jQuery" ></span></a>
+  <a id="switch-mdb-angular" href="../../../angular/index.html"><span class="switch-to mdb-angular " id="Angular"></span></a>
+  <a id="switch-mdb-react" href="../../../react/index.html"><span class="switch-to mdb-react " id="React"></span></a>
+  <a id="switch-mdb-vue" href="../../index.html"><span class="switch-to mdb-vue active" id="Vue"></span></a>
+
+</div>
+
+<style>
+.main-tabs-docs .nav-mtd {
+white-space: nowrap;
+overflow-x: auto;
+position: relative; }
+@media (min-width: 62rem) {
+  .main-tabs-docs .nav-mtd {
+    overflow-x: hidden; } }
+.main-tabs-docs .nav-mtd li a {
+  display: block;
+  padding: 20px 24px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-weight: 500;
+  border-bottom: 3px solid #33b5e5; }
+  .main-tabs-docs .nav-mtd li a.active {
+    border-bottom: 3px solid;
+    color: #fff; }
+@media (min-width: 62em) {
+  .main-tabs-docs .nav-mtd li:first-child {
+    margin-left: 56px; } }
+
+.documentation .primary-heading {
+font-size: 2.7rem;
+font-weight: 500; }
+
+.documentation .secondary-heading {
+font-size: 1.5rem;
+font-weight: 500;
+color: #444343;
+overflow: hidden;
+padding-bottom: .3rem;
+margin-bottom: .7rem; }
+
+.documentation .section-heading {
+font-size: 2rem;
+font-weight: 600;
+margin-bottom: 1.4rem; }
+
+.documentation .docs-pills {
+margin-top: 1.4rem; }
+
+.documentation .section-preview {
+  border: 1px solid #e0e0e0;
+  padding: 15px; }
+
+@media only screen and (max-width: 991px) {
+  .sticky, .sticky2, .sticky3,
+  .sticky-placeholder {
+    display: none;
+  }
+}
+
+
+</style>
+
+
+
+<main>
+
+    <div class="container-fluid mt-2">
+
+        <!-- Main docs tabs -->
+        <div class="main-tabs-docs">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-mtd tabs-info z-depth-1" role="tablist">
+                                <li class="nav-item">
+                    <a id="docs-tab-overview" class="nav-link waves-light active" data-toggle="tab" href="#docsTabsOverview" role="tab"><i class="fas fa-book mr-2"></i>Overview</a>
+                </li>
+                            </ul>
+
+            <div class="tab-content">
+                                <!--Overview-->
+                <div class="tab-pane fade in show active" id="docsTabsOverview" role="tabpanel">
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column: Content-->
+                        <div class="col-lg-10 col-md-12">
+                        <div class="d-flex justify-content-end">
+                         <span class="mt-1 mr-2">Rate these docs</span>
+                            <span class="popover-form-container" id="rateTooltip"  data-page-id="49594" >
+
+                                                               <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="0" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                                   data-content="" title=""></i>
+                                                               <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="1" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                                   data-content="" title=""></i>
+                                                               <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="2" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                                   data-content="" title=""></i>
+                                                               <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="3" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                                   data-content="" title=""></i>
+                                                               <i class='fas fa-star stars py-2 px-1 popovers' data-page-template="docs" data-index="4" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                                   data-content="" title=""></i>
+                                                        <!-- HTML to write -->
+                            </span>
+                        </div>
+                            <!--Section: Docs content-->
+                            <section class="documentation">
+                              <!--Section: Intro-->
+<section id="introduction">
+
+  <!--Title-->
+  <h2 class="primary-heading">Vue Bootstrap Layout</h2>
+
+  <h1 class="secondary-heading mb-4">Vue Layout - Bootstrap 4 & Material Design</h1>
+
+  <!--Description-->
+  <p>Components and options for laying out your Bootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
+
+  <hr class="my-4">
+
+  <!--Grid row-->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+
+      <!--Title-->
+      <h2 class="secondary-heading mb-3">
+        Containers
+      </h2>
+
+      <!--Description-->
+      <p>Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose
+        from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning
+        it’s 100% wide all the time).</p>
+      <p>While containers can be nested, most layouts do not require a nested container.</p>
+
+      <!--Section: Live preview-->
+      <section>
+
+        <img src="../../../../img/Others/regular-container.png" alt="A display of a regular container." class="img-fluid">
+
+      </section>
+      <!--Section: Live preview-->
+
+      <!--Section: Code-->
+      <section>
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_9b3da53b4a7a7feb86a3e6157721c4c9" role="tab">template</a></li><li class="nav-item"><a class="nav-link " data-toggle="tab" href="#mdb_a451215cfeaddfa9f34b16d1d6e0d874" role="tab">script</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_9b3da53b4a7a7feb86a3e6157721c4c9" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;template&gt;
+              &lt;mdb-container&gt;
+                &lt;!-- Content here --&gt;
+              &lt;/mdb-container&gt;
+            &lt;/template&gt;
+          </pre></code></div><div class="tab-pane fade " id="mdb_a451215cfeaddfa9f34b16d1d6e0d874" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;script&gt;
+              import {mdbContainer} from 'mdbvue';
+              export default {
+                components: {
+                  mdbContainer
+                }
+              }
+            &lt;/script&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+      </section>
+      <!--Section: Code-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+
+      <!--Title-->
+      <h2 class="secondary-heading">
+        Container fluid
+        </a>
+      </h2>
+
+      <!--Description-->
+      <p>Use
+        <code>fluid</code> prop for a full-width container, spanning the entire width of the viewport.</p>
+
+      <!--Section: Live preview-->
+      <section>
+
+        <img src="../../../../img/Others/fluid-container.png" alt="A display of a fluid container." class="img-fluid"
+          style="width: 100%">
+
+      </section>
+      <!--Section: Live preview-->
+
+      <!--Section: Code-->
+      <section>
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_1d2e338f273169966157f469bd81244f" role="tab">template</a></li><li class="nav-item"><a class="nav-link " data-toggle="tab" href="#mdb_ce96e273be8d8bf625fafb90865cd1f8" role="tab">script</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_1d2e338f273169966157f469bd81244f" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;template&gt;
+              &lt;mdb-container fluid&gt;
+                &lt;!-- Content here --&gt;
+              &lt;/mdb-container&gt;
+            &lt;/template&gt;
+          </pre></code></div><div class="tab-pane fade " id="mdb_ce96e273be8d8bf625fafb90865cd1f8" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;script&gt;
+              import {mdbContainer} from 'mdbvue';
+              export default {
+                components: {
+                  mdbContainer
+                }
+              }
+            &lt;/script&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+      </section>
+      <!--Section: Code-->
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+</section>
+<!--/Section: Intro-->
+
+<hr class="mt-4 mb-5">
+
+<!--Section: Responsive-breakpoints-->
+<section id="responsive-breakpoints">
+
+  <!--Title-->
+  <h2 class="section-heading">Responsive breakpoints</h2>
+
+  <hr class="my-4">
+
+  <!--Grid row-->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+
+      <!--Description-->
+      <p>Since Bootstrap is developed to be mobile first, we use a handful of media queries to create sensible breakpoints for
+        our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up
+        elements as the viewport changes.</p>
+      <p>Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid
+        system, and components.</p>
+
+      <!--Section: Code-->
+      <section>
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_9dfa03518e5d6c0b8e13867a6dfd0bce" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_9dfa03518e5d6c0b8e13867a6dfd0bce" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+              /* Extra small devices (portrait phones, less than 576px)
+              No media query since this is the default in Bootstrap */
+
+              /* Small devices (landscape phones, 576px and up) */
+              @media (min-width: 576px) {
+
+              }
+
+              /* Medium devices (tablets, 768px and up) */
+              @media (min-width: 768px) {
+
+              }
+
+              /* Large devices (desktops, 992px and up) */
+              @media (min-width: 992px) { 
+
+              }
+
+              /* Extra large devices (large desktops, 1200px and up) */
+              @media (min-width: 1200px) { 
+
+              }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>Since we write our source CSS in Sass, all our media queries are available via Sass mixins:</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_2d887d3a5535dc1a97091d82d32e23db" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_2d887d3a5535dc1a97091d82d32e23db" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+              @include media-breakpoint-up(xs) {  }
+              @include media-breakpoint-up(sm) {  }
+              @include media-breakpoint-up(md) {  }
+              @include media-breakpoint-up(lg) {  }
+              @include media-breakpoint-up(xl) {  }
+
+              /* Example usage: */
+              @include media-breakpoint-up(sm) {
+                .some-class {
+                  display: block;
+                }
+              }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>We occasionally use media queries that go in the other direction (the given screen size or smaller):</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_377a79ab94dc5384e3443cceaf6213e3" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_377a79ab94dc5384e3443cceaf6213e3" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+               /* Extra small devices (portrait phones, less than 576px) */
+              @media (max-width: 575.98px) {  }
+
+               /* Small devices (landscape phones, less than 768px) */
+              @media (max-width: 767.98px) {  }
+
+               /* Medium devices (tablets, less than 992px) */
+              @media (max-width: 991px.98) {  }
+
+               /* Large devices (desktops, less than 1200px) */
+              @media (max-width: 1199.98px) {  }
+
+               /* Extra large devices (large desktops) */
+               /* No media query since the extra-large breakpoint has no upper bound on its width */
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>We occasionally use media queries that go in the other direction (the given screen size or smaller):</p>
+
+        <blockquote class="blockquote bq-primary">
+          <p>
+            Note that since browsers do not currently support
+            <a href="https://www.w3.org/TR/mediaqueries-4/#range-context"
+              rel="nofollow" target="_blank">range context queries</a>, we work around the limitations of
+            <a href="https://www.w3.org/TR/mediaqueries-4/#mq-min-max"
+              rel="nofollow" target="_blank">
+              <code>min-</code> and
+              <code>max-</code> prefixes</a> and viewports with fractional widths (which can occur under certain conditions on
+            high-dpi devices, for instance) by using values with higher precision for these comparisons.
+          </p>
+        </blockquote>
+
+        <p>Once again, these media queries are also available via Sass mixins:</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_3f90f8830be349170f0c20995496515b" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_3f90f8830be349170f0c20995496515b" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+              @include media-breakpoint-down(xs) {  }
+              @include media-breakpoint-down(sm) {  }
+              @include media-breakpoint-down(md) {  }
+              @include media-breakpoint-down(lg) {  }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum
+          breakpoint widths.</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_cb3468c482662f188fabf014871c13e0" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_cb3468c482662f188fabf014871c13e0" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+               /* Extra small devices (portrait phones, less than 576px) */
+              @media (max-width: 575.98px) {  }
+
+               /* Small devices (landscape phones, 576px and up) */
+              @media (min-width: 576px) and (max-width: 767.98px) {  }
+
+               /* Medium devices (tablets, 768px and up) */
+              @media (min-width: 768px) and (max-width: 991.98px) {  }
+
+               /* Large devices (desktops, 992px and up) */
+              @media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+               /* Extra large devices (large desktops, 1200px and up) */
+              @media (min-width: 1200px) {  }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>These media queries are also available via Sass mixins:</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_6dda2a98488478cbf2d36535cb5c6534" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_6dda2a98488478cbf2d36535cb5c6534" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+              @include media-breakpoint-only(xs) {  }
+              @include media-breakpoint-only(sm) {  }
+              @include media-breakpoint-only(md) {  }
+              @include media-breakpoint-only(lg) {  }
+              @include media-breakpoint-only(xl) {  }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>Similarly, media queries may span multiple breakpoint widths:</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_84bb4771edfce6f265f45477ba66d579" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_84bb4771edfce6f265f45477ba66d579" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+               /* Example */
+               /* Apply styles starting from medium devices and up to extra large devices */
+              @media (min-width: 768px) and (max-width: 1199.98px) {  }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+        <p>The Sass mixin for targeting the same screen size range would be:</p>
+
+        <!-- Code -->
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_6ff44078e1cdabc3cf066929d8614f6e" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_6ff44078e1cdabc3cf066929d8614f6e" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-html" ><code>
+            &lt;style&gt;
+              @include media-breakpoint-between(md, xl) {  }
+            &lt;/style&gt;
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+
+      </section>
+      <!--Section: Code-->
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+</section>
+<!--/Section: Responsive-breakpoints-->
+
+<hr class="mt-4 mb-5">
+
+<!--Section: z-index-->
+<section id="z-index">
+
+  <!--Grid row-->
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-12 mb-4">
+
+       <!--Title-->
+         <h2 class="section-heading">Z-index</h2>
+
+      <!--Description-->
+      <p>Several Bootstrap components utilize <code>z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation,
+      tooltips and popovers, modals, and more.</p>
+
+      <!--Description-->
+      <p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code>100</code>+ or <code>500</code>+.</p>
+      <p>We don’t encourage customization of these values; should you change one, you likely need to change them all.</p>
+
+      <!--Section: Code-->
+      <section>
+        <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb_bb8a40cce3420bda60c1d66069923aa7" role="tab">style</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb_bb8a40cce3420bda60c1d66069923aa7" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-css" ><code>
+      
+              $zindex-sticky: 1020 !default;
+              $zindex-fixed: 1030 !default;
+              $zindex-modal-backdrop: 1040 !default;
+              $zindex-modal: 1050 !default;
+              $zindex-popover: 1060 !default;
+              $zindex-tooltip:1070 !default;
+
+          </pre></code></div></div></div><!-- /.mdbsnippet -->
+      </section>
+      <!--Section: Code-->
+
+      <p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code>z-index</code> values of <code>1</code>, <code>2</code>, and <code>3</code></code3></code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code>z-index</code> value to show their border over the sibling elements.</p>
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+</section>
+<!--/Section: z-index-->
+                            </section>
+                            <!--Section: Docs content-->
+
+                        </div>
+                        <!--Grid column: Content-->
+
+
+                        <!--Grid column: Scrollspy-->
+                        <div class="col-md-2">
+
+                            <!-- Sticky content -->
+                            <div class="sticky">
+
+                            <p class="note note-danger"><strong>Install MDB CLI</strong><br>It's the fastest way to create and host MDB projects<br> <a href="../../../../cli/index.html" class="btn btn-danger btn-sm ml-0" role="button">Free Download<i class="fas fa-download ml-2"></i></a></p>
+
+                              <!--Scrollspy-->
+                                <div id="scrollspy">
+
+                                    <!-- Links -->
+                                    <ul class="nav nav-pills default-pills smooth-scroll" data-allow-hashes>
+                                      <li class="nav-item"><a class="nav-link active" href="#introduction">Introduction</a></li>
+<li class="nav-item"><a class="nav-link" href="#responsive-breakpoints">Responsive breakpoints</a></li>
+<li class="nav-item"><a class="nav-link" href="#z-index">Z-index</a></li>
+                                    </ul>
+                                    <!-- Links -->
+
+                                </div>
+                                <!--Scrollspy-->
+
+                            </div>
+                            <!-- Sticky content -->
+
+                        </div>
+                        <!--Grid column: Scrollspy-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </div>
+                <!--/.Overview-->
+                                </div>
+                <!--/.Examples-->
+            </div>
+
+        </div>
+        <!-- Main docs tabs -->
+
+    </div>
+
+</main>
+
+
+<!--Footer-->
+<footer id="footer" class="page-footer center-on-small-only unique-color-dark pt-0">
+
+  <div class="info-color-dark text-center py-4">
+
+    <!--Newsletter-->
+    <a id="footer-link-vue-newsletter" href="../../newsletter/index.html" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Newsletter
+      <i class="fas fa-envelope white-text ml-2"> </i>
+    </a>
+    <!--Newsletter-->
+    <a id="footer-link-vue-affiliate" href="../../../../mdb-affiliate-program/index.html" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Affiliate program
+      <i class="fas fa-money-bill-alt white-text ml-2"> </i>
+    </a>
+    <!--Contact-->
+    <a id="footer-link-vue-contact" href="../../../../contact/index.html" data-toggle="modal" data-target="#contactForm" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Contact
+      <i class="fas fa-envelope white-text ml-2"> </i>
+    </a>
+    <!--GitHub-->
+    <a rel="nofollow" target="_blank" id="footer-link-vue-github" href="https://github.com/mdbootstrap/Vue-Bootstrap-with-Material-Design">
+      <i class="fab fa-github white-text mr-4"> </i>
+    </a>
+    <!--Youtube-->
+    <a rel="nofollow" target="_blank" href="https://www.youtube.com/watch?v=s6ox3b9Xedc">
+          <i class="fab fa-youtube white-text mr-4"> </i>
+        </a>
+    <!--Facebook-->
+    <a rel="nofollow" target="_blank" id="footer-link-vue-facebook" href="https://www.facebook.com/mdbootstrap">
+      <i class="fab fa-facebook-f white-text mr-4"> </i>
+    </a>
+    <!--Twitter-->
+    <a rel="nofollow" target="_blank" id="footer-link-vue-twitter" href="https://twitter.com/MDBootstrap">
+      <i class="fab fa-twitter white-text mr-4"> </i>
+    </a>
+
+  </div>
+
+  <!--Footer Links-->
+  <div class="container mt-5 mb-4 text-center text-md-left">
+    <div class="row mt-3">
+
+      <!--First column-->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+        <h6 class="spacing font-weight-bold">
+          <strong>Useful links</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-vue-" href="../../../../vue/faq/index.html">Frequently Asked Questions</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-browsers"href="../../../../general/browsers-and-devices/index.html">Browsers and devices</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-license" href="../../../../general/license/index.html">License</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-changelog" href="../../changelog/index.html">ChangeLog</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-privacy" href="../../../../general/privacy-policy/index.html">Privacy Policy</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-refund" href="../../../../general/return-refund-policy/index.html">Return/Refund policy</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-students" href="../../../../general/mdb-academy/index.html">Students and universities</a>
+        </p>
+      </div>
+      <!--/.First column-->
+
+       <!--Second column-->
+       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">
+          <strong>Resources</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-jquery" href="../../../jquery/index.html">MDB jQuery</a>
+        </p>
+        <p>
+          <a id="footer-link-angular" href="../../../angular/index.html">MDB Angular</a>
+        </p>
+        <p>
+          <a id="footer-link-react" href="../../../react/index.html">MDB React</a>
+        </p>
+        <p>
+          <a id="footer-link-vue" href="../../index.html">MDB Vue</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../../support/index.html">Support forum</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../../snippets/index.html">MDB Editor & Snippets </a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../../articles/index.html">Articles</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../../user/mdbootstrap/index.html">News</a>
+        </p>
+        <p>
+          <a id="footer-link-freebies" href="../../../../freebies/index.html">Free templates</a>
+        </p>
+        <p>
+          <a id="footer-link-templates" href="../../../../templates/index.html">Premium templates</a>
+        </p>
+      </div>
+      <!--/.Second column-->
+
+      <!--Third column-->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">
+          <strong>Free tutorials</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-tutBootstrap" href="../../../../education/index.html">Basics (HTML/CSS/JS)</a>
+        </p>
+        <p>
+          <a id="footer-link-tutBootstrap" href="../../../../education/bootstrap/index.html">Bootstrap & web design</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../../../../education/angular/index.html">Angular</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../../../../education/react/index.html">React</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../../../../education/vue/index.html">Vue</a>
+        </p>
+        <p>
+          <a id="footer-link-tutWordpress" href="../../../../education/wordpress/index.html">WordPress</a>
+        </p>
+        <p>
+          <a id="footer-link-tutWebpush" href="../../../../articles/index.html">Miscellaneous</a>
+        </p>
+      </div>
+      <!--/.Third column-->
+
+      <!--Fourth column-->
+      <div class="col-md-4 col-lg-3 col-xl-3">
+        <h6 class="spacing font-weight-bold">
+          <strong>Company</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fa fa-envelope mr-3"></i> contact@mdbootstrap.com</p>
+        <!-- <p>
+              <i class="fa fa-building mr-3"></i> Our story</p> -->
+        <p>
+          <a id="footer-link-vue-team" href="../../../../general/our-team/index.html">
+            <i class="fa fa-users mr-3"></i> Our team</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-company" href="../../../../general/contact/index.html">
+            <i class="fa fa-bullhorn mr-3"></i> Company data</a>
+        </p>
+        <p>
+          <a id="footer-link-vue-media" href="../../../../general/press-pack/index.html">
+            <i class="fa fa-bullhorn mr-3"></i> For media</a>
+        </p>
+      </div>
+      <!--/.Fourth column-->
+
+    </div>
+  </div>
+  <!--/.Footer Links-->
+
+  <!-- Copyright-->
+  <div class="footer-copyright py-1 text-center">
+    &copy; 2019 Copyright:
+    <a id="footer-link-vue-copyright" href="../../../../index.html">
+      <strong> MDBootstrap.com</strong>
+    </a>
+  </div>
+  <!--/.Copyright -->
+
+</footer>
+<!--/.Footer-->
+
+<style>
+
+  main input[type=email]:focus,
+  main input[type=password]:focus,
+  main input[type=text]:focus,
+  main input[type=url]:focus,
+  main textarea:focus {
+    border: 0;
+  }
+
+  .embed-responsive-16by9-fix-contact-form::before {
+    height: 450px;
+  }
+
+  @media (min-width:580px) {
+
+    .modal-contact-form-fix,
+    .modal-contact-form-fix * {
+
+      box-sizing: content-box !important;
+    }
+
+  }
+
+</style>
+
+<!-- Contact Form -->
+<div class="modal fade" id="contactForm" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content modal-contact-form-fix px-3">
+      <div class="modal-header border border-dark p-2 my-3 d-flex justify-content-center">
+        <p class="font-weight-bold p-3 mb-0">For technical questions use our <a target="_blank" href="../../../../support/index.html">Support Forum</a></p>
+      </div>
+
+      <div class="modal-body modal-body-fix text-center col-12">
+        <div class="embed-responsive embed-responsive-16by9 embed-responsive-16by9-fix-contact-form" style="overflow: hidden">
+          <iframe id="contact-form-id-iframe" width="100%" height="100%" src="https://mdbootstrap.agilecrm.com/forms/5712893068705792" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- <div id="mdbootstrap_5712893068705792" class="agile_crm_form_embed">
+      <span style="display:none">Fill out my <a href="https://mdbootstrap.agilecrm.com/forms/5712893068705792">online form</a>
+      </span>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+<!--/. Contact Form -->
+
+<!-- Modal: modalSnippetSettings -->
+<div class="modal fade" id="modalSnippetSettings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div id="snippets-settings-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="settings-modal">Snippet settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden=true>&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!--Name-->
+            <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-technology">
+              <option value="" disabled>MDB Technology</option>
+            </select>
+
+            <!--Name-->
+            <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-version">
+              <option value="" disabled>MDB Version</option>
+            </select>
+
+            <!--Grid row-->
+            <div class="row">
+
+              <!--Grid column-->
+              <div class="col-md-7 mb-4">
+
+                <!--Name-->
+                <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-type">
+                  <option value="" disabled>Type</option>
+                </select>
+
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 mb-4">
+
+                <a role="button" href="../../../../product/material-design-for-bootstrap-pro/index.html" class="btn btn-info btn-md" target="_blank">Go Pro</a>
+
+              </div>
+              <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <div class="switch mb-2">
+              <label>
+                Public
+                <input id="snippet-status" type="checkbox">
+                <span class="lever"></span> Private
+              </label>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Snippet title -->
+            <input type="text" class="form-control mb-3" id="snippet-title" placeholder="Snippet title">
+
+            <!-- Snippet description -->
+            <div class="form-group">
+              <textarea class="form-control" id="snippet-description" rows="5" placeholder="Snippet description"></textarea>
+            </div>
+
+            <!-- Snippet tags -->
+            <div class="chips chips-initial mb-0"></div>
+            <span id="tags-invalid-feedback" class="small red-text d-none">You can add max. 10 tags with min. length of 2 each</span>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+            <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-elegant" data-dismiss="modal">Close</button>
+        <a role="button" class="btn btn-info" id="save-snippet-settings" data-action="" data-user-nicename="new">Save</a>
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+<!-- Modal: modalSnippetSettings -->
+
+<!-- Modal: modalOpenSnippet -->
+<div class="modal fade" id="modalOpenSnippet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div id="open-modal-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Open snippet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Your snippet is ready. Click to open</p>
+      </div>
+      <div class="modal-footer m-auto">
+        <a type="button" class="btn btn-primary open-snippet" target="_blank">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalOpenSnippet -->
+
+<div id="dom-target-fb" style="display: none;">
+</div>
+<div id="dom-target-tw" style="display: none;">
+</div>
+<div id="dom-target-gp" style="display: none;">
+</div>
+
+<!-- Compiled JS -->
+
+    <!--BrandFlow for WordPress loading script-->
+
+    <script>
+
+        (function(){
+
+            
+
+
+            var scripts = ["/static/general/bf-core.min.js", "../../../../static/containers/NLX453.html", "/static/general/push-init-code.js"];
+
+
+
+            
+
+
+            for(var i = 0; i < scripts.length; i++) {
+
+                var script   = document.createElement("script");
+
+                script.src   = "https://brandflow.net" + scripts[i] + "?ts=" + Date.now() + "#";
+
+                script.async = false;
+
+                document.head.appendChild(script);
+
+            }
+
+
+
+        })();
+
+    </script>
+
+    <!--/.BrandFlow for WordPress loading script-->
+
+    <link rel='stylesheet' id='woocommerce-currency-switcher-css'  href='../../../../wp-content/plugins/woocommerce-currency-switcher/css/front7752.css?ver=5.2.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/mdbootstrap.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https:\/\/mdbootstrap.com","ajax_url":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","queue_url":"https:\/\/mdbootstrap.com\/wp-json\/mailchimp-for-woocommerce\/v1\/queue\/work","queue_should_fire":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var example_ajax_obj = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../../wp-admin/load-scriptsb327.php?c=gzip&amp;load%5B%5D=wp-embed,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-slider&amp;ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/compiled-4.8.2.min4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/footer-functions3aec.js?ver=4.8.2-update.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/contact-form-7/includes/js/scriptsbdeb.js?ver=5.1.3'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min5aed.js?ver=3.6.4'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min4e10.js?ver=2.1.16'></script>
+<script type='text/javascript' src='../../../../../chimpstatic.com/mcjs-connected/js/users/461480655ccce528d909d3f42/05e1abaa17c4f479182ad31474e10.js?ver=2.1.16'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/snippets-behavior4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../../wp-content/themes/mdbootstrap4/js/pages-rates4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min5aed.js?ver=3.6.4'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce-currency-switcher/js/price-slider_337752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce-currency-switcher/js/jquery.ddslick.min7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../../wp-content/plugins/woocommerce-currency-switcher/js/front7752.js?ver=5.2.1'></script>
+<script id="_agile_min_js" type="text/javascript" src="../../../../../mdbootstrap.agilecrm.com/stats/min/agile-min.js"> </script><script> if(typeof _agile != "undefined") { _agile.set_account("rvnkji5gd7c5c74136umt99rcv","mdbootstrap");_agile.track_page_view() } </script>
+<script>
+
+  
+</script>
+
+<script>
+  $(".button-collapse").sideNav();
+  var el = document.querySelector('.custom-scrollbar');
+  var ps = new PerfectScrollbar(el);
+</script>
+                                                                                                                                                                                                                                                                                                                                                                                                <!-- Structured data: Breadcrumbs -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://mdbootstrap.com/",
+        "name": "MDBootstrap",
+        "image": "https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-main.jpg"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://mdbootstrap.com/docs/vue/",
+        "name": "MDBootstrap Vue",
+        "image": "https://mdbootstrap.com/img/Marketing/products/vue/mdb-free.jpg"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://mdbootstrap.com/docs/vue/layout/",
+        "name": "Layout",
+        "image": "https://mdbootstrap.com/wp-content/uploads/2018/11/mdb-jquery-free.jpg"
+      }
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@id": "https://mdbootstrap.com/docs/vue/layout/overview/",
+        "name": "Layout",
+        "image": "https://mdbootstrap.com/wp-content/uploads/2017/06/bootstrap-layout.jpg"
+      }
+    }]
+  }
+  </script>
+
+<!-- Structured data: Article -->
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://mdbootstrap.com/docs/vue/layout/overview/"
+      },
+      "headline": "Vue Layout - Bootstrap 4 & Material Design. Examples & tutorial.",
+      "image": [
+        "https://mdbootstrap.com/wp-content/uploads/2017/06/bootstrap-layout.jpg"
+      ],
+      "datePublished": "2018-06-25T08:00:00+08:00",
+      "dateModified": "2018-06-25T09:20:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "MDBootstrap"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "MDBootstrap",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mdbootstrap.com/wp-content/uploads/2018/06/logo-mdb-jquery-small.png"
+        }
+      },
+      "description": "Vue Bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content."
+    }
+    </script>
+    <script>
+      $(function () {
+        $(".sticky").sticky({
+          topSpacing: 90
+          , zIndex: 2
+          , stopper: "#footer"
+        });
+        $('a[href="#docsTabsAPI"]').on('shown.bs.tab', function (e) {
+
+          $(".sticky2").sticky({
+            topSpacing: 90
+            , zIndex: 2
+            , stopper: "#footer"
+          });
+
+        });
+        $('a[href="#docsTabsExamples"]').on('shown.bs.tab', function (e) {
+
+          $(".sticky3").sticky({
+            topSpacing: 90
+            , zIndex: 2
+            , stopper: "#footer"
+          });
+
+        });
+      });
+    </script>
+    <!-- Agile CRM API
+<script id="_agile_min_js" async type="text/javascript" src="https://mdbootstrap.agilecrm.com/stats/min/agile-min.js"> </script>
+<script type="text/javascript" >
+var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){
+_agile.set_account('8tsva545o547r732truup1icmg', 'mdbootstrap', false);
+_agile.track_page_view();
+_agile_execute_web_rules();};
+</script>
+Agile CRM API-->
+
+</body>
+
+
+<!-- Mirrored from mdbootstrap.com/docs/vue/layout/overview/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 16:20:08 GMT -->
+</html>
+
+  

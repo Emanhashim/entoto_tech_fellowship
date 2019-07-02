@@ -1,0 +1,4 @@
+SELECT * FROM Customer
+WHERE City LIKE '%k'; 
+
+this one selects from the table where city ends with "k"

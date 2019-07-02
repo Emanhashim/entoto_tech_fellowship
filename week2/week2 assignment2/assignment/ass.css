@@ -1,0 +1,46 @@
+    body {
+    background-color :gray;
+}
+header {
+    background-color :black;
+   margin-bottom :0%;
+   height :200px;
+}
+
+.navigation{
+   height:100px;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    align-content: space-between;
+    margin-right: 100px;
+	margin-left:80;#
+   
+}
+a{
+    text-decoration: none;
+}
+nav p{
+    margin-left: 30px;
+}
+
+
+
+}
+.link{
+	margin-right:100%;
+	margin-bottom:0%;
+}
+#form{
+	
+	margin-left:40%;
+	margin-right:20%;
+}
+#img{
+margin-left:50%;}
+.login{
+	margin-left:50px;
+	margin-right:50px;
+}
+p{
+text-align:center;}

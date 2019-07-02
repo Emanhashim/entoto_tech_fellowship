@@ -1,0 +1,5 @@
+SELECT * FROM Products
+WHERE Price NOT BETWEEN 10 AND 20; 
+
+this one selects all rows that has a price between 10 and 20
+currently i got two rows

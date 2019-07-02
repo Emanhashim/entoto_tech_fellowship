@@ -1,0 +1,5 @@
+CREATE INDEX PIndex
+ON Persons (LastName)
+
+this index value used for search pupose and make it quick that we r searching the lastname
+as a catalist

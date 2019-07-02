@@ -1,0 +1,3 @@
+SELECT lower (lastname) FROM employee;
+
+ againi have select my employee table and latname fields to be lowercase and its changed to lowercase indeed

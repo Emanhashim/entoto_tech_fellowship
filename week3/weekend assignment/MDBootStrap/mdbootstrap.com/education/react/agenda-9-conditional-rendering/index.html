@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+<!-- Mirrored from mdbootstrap.com/education/react/agenda-9-conditional-rendering/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 16:18:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="#33b5e5">
+    <link rel="manifest" href="../../../manifest.json">
+
+    
+      <title>Conditional rendering - Material Design for Bootstrap</title>
+    
+    <link rel="shortcut icon" href="../../../wp-content/themes/mdbootstrap4/favicon.ico" />
+
+    <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../wp-load.html';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../wp-load.html';</script><script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<script type="text/javascript">var ajax_url = '../../../wp-load.html';</script>
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	var gtm4wp_use_sku_instead        = 0;
+	var gtm4wp_id_prefix              = '';
+	var gtm4wp_remarketing            = false;
+	var gtm4wp_eec                    = 1;
+	var gtm4wp_classicec              = 1;
+	var gtm4wp_currency               = 'EUR';
+	var gtm4wp_product_per_impression = 0;
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO plugin v11.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Conditional rendering" />
+<meta property="og:url" content="https://mdbootstrap.com/education/react/agenda-9-conditional-rendering/" />
+<meta property="og:site_name" content="Material Design for Bootstrap" />
+<meta property="article:publisher" content="https://www.facebook.com/mdbootstrap" />
+<meta property="article:author" content="https://www.facebook.com/dawid.adach.5" />
+<meta property="og:image" content="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-more.jpg" />
+<meta property="og:image:secure_url" content="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-more.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Conditional rendering" />
+<meta name="twitter:site" content="@MDBootstrap" />
+<meta name="twitter:image" content="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-more.jpg" />
+<meta name="twitter:creator" content="@dawidadach" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='http://chimpstatic.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mdbootstrap.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='../../../wp-includes/css/dist/block-library/style.min7752.css?ver=5.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='../../../wp-content/plugins/woocommerce/assets/css/blocks/style5aed.css?ver=3.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='../../../wp-content/plugins/contact-form-7/includes/css/stylesbdeb.css?ver=5.1.3' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='wsl-widget-css'  href='../../../wp-content/plugins/wordpress-social-login/assets/css/style7752.css?ver=5.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='compiled.css-css'  href='../../../wp-content/themes/mdbootstrap4/css/compiled-4.8.2.min4a41.css?ver=4.8.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mdw_search_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","search_tree":{"44772":{"title":"react images - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap images are automatically adjusted to all screen sizes - image will never be larger than parent elements. its styles can be changed via classes.","link":"https:\/\/mdbootstrap.com?page_id=44772","wptitle":"Images"},"44843":{"title":"react visibility - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap visibility class allows controlling the visibility of elements without changing the display. this utility keep content visible for screen readers.","link":"https:\/\/mdbootstrap.com?page_id=44843","wptitle":"Visibility"},"44935":{"title":"react buttons - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap buttons are components which are triggering a desirable user interaction. easy to customize in terms of size, shape, and color.","link":"https:\/\/mdbootstrap.com?page_id=44935","wptitle":"Buttons"},"45060":{"title":"react charts - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap charts are graphical representations of data. charts come in different sizes and shapes: bar, line, pie, radar, polar and more.","link":"https:\/\/mdbootstrap.com?page_id=45060","wptitle":"Charts"},"45063":{"title":"react bootstrap breadcrumb - examples & tutorial. basic & advanced usage","description":"react bootstrap breadcrumbs are navigation elements which indicate a current location on the website. breadcrumbs show a hierarchy of the current location as well","link":"https:\/\/mdbootstrap.com?page_id=45063","wptitle":"Breadcrumb"},"46923":{"title":"react layout - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap layout includes responsive breakpoints in grid system for providing mobile-first experience and z-index - a third axis to arrange content.","link":"https:\/\/mdbootstrap.com?page_id=46923","wptitle":"Layout overview"},"46924":{"title":"react bootstrap grid examples","description":"over 8 react bootstrap grid examples using the 12 columns bootstrap grid system to position your pieces of content exactly as you wish to.","link":"https:\/\/mdbootstrap.com?page_id=46924","wptitle":"Grid examples"},"46925":{"title":"react bootstrap grid usage","description":"learn about all the pros and cons of using dedicated, react bootstrap grid system, and most importantly about its 12 column layout.","link":"https:\/\/mdbootstrap.com?page_id=46925","wptitle":"Grid system"},"46926":{"title":"react utilities - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap utilities for layout are a group of helpers, which is useful in showing, hiding, aligning, and spacing content.","link":"https:\/\/mdbootstrap.com?page_id=46926","wptitle":"Utilities"},"46927":{"title":"react media - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap media provides you with various ways of presenting images and videos to your audience thanks to bootstrap way of handling those elements.","link":"https:\/\/mdbootstrap.com?page_id=46927","wptitle":"Media object"},"46928":{"title":"react components - bootstrap 4 & material design. examples & tutorial","description":"learn how to use react bootstrap components at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com?page_id=46928","wptitle":" Components"},"46929":{"title":"react tags, labels & badges - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap tags, labels & badges categorize content with use of a text or icons, making it easier to browse throughout articles, comments or pages.","link":"https:\/\/mdbootstrap.com?page_id=46929","wptitle":"Tags, Labels & Badges"},"46931":{"title":"react collapse - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap collapse is a component which toggles content. useful for grouping great amount of texts and\/or graphics into expanding and collapsing items.","link":"https:\/\/mdbootstrap.com?page_id=46931","wptitle":"Collapse"},"46933":{"title":"react figures - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap figures are commonly used elements for displaying images with the caption. a caption can be left-aligned or right-align.","link":"https:\/\/mdbootstrap.com?page_id=46933","wptitle":"Figures"},"46934":{"title":"react code - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap code is a set of classes which are used for styling text as inline codes, variables, users inputs, sample outputs or blocks of code.","link":"https:\/\/mdbootstrap.com?page_id=46934","wptitle":"Code"},"46935":{"title":"react typography - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap typography is the style and appearance of headings, lists, body text and basic paragraphs - 14 examples coming along with descriptions.","link":"https:\/\/mdbootstrap.com?page_id=46935","wptitle":"Typography"},"46939":{"title":"react borders - bootstrap 4 & material design. examples & tutorial.","description":"vue bootstrap borders are lines placed on the edges of buttons, images, and other web elements. additionally, border-radius class rounds the elements corners.","link":"https:\/\/mdbootstrap.com?page_id=46939","wptitle":"Borders"},"46940":{"title":"react clearfix - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap clearfix is a utility which to automatically clear child elements, so a user doesn't have to add additional markup.","link":"https:\/\/mdbootstrap.com?page_id=46940","wptitle":"Clearfix"},"46941":{"title":"react close icon - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap close icon is an element which is used for dismissing components like modals and alerts. see how easy implementation is.","link":"https:\/\/mdbootstrap.com?page_id=46941","wptitle":"Icon"},"46942":{"title":"react display - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap display is a property which applies to many elements and specifies the type of rendering box used for an element.","link":"https:\/\/mdbootstrap.com?page_id=46942","wptitle":"Display"},"46943":{"title":"react embeds - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap embeds is a utility which helps you insert video or slideshow in the page keeping width of the parent and scales on any device.","link":"https:\/\/mdbootstrap.com?page_id=46943","wptitle":"Embeds"},"46944":{"title":"react float - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap float is a utility which specified whether an element will be placed on the right or left side of a container. floating may be also disabled.","link":"https:\/\/mdbootstrap.com?page_id=46944","wptitle":"Float"},"46945":{"title":"react flexbox - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap flexbox is a utility for managing position of the items in a container and distributes space between them in a more efficient way.","link":"https:\/\/mdbootstrap.com?page_id=46945","wptitle":"Flexbox"},"46946":{"title":"react image replacement - bootstrap 4 & material design. examples & tutorial.","description":"react image replacement is a utility that lets you swap text for background images by adding a single class.","link":"https:\/\/mdbootstrap.com?page_id=46946","wptitle":"Image replacement"},"46947":{"title":"react position - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap position utilities are helpful for quickly placing a component outside the normal document flow. see a handful of fixed position classes.","link":"https:\/\/mdbootstrap.com?page_id=46947","wptitle":"Position"},"46948":{"title":"react screenreaders - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap screenreaders is an assistive technology which hides elements on every device except screen readers with a single class.","link":"https:\/\/mdbootstrap.com?page_id=46948","wptitle":"Screenreaders"},"46949":{"title":"react tables - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap tables - basic and advanced usage. fully functional, responsive examples with search and sort options & pagination, buttons & icons elements.","link":"https:\/\/mdbootstrap.com?page_id=46949","wptitle":"Tables"},"46950":{"title":"react sizing - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap sizing is a utility which allows you to adjust elements width or height. there are 4 available values: 25%, 50%, 75% and 100%.","link":"https:\/\/mdbootstrap.com?page_id=46950","wptitle":"Sizing"},"46951":{"title":"react spacing - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap spacing is a utility which assigns responsive margin or padding classes to elements to modify its display position.","link":"https:\/\/mdbootstrap.com?page_id=46951","wptitle":"Spacing"},"46952":{"title":"react text - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap text utilities are a group of text modifiers which change text alignment, wrapping, letter capitalization, weight, and italics.","link":"https:\/\/mdbootstrap.com?page_id=46952","wptitle":"Text"},"46953":{"title":"react vertical align - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap vertical align is a utility that specifies the alignment of elements. works with inline, inline-block, inline-table, and table cell elements only.","link":"https:\/\/mdbootstrap.com?page_id=46953","wptitle":"Vertical Align"},"46954":{"title":"react inputs - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap input is a special field which is used in order to receive data from the user. used mostly in a variety of web-based forms.","link":"https:\/\/mdbootstrap.com?page_id=46954","wptitle":"Inputs"},"46955":{"title":"react card - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap cards are components which display content build of different elements with characteristic shadows, depth and hover effects.","link":"https:\/\/mdbootstrap.com?page_id=46955","wptitle":"Cards"},"46956":{"title":"react pagination - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap pagination is a component used when content is divided into separate pages to display the page numbers and enable navigation between them.","link":"https:\/\/mdbootstrap.com?page_id=46956","wptitle":"Pagination"},"46957":{"title":"react progress bar - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap progress bar is a component which displays a progress of a process in which user is involved. their color, shape, and animation can be customized.","link":"https:\/\/mdbootstrap.com?page_id=46957","wptitle":"Progress Bar"},"46959":{"title":"react modals - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap modal is lightweight, but powerful & multipurpose popup. learn how to manipulate size, styles & position. multiple examples and detailed tutorial.","link":"https:\/\/mdbootstrap.com?page_id=46959","wptitle":"Modals"},"46960":{"title":"react bootstrap with material design - getting started & download","description":"see how easy it is to install and use free material design for react bootstrap ui kit. you need only 5 minutes to start creating stunning websites with no effort.","link":"https:\/\/mdbootstrap.com?page_id=46960","wptitle":"Bootstrap Getting Started"},"46999":{"title":"react popovers - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap popover is a component which displays a box with a content after a click on an element - similar to the tooltip but can contain more content.","link":"https:\/\/mdbootstrap.com?page_id=46999","wptitle":"Popovers"},"47001":{"title":"react tooltips - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap tooltips are little clouds with a brief text message, triggered by clicking on a specific element or hovering over it.","link":"https:\/\/mdbootstrap.com?page_id=47001","wptitle":"Tooltips"},"47202":{"title":"react alerts - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap alerts are feedback messages which are displayed after specific actions preceded by the user. length of the text is not limited.","link":"https:\/\/mdbootstrap.com?page_id=47202","wptitle":"Alerts"},"47513":{"title":"react tabs - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap tabs are components which separate content placed in the same wrapper but in the separate pane. only one pane can be displayed at the time.","link":"https:\/\/mdbootstrap.com?page_id=47513","wptitle":"Tabs"},"47514":{"title":"react css - bootstrap 4 & material design. examples & tutorial","description":"learn how to use react bootstrap css at basic and advanced level. read our visual guide and comprehensive tutorial about the newest bootstrap 4.","link":"https:\/\/mdbootstrap.com?page_id=47514","wptitle":"CSS"},"47515":{"title":"react masks - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap masks alter the visibility of an element by either partially or fully hiding it. masks are used to make content more visible in the picture.","link":"https:\/\/mdbootstrap.com?page_id=47515","wptitle":"Masks"},"47516":{"title":"react dropdown - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap dropdown is a toggleable menu embedding additional links or content. it allows you to construct advanced navigation and link categorization","link":"https:\/\/mdbootstrap.com?page_id=47516","wptitle":"Dropdowns"},"47517":{"title":"react carousel - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap carousel is responsive and interactive slideshow which is created for presenting content, especially images and videos.","link":"https:\/\/mdbootstrap.com?page_id=47517","wptitle":"Carousel"},"48909":{"title":"react mdbootstrap newsletter - most important news, updates & tutorials","description":"react mdbootstrap newsletter - easy unsubscription, no spam messages. we'll write rarely, but only the best content. specify your preferences and stay up to date","link":"https:\/\/mdbootstrap.com?page_id=48909","wptitle":"Newsletter"},"50509":{"title":"mdbootstrap react changelog - list of changes in the newest release","description":"material design for react bootstrap provides a detailed list of changes in each release. read it carefully to do not miss any important update.","link":"https:\/\/mdbootstrap.com?page_id=50509","wptitle":" Changelog"},"51580":{"title":"react hover effects - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap hover effect appears when a user positions computer cursor over an element without activating it. hover effects make a website more interactive.","link":"https:\/\/mdbootstrap.com?page_id=51580","wptitle":"Hover effects"},"51582":{"title":"react forms - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap forms are input-based components which are designed to collect users data. used as login, subscribe or contact form, all can be easily customized.","link":"https:\/\/mdbootstrap.com?page_id=51582","wptitle":"Forms"},"51584":{"title":"react datepicker - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap date picker is a component that allows your users to pick the time in a straightforward, visual manner, while requiring minimum setup.","link":"https:\/\/mdbootstrap.com?page_id=51584","wptitle":"Date Picker"},"51586":{"title":"react timepicker - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap time picker is a plugin which allows a user to select a time in the bootstrap form.","link":"https:\/\/mdbootstrap.com?page_id=51586","wptitle":"Time picker"},"51589":{"title":"react select - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap material select is a form control which after a click displays a collapsable list of multiple values which can be used in forms, menus or surveys.","link":"https:\/\/mdbootstrap.com?page_id=51589","wptitle":"Select"},"51592":{"title":"react scrollspy - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap scrollspy autmatically updates tabs, navigation or list group components based on scroll position to indicate which link is currently active in the viewport.","link":"https:\/\/mdbootstrap.com?page_id=51592","wptitle":"ScrollSpy"},"51594":{"title":"react sidebar \/ sidenav - bootstrap 4 & material design. examples & tutorial","description":"react sidenav is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com?page_id=51594","wptitle":"SideNav"},"51596":{"title":"react navigation - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap navigation is a combination of navbar, sidenav, and footer in various forms and different functionalities like non-fixed navbar or hidden sidenav.","link":"https:\/\/mdbootstrap.com?page_id=51596","wptitle":"Navigation"},"51598":{"title":"react navbar - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap navbar is a horizontal navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.","link":"https:\/\/mdbootstrap.com?page_id=51598","wptitle":"Navbar"},"53644":{"title":"react animations - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap animations are illusions of motions for web elements. +70 animations generated by css only, work properly on every browser.","link":"https:\/\/mdbootstrap.com?page_id=53644","wptitle":"Animations"},"53646":{"title":"react colors - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap colors is a sensational palette of 300 delightful colors, which will aid you in creating inviting, consistent design.","link":"https:\/\/mdbootstrap.com?page_id=53646","wptitle":"Colors"},"53717":{"title":"react shadows - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap shadow is an effect used in web elements which provides important visual cues about objects' depth and directional movement.","link":"https:\/\/mdbootstrap.com?page_id=53717","wptitle":"Shadows"},"53720":{"title":"react skins - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap skins are basic color schemes which can be applied for the website providing ready to use full-page web design.","link":"https:\/\/mdbootstrap.com?page_id=53720","wptitle":"Skins"},"53834":{"title":"react list group - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap list groups are a flexible component which displays not only simple list of elements but complex custom content.","link":"https:\/\/mdbootstrap.com?page_id=53834","wptitle":"List Group"},"53985":{"title":"react footer - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap footer is an additional navigation for the website. it can hold links, buttons, company info, copyrights, forms and many other elements.","link":"https:\/\/mdbootstrap.com?page_id=53985","wptitle":"Footer"},"56184":{"title":"react lightbox - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap lightbox is a group of images combined in one responsive gallery. elements are grouped in grid, which can be displayed as a slideshow.","link":"https:\/\/mdbootstrap.com?page_id=56184","wptitle":"Lightbox"},"56237":{"title":"react sticky content - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap sticky content (affix) is a plugin which allows elements to be locked in the particular area of the page. often used in navigation menus.","link":"https:\/\/mdbootstrap.com?page_id=56237","wptitle":"Sticky"},"56972":{"title":"react bootstrap - 5 min quick start","description":"get started with mdbootstrap react, the world's most popular material design framework for building responsive, mobile-first sites.","link":"https:\/\/mdbootstrap.com?page_id=56972","wptitle":" 5 min Quick Start"},"57865":{"title":"react bootstrap blog section","description":"this blog sections gather all the most useful components that may come in handy in managing a content-heavy blog page.","link":"https:\/\/mdbootstrap.com?page_id=57865","wptitle":"Blog"},"57870":{"title":"react bootstrap contact section","description":"contact section gathers all the essential components used in providing your users with location details, emails or phone numbers.","link":"https:\/\/mdbootstrap.com?page_id=57870","wptitle":"Contact"},"57872":{"title":"react bootstrap e-commerce","description":"e-commerce section brings together all the components used in managing an online shop, along with product cards and carousels.","link":"https:\/\/mdbootstrap.com?page_id=57872","wptitle":"Commerce"},"57874":{"title":"react bootstrap features","description":"features sections let you present your project, product or idea in a way that will surely convince the visitor about its value.","link":"https:\/\/mdbootstrap.com?page_id=57874","wptitle":"Features"},"57876":{"title":"react bootstrap intros","description":"intro section introduce your users to the most valuable piece of the information about the project, app, software or product.","link":"https:\/\/mdbootstrap.com?page_id=57876","wptitle":"Intros"},"57878":{"title":"react bootstrap magazine","description":"magazine section gathers most crucial components useful in managing a content-heavy website or a more simple blog.","link":"https:\/\/mdbootstrap.com?page_id=57878","wptitle":"Magazine"},"57880":{"title":"react bootstrap projects","description":"projects section is useful if you are about to show your website visitors how exactly you develop each project and what is it about.","link":"https:\/\/mdbootstrap.com?page_id=57880","wptitle":"Projects"},"57882":{"title":"react bootstrap social","description":"social sections are rich in a variety of news feed types with comments, likes, profiles and sharing options ready to be implemented on your platform.","link":"https:\/\/mdbootstrap.com?page_id=57882","wptitle":"Social"},"57885":{"title":"react bootstrap team sections","description":"team sections let you present all your crew members in a way that your visitors will love. that's a great opportunity to get them to know you.","link":"https:\/\/mdbootstrap.com?page_id=57885","wptitle":"Team"},"57888":{"title":"react bootstrap testimonials","description":"testimonials sections is a chance for you to show your website visitors how your community love your projects, product or an app.","link":"https:\/\/mdbootstrap.com?page_id=57888","wptitle":"Testimonials"},"57891":{"title":"react buttons social - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap social buttons are buttons which are dedicated for social media usage. font awesome covers icons for all major platforms.","link":"https:\/\/mdbootstrap.com?page_id=57891","wptitle":"Social buttons"},"59421":{"title":"react panels - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap panels are bordered boxes where you can place texts, lists, tables and other content. panels are similar to cards, but they don't include media.","link":"https:\/\/mdbootstrap.com?page_id=59421","wptitle":"Panels"},"59428":{"title":"react bootstrap search - examples & tutorial. basic & advanced usage","description":"react bootstrap search is a component which enables a process of finding words, sentences, and numbers in the collection of documents, web pages or other sources.","link":"https:\/\/mdbootstrap.com?page_id=59428","wptitle":"Search"},"59430":{"title":"react autocomplete - examples & tutorial. basic & advanced usage","description":"react autocomplete is a component which predicts the words basing on the first few letters given by a user, while one is typing it.","link":"https:\/\/mdbootstrap.com?page_id=59430","wptitle":"Autocomplete"},"59614":{"title":"react material design for bootstrap - frequently asked questions","description":"check out the most popular questions asked by community to fastly find out the answer to your problems connected with mdbootstrap react package.","link":"https:\/\/mdbootstrap.com?page_id=59614","wptitle":" FAQ"},"60713":{"title":"react form validation - bootstrap 4 & material design. examples & tutorial","description":"bootstrap form validation are input-based components which collect and validate users data. used as login or register can improve user experience.","link":"https:\/\/mdbootstrap.com?page_id=60713","wptitle":"Form Validation"},"60718":{"title":"react table editable - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60718","wptitle":"Table Editable"},"60721":{"title":"react table pagination - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60721","wptitle":"Table Pagination"},"60725":{"title":"react tables - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60725","wptitle":"Table Responsive"},"60727":{"title":"react table scroll - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60727","wptitle":"Table Scroll"},"60731":{"title":"react table search - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60731","wptitle":"Table Search"},"60733":{"title":"react table sort - bootstrap 4 & material design. examples & tutorial.","description":"react tables are the best way of presenting a huge amount of data to users. tables are responsive and offers variety of data segregation methods.","link":"https:\/\/mdbootstrap.com?page_id=60733","wptitle":"Table Sort"},"60735":{"title":"react stepper - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap stepper is a component that displays content as a process with defined by user milestones. following steps are separated and connected by buttons.","link":"https:\/\/mdbootstrap.com?page_id=60735","wptitle":"Stepper"},"75285":{"title":"react datatables - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap 4 integration with the most popular plugin enhancing the possibilities of standard tables. available in material design or default bootstrap style.","link":"https:\/\/mdbootstrap.com?page_id=75285","wptitle":"Datatables"},"75288":{"title":"react tables - bootstrap 4 & material design. examples & tutorial.","description":"extended bootstrap tables with additional elements like buttons, checkboxes, icons, panels & more.","link":"https:\/\/mdbootstrap.com?page_id=75288","wptitle":"Table styles &amp; examples"},"75580":{"title":"react checkbox - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap checkbox is a component used for allowing a user to make a multiple choice. broadly used in the forms and surveys.","link":"https:\/\/mdbootstrap.com?page_id=75580","wptitle":"Checkbox"},"79358":{"title":"react modal generator - free, online editor for bootstrap 4 modals","description":"react modal generator - a simple and fast way to create a bootstrap 4 modals with custom styles, sizes, animations and positions.","link":"https:\/\/mdbootstrap.com?page_id=79358","wptitle":"Modal Generator"},"79790":{"title":"react hamburger menu - examples & tutorial. basic & advanced usage","description":"react hamburger menu is a navigation with additional hamburger looks-like icon which activates hidden menu elements in navbar or sidenav.","link":"https:\/\/mdbootstrap.com?page_id=79790","wptitle":"Hamburger Menu"},"80176":{"title":"react bootstrap iframe - examples & tutorial. basic & advanced usage","description":"react bootstrap iframe is an html document which is embedded in another html doc on a web page. iframes are used to insert content from another source.","link":"https:\/\/mdbootstrap.com?page_id=80176","wptitle":"Iframe"},"80180":{"title":"react bootstrap timelines - examples & tutorial. basic & advanced usage","description":"bootstrap timeline is a component which can be used to display content in chronological order. listed items may contain not only text but also images.","link":"https:\/\/mdbootstrap.com?page_id=80180","wptitle":"Timeline"},"80650":{"title":"react chat - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap chat is a component dedicated for text-based communication between two or more users in real time. build with conversations list sidebar.","link":"https:\/\/mdbootstrap.com?page_id=80650","wptitle":"Chat"},"81038":{"title":"react bootstrap with material design - powerful and free ui kit","description":"react 16, bootstrap 4 & material design. 400+ material ui elements, 600+ material icons, 74 css animations, sass files and many more. no jquery.","link":"https:\/\/mdbootstrap.com?page_id=81038","wptitle":"Material Design for Bootstrap (React version)"},"81337":{"title":"","description":"%%excerpt%% multiple plugins for react js, addons which enhance your react bootstrap project. quick install, easy to use & customize. huge community and fast support.","link":"https:\/\/mdbootstrap.com?page_id=81337","wptitle":"MDB React plugins & addons"},"81664":{"title":"react radio button - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap radio buttons are option buttons, which allows users to choose one of a predefined set of two or more options. commonly used in forms and surveys.","link":"https:\/\/mdbootstrap.com?page_id=81664","wptitle":"Radio Button"},"81674":{"title":"react bootstrap switch - examples & tutorial. basic & advanced usage","description":"react bootstrap switch is a simple component used for activating one of two predefined options. commonly used as an on\/off button.","link":"https:\/\/mdbootstrap.com?page_id=81674","wptitle":"Switch"},"82419":{"title":"react slider - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap slider is an interactive component that lets the user swiftly slide through possible values spread on the desired range.","link":"https:\/\/mdbootstrap.com?page_id=82419","wptitle":"Slider"},"82426":{"title":"react file input - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap file input is a field which user can use to upload one or more files (photos, documents or any other file type) from the local storage.","link":"https:\/\/mdbootstrap.com?page_id=82426","wptitle":"File Input"},"82433":{"title":"react textarea - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap textarea is an input dedicated for a large volume of text. it may be used in a variety of components like forms, comment sections, and forums.","link":"https:\/\/mdbootstrap.com?page_id=82433","wptitle":"Textarea"},"82435":{"title":"react bootstrap notifications - examples & tutorial. basic & advanced usage","description":"react bootstrap notifications are feedback messages which are displayed after specific actions preceded by the user. length of the text is not limited.","link":"https:\/\/mdbootstrap.com?page_id=82435","wptitle":"Notifications"},"82682":{"title":"react pills - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap pills are simple navigation components that expedite browsing through various options in the layout.","link":"https:\/\/mdbootstrap.com?page_id=82682","wptitle":"Pills"},"82780":{"title":"react background image - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap background image is an illustration chosen by a user placed behind all other objects on the website. it may be full or partially visible.","link":"https:\/\/mdbootstrap.com?page_id=82780","wptitle":"Background Image"},"82784":{"title":"react gradient - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap gradient is a linear color progression - a transition between two colors is fluent. gradient can be used in various of components.","link":"https:\/\/mdbootstrap.com?page_id=82784","wptitle":"Gradients"},"82792":{"title":"react icons - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap icons usage is a quick tutorial which describes the proper way of using font awesome icons in bootstrap framework.","link":"https:\/\/mdbootstrap.com?page_id=82792","wptitle":"Icons usage"},"82799":{"title":"react icons list - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap icon list is a number of 600 scalable vector icons called font awesome which covers multiple topics and use cases.","link":"https:\/\/mdbootstrap.com?page_id=82799","wptitle":"Icons list"},"82832":{"title":"react loader\/spinner - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap loader is animation that is used to keep visitors entertained while the page is still loading, which helps to increase the user experience.","link":"https:\/\/mdbootstrap.com?page_id=82832","wptitle":"Loader\/Spinner"},"83002":{"title":"react media queries - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap media queries are queries use for applying styles determined by the general type of the device, browsers characteristics or environment.","link":"https:\/\/mdbootstrap.com?page_id=83002","wptitle":"Media Queries"},"83400":{"title":"react buttons group - bootstrap 4 & material design. examples & tutorial","description":"react bootstrap buttons are components which are triggering a desirable user interaction. easy to customize in terms of size, shape, and color.","link":"https:\/\/mdbootstrap.com?page_id=83400","wptitle":"Button Group"},"83403":{"title":"react accordion - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap accordion is a component which organizes content within collapsable items. accordion allows showing only one collapsed item at the same time.","link":"https:\/\/mdbootstrap.com?page_id=83403","wptitle":"Accordion"},"83406":{"title":"react jumbotron - bootstrap 4 & material design. examples & tutorial.","description":"react jumbotron is a responsive component which the main goal is to focus visitor's attention or highlight the special piece of information.","link":"https:\/\/mdbootstrap.com?page_id=83406","wptitle":"Jumbotron"},"83450":{"title":"react edge header - bootstrap 4 & material design. examples & tutorial.","description":"react edge header is a full-width block located on the top of a page as a part of a background for a card. it is a unique material design component.","link":"https:\/\/mdbootstrap.com?page_id=83450","wptitle":"Edge header"},"83453":{"title":"react flipping cards - bootstrap 4 & material design. examples & tutorial.","description":"react flipping card is a card animation that gives an element effect of flipping to the other side upon the interaction.","link":"https:\/\/mdbootstrap.com?page_id=83453","wptitle":"Flipping cards"},"83455":{"title":"react streak - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap streak is a horizontal block containing text, uses to separate content sections or highlight some piece of information.","link":"https:\/\/mdbootstrap.com?page_id=83455","wptitle":"Streak"},"84682":{"title":"react blog components - examples & tutorial. basic & advanced usage","description":"react bootstrap blog components is a set of components which are dedicated to building a blog or any other content-oriented website.","link":"https:\/\/mdbootstrap.com?page_id=84682","wptitle":"Blog Components"},"84697":{"title":"react e-commerce components - examples, tutorial & advance usage","description":"react bootstrap e-commerce components is a set of components which are necessary to build online stores and any other e-commerce business.","link":"https:\/\/mdbootstrap.com?page_id=84697","wptitle":"Commerce components"},"84753":{"title":"react overflow - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap overflow utility helps to quickly configure how content overflows an element.","link":"https:\/\/mdbootstrap.com?page_id=84753","wptitle":"Overflow"},"84792":{"title":"react masonry - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap masonry is a grid layout based on columns. unlike other grid layouts, it doesn\u2019t have fixed height rows.","link":"https:\/\/mdbootstrap.com?page_id=84792","wptitle":"Masonry"},"84965":{"title":"react multiselect - bootstrap 4 & material design. examples & tutorial.","description":"bootstrap material multiselect is a form control, that after the click displays a collapsable list of multiple values which can be used in forms, menus or surveys.","link":"https:\/\/mdbootstrap.com?page_id=84965","wptitle":"Multiselect"},"84973":{"title":"react waves - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap waves effect is an impression of circular overlay movement, triggered by clicking the object, flowing from the center of the click.","link":"https:\/\/mdbootstrap.com?page_id=84973","wptitle":"Waves effect"},"85186":{"title":"react scrollbar & smoothscroll - bootstrap 4 & material design. examples & tutorial.","description":"react bootstrap scrollbar can be used on elements with content too wide or tall to wrap smoothly inside container. smooth scroll is an animated movement from a trigger to another place of the same page.","link":"https:\/\/mdbootstrap.com?page_id=85186","wptitle":"Scrollbar & SmoothScroll"},"85191":{"title":"react navs - bootstrap 4 & material design. examples & tutorial.","description":"the base nav component is built with flexbox and provide a strong foundation for building all types of navigation components.","link":"https:\/\/mdbootstrap.com?page_id=85191","wptitle":"Navs"}}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_auth_object = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","redirecturl":"https:\/\/mdbootstrap.com","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shareCountsData = {"oldShareCounts":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-admin/load-scriptsb4bc.php?c=gzip&amp;load%5B%5D=jquery-core,jquery-migrate&amp;ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-classic2c00.js?ver=1.9.2'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-enhanced2c00.js?ver=1.9.2'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/mdb-searchfe9d.js?ver=4.7.3'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/jquery.validate7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/ajax-auth-script7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/tutorial-share-countsf0af.js?ver=4.8.2-update.3'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.1" />
+<meta name="generator" content="WooCommerce 3.6.4" />
+<link rel='shortlink' href='../../../index1246.html?p=84293' />
+<link rel="alternate" type="application/json+oembed" href="../../../wp-json/oembed/1.0/embed122d.json?url=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../../wp-json/oembed/1.0/embedada5?url=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F&amp;format=xml" />
+
+        <!-- Push Notifications user -->
+
+        <script>
+
+            var wp_ajaxurl = "../../../wp-admin/admin-ajax.html";
+
+
+
+            
+                var pnu = true;
+
+            
+
+
+        </script>
+
+        <!--/.Push Notifications user -->
+
+    
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"customerTotalOrders":0,"customerTotalOrderValue":"0.00","customerFirstName":"","customerLastName":"","customerBillingFirstName":"","customerBillingLastName":"","customerBillingCompany":"","customerBillingAddress1":"","customerBillingAddress2":"","customerBillingCity":"","customerBillingPostcode":"","customerBillingCountry":"","customerBillingEmail":"","customerBillingPhone":"","customerShippingFirstName":"","customerShippingLastName":"","customerShippingCompany":"","customerShippingAddress1":"","customerShippingAddress2":"","customerShippingCity":"","customerShippingPostcode":"","customerShippingCountry":""});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W7MBMN');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="referrer" content="always"/>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="icon" href="../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../../wp-content/uploads/2016/11/cropped-ms-icon-310x310-180x180.png" />
+<meta name="msapplication-TileImage" content="https://mdbootstrap.com/wp-content/uploads/2016/11/cropped-ms-icon-310x310-270x270.png" />
+        <script type="text/javascript">
+            var woocs_is_mobile = 0;
+            var woocs_drop_down_view = "ddslick";
+            var woocs_current_currency = {"name":"EUR","rate":1,"symbol":"&euro;","position":"left_space","is_etalon":0,"hide_cents":1,"decimals":0,"description":"European Euro","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+            var woocs_default_currency = {"name":"USD","rate":1,"symbol":"&#36;","position":"left","is_etalon":1,"hide_cents":1,"decimals":0,"description":"USA dollar","flag":"https:\/\/mdbootstrap.com\/wp-content\/plugins\/woocommerce-currency-switcher\/img\/no_flag.png"};
+            var woocs_array_of_get = '{}';
+        
+            woocs_array_no_cents = '["JPY","TWD"]';
+
+            var woocs_ajaxurl = "../../../wp-admin/admin-ajax.html";
+            var woocs_lang_loading = "loading";
+            var woocs_shop_is_cached =0;
+        </script>
+            <script> var currency = '€'; </script>
+    <meta name="p:domain_verify" content="ba4bb1f26dcf05eadc4ea92722eca381"/>
+
+
+<!-- Ahref verification -->
+<meta name="ahrefs-site-verification" content="cd945a30a32beb9f20f22626c5f801f2063a726c6fd9af1db55ce27eafaa1e45">
+
+</head>
+
+<body class="fixed-sn mdb-skin-custom " data-spy="scroll" data-target="#scrollspy" data-offset="15">
+
+
+
+<header>
+  
+<!-- Sidebar navigation -->
+<div id="slide-out" class="side-nav sn-bg-4 mdb-sidenav fixed">
+  <ul class="custom-scrollbar list-unstyled" style="max-height:100vh; padding-bottom:90px">
+    <!-- Logo -->
+    <li class="logo-sn d-block waves-effect">
+      <div class="text-center">
+        <a class="pl-0" href="../../../index.html"><img id="MDB-logo" src="../../../img/Marketing/other/logo/logo-mdb-react-small.png" alt="MDB Logo"></a>
+      </div>
+    </li>
+    <!--/. Logo -->
+    <!--Search Form-->
+    <li>
+      <form class="search-form" onkeypress="return event.keyCode != 13;" role="search" method="GET" autocomplete="off">
+        <div class="form-group md-form mt-0 d-block waves-light">
+          <input type="text" class="form-control pb-1 pt-2 mb-0" name="mdw_serach" placeholder="Search"
+                 id="mdb_main_search">
+          <label for="mdb_main_search" class="sr-only">Search</label>
+        </div>
+        <div class="dropdown-wrapper"></div>
+      </form>
+    </li>
+    <!--/.Search Form-->
+    <!-- Side navigation links -->
+    <li>
+      <ul id="side-menu" class="collapsible collapsible-accordion"><li id="menu-item-81319" class="menu-item menu-item-type-post_type menu-item-object-product  menu-item-81319"><a class="collapsible-header waves-effect" id="link-menu-item-81319"  href="../../../products/react-ui-kit/index.html"><i class="far fa-gem"></i>MDB React Pro</a></li>
+<li id="menu-item-88069" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-88069"><a class="collapsible-header waves-effect" id="link-menu-item-88069"  href="../../../products/index.html"><i class="fas fa-gem"></i>Products</a></li>
+<li id="menu-item-59475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-59475"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-download"></i>Getting started<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81329" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81329"><a class="collapsible-header waves-effect" id="link-menu-item-81329"  href="../../../docs/react/index.html">About MDB React</a></li>
+	<li id="menu-item-46962" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46962"><a class="collapsible-header waves-effect" id="link-menu-item-46962"  href="../../../docs/react/getting-started/download/index.html">Download</a></li>
+	<li id="menu-item-59478" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59478"><a class="collapsible-header waves-effect" id="link-menu-item-59478"  href="../../../docs/react/getting-started/quick-start/index.html">Quick start</a></li>
+	<li id="menu-item-85136" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor  menu-item-85136"><a class="collapsible-header waves-effect" id="link-menu-item-85136"  href="../index.html">Full tutorial</a></li>
+	<li id="menu-item-87548" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-87548"><a class="collapsible-header waves-effect" id="link-menu-item-87548"  href="../../../cli/index.html">MDB CLI</a></li>
+	<li id="menu-item-81529" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81529"><a class="collapsible-header waves-effect" id="link-menu-item-81529"  href="../../../docs/jquery/index.html">MDB jQuery</a></li>
+	<li id="menu-item-81530" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81530"><a class="collapsible-header waves-effect" id="link-menu-item-81530"  href="../../../docs/angular/index.html">MDB Angular</a></li>
+	<li id="menu-item-81531" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81531"><a class="collapsible-header waves-effect" id="link-menu-item-81531"  href="../../../docs/vue/index.html">MDB Vue</a></li>
+	<li id="menu-item-59481" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59481"><a class="collapsible-header waves-effect" id="link-menu-item-59481"  href="../../../publications/front-end/bootstrap-news/index.html">News</a></li>
+	<li id="menu-item-59480" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-59480"><a class="collapsible-header waves-effect" id="link-menu-item-59480"  href="../../../index.html">Home page</a></li>
+</ul></div>
+</li>
+<li id="menu-item-46961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-46961"><a class="collapsible-header waves-effect arrow-r "><i class="fas  fa-th-large"></i>Layout<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-46966" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46966"><a class="collapsible-header waves-effect" id="link-menu-item-46966"  href="../../../docs/react/layout/overview/index.html">Layout overview</a></li>
+	<li id="menu-item-46968" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46968"><a class="collapsible-header waves-effect" id="link-menu-item-46968"  href="../../../docs/react/layout/grid-examples/index.html">Grid examples</a></li>
+	<li id="menu-item-46967" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46967"><a class="collapsible-header waves-effect" id="link-menu-item-46967"  href="../../../docs/react/layout/grid-usage/index.html">Grid usage</a></li>
+	<li id="menu-item-84795" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84795"><a class="collapsible-header waves-effect" id="link-menu-item-84795"  href="../../../docs/react/layout/masonry/index.html">Masonry</a></li>
+	<li id="menu-item-46970" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46970"><a class="collapsible-header waves-effect" id="link-menu-item-46970"  href="../../../docs/react/layout/media-object/index.html">Media object</a></li>
+	<li id="menu-item-83005" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83005"><a class="collapsible-header waves-effect" id="link-menu-item-83005"  href="../../../docs/react/layout/media-queries/index.html">Media Queries</a></li>
+	<li id="menu-item-46971" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46971"><a class="collapsible-header waves-effect" id="link-menu-item-46971"  href="../../../docs/react/layout/utilities/index.html">Utilities for layout</a></li>
+</ul></div>
+</li>
+<li id="menu-item-46963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-46963"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-object-ungroup"></i>Utilities<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-46972" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46972"><a class="collapsible-header waves-effect" id="link-menu-item-46972"  href="../../../docs/react/utilities/borders/index.html">Borders</a></li>
+	<li id="menu-item-46973" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46973"><a class="collapsible-header waves-effect" id="link-menu-item-46973"  href="../../../docs/react/utilities/clearfix/index.html">Clearfix</a></li>
+	<li id="menu-item-46974" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46974"><a class="collapsible-header waves-effect" id="link-menu-item-46974"  href="../../../docs/react/utilities/close-icon/index.html">Close Icon</a></li>
+	<li id="menu-item-46975" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46975"><a class="collapsible-header waves-effect" id="link-menu-item-46975"  href="../../../docs/react/utilities/display/index.html">Display</a></li>
+	<li id="menu-item-46976" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46976"><a class="collapsible-header waves-effect" id="link-menu-item-46976"  href="../../../docs/react/utilities/embeds/index.html">Embeds</a></li>
+	<li id="menu-item-46977" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46977"><a class="collapsible-header waves-effect" id="link-menu-item-46977"  href="../../../docs/react/utilities/float/index.html">Float</a></li>
+	<li id="menu-item-46978" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46978"><a class="collapsible-header waves-effect" id="link-menu-item-46978"  href="../../../docs/react/utilities/flexbox/index.html">Flexbox</a></li>
+	<li id="menu-item-46980" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46980"><a class="collapsible-header waves-effect" id="link-menu-item-46980"  href="../../../docs/react/utilities/image-replacement/index.html">Image replacement</a></li>
+	<li id="menu-item-84757" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84757"><a class="collapsible-header waves-effect" id="link-menu-item-84757"  href="../../../docs/react/utilities/overflow/index.html">Overflow</a></li>
+	<li id="menu-item-46981" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46981"><a class="collapsible-header waves-effect" id="link-menu-item-46981"  href="../../../docs/react/utilities/position/index.html">Position</a></li>
+	<li id="menu-item-46982" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46982"><a class="collapsible-header waves-effect" id="link-menu-item-46982"  href="../../../docs/react/utilities/screenreaders/index.html">Screenreaders</a></li>
+	<li id="menu-item-46983" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46983"><a class="collapsible-header waves-effect" id="link-menu-item-46983"  href="../../../docs/react/utilities/sizing/index.html">Sizing</a></li>
+	<li id="menu-item-46984" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46984"><a class="collapsible-header waves-effect" id="link-menu-item-46984"  href="../../../docs/react/utilities/spacing/index.html">Spacing</a></li>
+	<li id="menu-item-46985" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46985"><a class="collapsible-header waves-effect" id="link-menu-item-46985"  href="../../../docs/react/utilities/text/index.html">Text</a></li>
+	<li id="menu-item-46986" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46986"><a class="collapsible-header waves-effect" id="link-menu-item-46986"  href="../../../docs/react/utilities/vertical-align/index.html">Vertical Align</a></li>
+	<li id="menu-item-46987" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46987"><a class="collapsible-header waves-effect" id="link-menu-item-46987"  href="../../../docs/react/utilities/visibility/index.html">Visibility</a></li>
+</ul></div>
+</li>
+<li id="menu-item-75677" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-75677"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-indent"></i>Content<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-75678" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75678"><a class="collapsible-header waves-effect" id="link-menu-item-75678"  href="../../../docs/react/content/code/index.html">Code</a></li>
+	<li id="menu-item-75679" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75679"><a class="collapsible-header waves-effect" id="link-menu-item-75679"  href="../../../docs/react/content/figures/index.html">Figures</a></li>
+	<li id="menu-item-82802" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82802"><a class="collapsible-header waves-effect" id="link-menu-item-82802"  href="../../../docs/react/content/icons-list/index.html">Icons list</a></li>
+	<li id="menu-item-82796" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82796"><a class="collapsible-header waves-effect" id="link-menu-item-82796"  href="../../../docs/react/content/icons-usage/index.html">Icons usage</a></li>
+	<li id="menu-item-75682" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75682"><a class="collapsible-header waves-effect" id="link-menu-item-75682"  href="../../../docs/react/content/images/index.html">Images</a></li>
+	<li id="menu-item-75683" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75683"><a class="collapsible-header waves-effect" id="link-menu-item-75683"  href="../../../docs/react/content/typography/index.html">Typography</a></li>
+</ul></div>
+</li>
+<li id="menu-item-81430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-81430"><a class="collapsible-header waves-effect arrow-r "><i class="fab fa-css3"></i>CSS<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81426" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81426"><a class="collapsible-header waves-effect" id="link-menu-item-81426"  href="../../../docs/react/css/demo/index.html">Demo</a></li>
+	<li id="menu-item-54055" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54055"><a class="collapsible-header waves-effect" id="link-menu-item-54055"  href="../../../docs/react/css/animations/index.html">Animations</a></li>
+	<li id="menu-item-82783" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82783"><a class="collapsible-header waves-effect" id="link-menu-item-82783"  href="../../../docs/react/css/background-image/index.html">Background image</a></li>
+	<li id="menu-item-54056" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54056"><a class="collapsible-header waves-effect" id="link-menu-item-54056"  href="../../../docs/react/css/colors/index.html">Colors</a></li>
+	<li id="menu-item-82787" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82787"><a class="collapsible-header waves-effect" id="link-menu-item-82787"  href="../../../docs/react/css/gradients/index.html">Gradients</a></li>
+	<li id="menu-item-47523" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47523"><a class="collapsible-header waves-effect" id="link-menu-item-47523"  href="../../../docs/react/css/masks/index.html">Masks</a></li>
+	<li id="menu-item-51614" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51614"><a class="collapsible-header waves-effect" id="link-menu-item-51614"  href="../../../docs/react/css/hover-effects/index.html">Hover effects</a></li>
+	<li id="menu-item-54054" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54054"><a class="collapsible-header waves-effect" id="link-menu-item-54054"  href="../../../docs/react/css/shadows/index.html">Shadows</a></li>
+	<li id="menu-item-54053" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54053"><a class="collapsible-header waves-effect" id="link-menu-item-54053"  href="../../../docs/react/css/skins/index.html">Skins</a></li>
+</ul></div>
+</li>
+<li id="menu-item-81431" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-81431"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-cubes"></i>Components<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-81427" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81427"><a class="collapsible-header waves-effect" id="link-menu-item-81427"  href="../../../docs/react/components/demo/index.html">Demo</a></li>
+	<li id="menu-item-47527" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47527"><a class="collapsible-header waves-effect" id="link-menu-item-47527"  href="../../../docs/react/components/alerts/index.html">Alerts</a></li>
+	<li id="menu-item-46988" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46988"><a class="collapsible-header waves-effect" id="link-menu-item-46988"  href="../../../docs/react/components/buttons/index.html">Buttons</a></li>
+	<li id="menu-item-83412" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83412"><a class="collapsible-header waves-effect" id="link-menu-item-83412"  href="../../../docs/react/components/button-group/index.html">Buttons group</a></li>
+	<li id="menu-item-82774" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82774"><a class="collapsible-header waves-effect" id="link-menu-item-82774"  href="../../../docs/react/components/buttons-social/index.html">Buttons social</a></li>
+	<li id="menu-item-46989" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46989"><a class="collapsible-header waves-effect" id="link-menu-item-46989"  href="../../../docs/react/components/cards/index.html">Cards</a></li>
+	<li id="menu-item-47519" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47519"><a class="collapsible-header waves-effect" id="link-menu-item-47519"  href="../../../docs/react/components/dropdowns/index.html">Dropdown</a></li>
+	<li id="menu-item-83410" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83410"><a class="collapsible-header waves-effect" id="link-menu-item-83410"  href="../../../docs/react/components/jumbotron/index.html">Jumbotron</a></li>
+	<li id="menu-item-54058" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54058"><a class="collapsible-header waves-effect" id="link-menu-item-54058"  href="../../../docs/react/components/list-group/index.html">List Group</a></li>
+	<li id="menu-item-82836" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82836"><a class="collapsible-header waves-effect" id="link-menu-item-82836"  href="../../../docs/react/components/spinners/index.html">Loaders / Spinners</a></li>
+	<li id="menu-item-46991" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46991"><a class="collapsible-header waves-effect" id="link-menu-item-46991"  href="../../../docs/react/components/pagination/index.html">Pagination</a></li>
+	<li id="menu-item-59607" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59607"><a class="collapsible-header waves-effect" id="link-menu-item-59607"  href="../../../docs/react/components/panels/index.html">Panels</a></li>
+	<li id="menu-item-82685" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82685"><a class="collapsible-header waves-effect" id="link-menu-item-82685"  href="../../../docs/react/components/pills/index.html">Pills</a></li>
+	<li id="menu-item-47524" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47524"><a class="collapsible-header waves-effect" id="link-menu-item-47524"  href="../../../docs/react/components/tabs/index.html">Tabs</a></li>
+	<li id="menu-item-46992" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46992"><a class="collapsible-header waves-effect" id="link-menu-item-46992"  href="../../../docs/react/components/badges/index.html">Tags, Labels &#038; Badges</a></li>
+	<li id="menu-item-46994" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46994"><a class="collapsible-header waves-effect" id="link-menu-item-46994"  href="../../../docs/react/components/progress-bar/index.html">Progress Bar</a></li>
+	<li id="menu-item-60869" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60869"><a class="collapsible-header waves-effect" id="link-menu-item-60869"  href="../../../docs/react/components/stepper/index.html">Steppers</a></li>
+</ul></div>
+</li>
+<li id="menu-item-46995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-46995"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-code"></i>Advanced<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-83411" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-83411"><a class="collapsible-header waves-effect" id="link-menu-item-83411"  href="../../../docs/react/advanced/accordion/index.html">Accordion</a></li>
+	<li id="menu-item-47518" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47518"><a class="collapsible-header waves-effect" id="link-menu-item-47518"  href="../../../docs/react/advanced/carousel/index.html">Carousel</a></li>
+	<li id="menu-item-47521" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47521"><a class="collapsible-header waves-effect" id="link-menu-item-47521"  href="../../../docs/react/advanced/charts/index.html">Charts</a></li>
+	<li id="menu-item-46996" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46996"><a class="collapsible-header waves-effect" id="link-menu-item-46996"  href="../../../docs/react/advanced/collapse/index.html">Collapse</a></li>
+	<li id="menu-item-56346" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-56346"><a class="collapsible-header waves-effect" id="link-menu-item-56346"  href="../../../docs/react/advanced/lightbox/index.html">Lightbox</a></li>
+	<li id="menu-item-82446" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82446"><a class="collapsible-header waves-effect" id="link-menu-item-82446"  href="../../../docs/react/advanced/notifications/index.html">Notifications</a></li>
+	<li id="menu-item-47003" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47003"><a class="collapsible-header waves-effect" id="link-menu-item-47003"  href="../../../docs/react/advanced/popovers/index.html">Popovers</a></li>
+	<li id="menu-item-85190" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-85190"><a class="collapsible-header waves-effect" id="link-menu-item-85190"  href="../../../docs/react/advanced/scroll/index.html">Scrollbar &#038; SmoothScroll</a></li>
+	<li id="menu-item-56345" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-56345"><a class="collapsible-header waves-effect" id="link-menu-item-56345"  href="../../../docs/react/advanced/sticky/index.html">Sticky Content</a></li>
+	<li id="menu-item-47004" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47004"><a class="collapsible-header waves-effect" id="link-menu-item-47004"  href="../../../docs/react/advanced/tooltips/index.html">Tooltips</a></li>
+	<li id="menu-item-84977" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84977"><a class="collapsible-header waves-effect" id="link-menu-item-84977"  href="../../../docs/react/advanced/waves-effect/index.html">Waves effect</a></li>
+</ul></div>
+</li>
+<li id="menu-item-60859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-60859"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-bars"></i> Navigation<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-51613" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51613"><a class="collapsible-header waves-effect" id="link-menu-item-51613"  href="../../../docs/react/navigation/compositions/index.html">Compositions</a></li>
+	<li id="menu-item-47520" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-47520"><a class="collapsible-header waves-effect" id="link-menu-item-47520"  href="../../../docs/react/navigation/breadcrumb/index.html">Breadcrumb</a></li>
+	<li id="menu-item-54052" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-54052"><a class="collapsible-header waves-effect" id="link-menu-item-54052"  href="../../../docs/react/navigation/footer/index.html">Footer</a></li>
+	<li id="menu-item-79821" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-79821"><a class="collapsible-header waves-effect" id="link-menu-item-79821"  href="../../../docs/react/navigation/hamburger-menu/index.html">Hamburger Menu</a></li>
+	<li id="menu-item-51604" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51604"><a class="collapsible-header waves-effect" id="link-menu-item-51604"  href="../../../docs/react/navigation/navbar/index.html">Navbar</a></li>
+	<li id="menu-item-85198" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-85198"><a class="collapsible-header waves-effect" id="link-menu-item-85198"  href="../../../docs/react/navigation/navs/index.html">Navs</a></li>
+	<li id="menu-item-51606" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51606"><a class="collapsible-header waves-effect" id="link-menu-item-51606"  href="../../../docs/react/navigation/scrollspy/index.html">ScrollSpy</a></li>
+	<li id="menu-item-51612" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51612"><a class="collapsible-header waves-effect" id="link-menu-item-51612"  href="../../../docs/react/navigation/sidenav/index.html">SideNav</a></li>
+</ul></div>
+</li>
+<li id="menu-item-60858" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-60858"><a class="collapsible-header waves-effect arrow-r "><i class="fas  fa-edit"></i> Forms<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-51602" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51602"><a class="collapsible-header waves-effect" id="link-menu-item-51602"  href="../../../docs/react/forms/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-59606" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59606"><a class="collapsible-header waves-effect" id="link-menu-item-59606"  href="../../../docs/react/forms/autocomplete/index.html">Autocomplete</a></li>
+	<li id="menu-item-75692" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75692"><a class="collapsible-header waves-effect" id="link-menu-item-75692"  href="../../../docs/react/forms/checkbox/index.html">Checkbox</a></li>
+	<li id="menu-item-51605" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51605"><a class="collapsible-header waves-effect" id="link-menu-item-51605"  href="../../../docs/react/forms/date-picker/index.html">Date picker</a></li>
+	<li id="menu-item-82431" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82431"><a class="collapsible-header waves-effect" id="link-menu-item-82431"  href="../../../docs/react/forms/file-input/index.html">File input</a></li>
+	<li id="menu-item-46990" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46990"><a class="collapsible-header waves-effect" id="link-menu-item-46990"  href="../../../docs/react/forms/inputs/index.html">Inputs</a></li>
+	<li id="menu-item-84968" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-84968"><a class="collapsible-header waves-effect" id="link-menu-item-84968"  href="../../../docs/react/forms/multiselect/index.html">Multiselect</a></li>
+	<li id="menu-item-81673" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81673"><a class="collapsible-header waves-effect" id="link-menu-item-81673"  href="../../../docs/react/forms/radio-button/index.html">Radio Button</a></li>
+	<li id="menu-item-59608" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-59608"><a class="collapsible-header waves-effect" id="link-menu-item-59608"  href="../../../docs/react/forms/search/index.html">Search</a></li>
+	<li id="menu-item-51607" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51607"><a class="collapsible-header waves-effect" id="link-menu-item-51607"  href="../../../docs/react/forms/select/index.html">Select</a></li>
+	<li id="menu-item-82424" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82424"><a class="collapsible-header waves-effect" id="link-menu-item-82424"  href="../../../docs/react/forms/slider/index.html">Slider</a></li>
+	<li id="menu-item-81677" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81677"><a class="collapsible-header waves-effect" id="link-menu-item-81677"  href="../../../docs/react/forms/switch/index.html">Switch</a></li>
+	<li id="menu-item-82437" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82437"><a class="collapsible-header waves-effect" id="link-menu-item-82437"  href="../../../docs/react/forms/textarea/index.html">Textarea</a></li>
+	<li id="menu-item-51608" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-51608"><a class="collapsible-header waves-effect" id="link-menu-item-51608"  href="../../../docs/react/forms/time-picker/index.html">Time picker</a></li>
+	<li id="menu-item-60870" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60870"><a class="collapsible-header waves-effect" id="link-menu-item-60870"  href="../../../docs/react/forms/validation/index.html">Validation</a></li>
+</ul></div>
+</li>
+<li id="menu-item-76142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-76142"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-table"></i> Tables<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-60876" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60876"><a class="collapsible-header waves-effect" id="link-menu-item-60876"  href="../../../docs/react/tables/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-75689" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75689"><a class="collapsible-header waves-effect" id="link-menu-item-75689"  href="../../../docs/react/tables/additional/index.html">Additional examples</a></li>
+	<li id="menu-item-75688" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-75688"><a class="collapsible-header waves-effect" id="link-menu-item-75688"  href="../../../docs/react/tables/datatables/index.html">Datatables</a></li>
+	<li id="menu-item-60868" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60868"><a class="collapsible-header waves-effect" id="link-menu-item-60868"  href="../../../docs/react/tables/editable/index.html">Editable</a></li>
+	<li id="menu-item-60867" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60867"><a class="collapsible-header waves-effect" id="link-menu-item-60867"  href="../../../docs/react/tables/pagination/index.html">Pagination</a></li>
+	<li id="menu-item-60866" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60866"><a class="collapsible-header waves-effect" id="link-menu-item-60866"  href="../../../docs/react/tables/responsive/index.html">Responsive</a></li>
+	<li id="menu-item-60865" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60865"><a class="collapsible-header waves-effect" id="link-menu-item-60865"  href="../../../docs/react/tables/scroll/index.html">Scroll</a></li>
+	<li id="menu-item-60864" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60864"><a class="collapsible-header waves-effect" id="link-menu-item-60864"  href="../../../docs/react/tables/search/index.html">Search</a></li>
+	<li id="menu-item-60863" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-60863"><a class="collapsible-header waves-effect" id="link-menu-item-60863"  href="../../../docs/react/tables/sort/index.html">Sort</a></li>
+</ul></div>
+</li>
+<li id="menu-item-60856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-60856"><a class="collapsible-header waves-effect arrow-r "><i class="fas  fa-window-restore"></i>Modals<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-46997" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-46997"><a class="collapsible-header waves-effect" id="link-menu-item-46997"  href="../../../docs/react/modals/basic/index.html">Basic examples</a></li>
+	<li id="menu-item-79365" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-79365"><a class="collapsible-header waves-effect" id="link-menu-item-79365"  href="../../../docs/react/modals/generator/index.html">Generator</a></li>
+</ul></div>
+</li>
+<li id="menu-item-58007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-58007"><a class="collapsible-header waves-effect arrow-r "><i class="fas fa-th"></i>Sections<i class="fa fa-angle-down rotate-icon"></i></a>
+ <div class="collapsible-body" > <ul class="sub-menu">
+	<li id="menu-item-58008" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58008"><a class="collapsible-header waves-effect" id="link-menu-item-58008"  href="../../../docs/react/sections/blog/index.html">Blog</a></li>
+	<li id="menu-item-58009" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58009"><a class="collapsible-header waves-effect" id="link-menu-item-58009"  href="../../../docs/react/sections/contact/index.html">Contact</a></li>
+	<li id="menu-item-58010" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58010"><a class="collapsible-header waves-effect" id="link-menu-item-58010"  href="../../../docs/react/sections/e-commerce/index.html">E-commerce</a></li>
+	<li id="menu-item-58011" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58011"><a class="collapsible-header waves-effect" id="link-menu-item-58011"  href="../../../docs/react/sections/features/index.html">Features</a></li>
+	<li id="menu-item-58012" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58012"><a class="collapsible-header waves-effect" id="link-menu-item-58012"  href="../../../docs/react/sections/intros/index.html">Intros</a></li>
+	<li id="menu-item-58013" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58013"><a class="collapsible-header waves-effect" id="link-menu-item-58013"  href="../../../docs/react/sections/magazine/index.html">Magazine</a></li>
+	<li id="menu-item-58017" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58017"><a class="collapsible-header waves-effect" id="link-menu-item-58017"  href="../../../docs/react/sections/projects/index.html">Projects</a></li>
+	<li id="menu-item-58016" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58016"><a class="collapsible-header waves-effect" id="link-menu-item-58016"  href="../../../docs/react/sections/social/index.html">Social</a></li>
+	<li id="menu-item-58015" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58015"><a class="collapsible-header waves-effect" id="link-menu-item-58015"  href="../../../docs/react/sections/team/index.html">Team</a></li>
+	<li id="menu-item-58014" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-58014"><a class="collapsible-header waves-effect" id="link-menu-item-58014"  href="../../../docs/react/sections/testimonials/index.html">Testimonials</a></li>
+</ul></div>
+</li>
+<li id="menu-item-81347" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-81347"><a class="collapsible-header waves-effect" id="link-menu-item-81347"  href="../../../plugins/react/index.html"><i class="fas fa-plus-square"></i>Plugins &#038; addons</a></li>
+<li id="menu-item-82153" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-82153"><a class="collapsible-header waves-effect" id="link-menu-item-82153"  href="../../../freebies/react/admin-dashboard/index.html"><i class="fas fa-tachometer-alt"></i>Admin Dashboard Free</a></li>
+<li id="menu-item-82155" class="menu-item menu-item-type-post_type menu-item-object-product  menu-item-82155"><a class="collapsible-header waves-effect" id="link-menu-item-82155"  href="../../../products/react-admin-dashboard/index.html"><i class="fas fa-tachometer-alt"></i>Admin Dashboard Pro</a></li>
+</ul>    </li>
+    <!-- /. Side navigation links -->
+  </ul>
+  <div class="sidenav-bg mask-strong"></div>
+</div>
+<!--/. Sidebar navigation -->
+<!--/.SideNav-->
+<div class="modal fade" id="navbarLogin" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!-- Pills navs -->
+        <ul class="nav md-pills nav-justified pills-info">
+          <li class="nav-item">
+            <a class="nav-link active show" data-toggle="tab" href="#navbarLogin-login" role="tab" aria-selected="true">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#navbarLogin-signup" role="tab" aria-selected="false">Register</a>
+          </li>
+        </ul>
+
+        <!-- Pills panels -->
+        <div class="tab-content py-0">
+
+          <!--Panel 1-->
+          <div class="tab-pane fade in active show" id="navbarLogin-login" role="tabpanel">
+
+            <!-- Default form login -->
+            <form id="login" class="text-center" action="https://mdbootstrap.com/education/react/agenda-9-conditional-rendering/login" method="post">
+
+              <input type="hidden" id="security" name="security" value="aa47966a6c" /><input type="hidden" name="_wp_http_referer" value="/education/react/agenda-9-conditional-rendering/" />
+              <p class="status"></p>
+
+              <!-- Social login -->
+              <div class="my-3">
+                
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.3.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="../../../wp-loginb5b0-2.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="../../../wp-login27c3.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+		<a rel="nofollow" href="../../../wp-login50ff.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+	</div>
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+              </div>
+              <!-- Social login -->
+
+              <!-- Default input -->
+              <label class="grey-text" for="username">Your e-mail or username</label>
+              <input type="text" id="username" class="form-control" name="username">
+
+              <br>
+
+              <!-- Default input password -->
+              <label class="grey-text" for="password">Your password</label>
+              <input type="password" id="password" class="form-control" name="password">
+
+              <div class="mt-4">
+                <a href="../../../my-account/lost-password/index.html" class="btn btn-outline-info btn-md mb-4 waves-effect waves-light" type="submit">Forgot password?</a>
+                <button class="btn btn-info btn-md mb-4 waves-effect waves-light" type="submit" value="LOGIN">Login</button>
+              </div>
+
+            </form>
+            <!-- Default form login -->
+
+          </div>
+          <!--/.Panel 1-->
+
+          <!--Panel 2-->
+          <div class="tab-pane fade" id="navbarLogin-signup" role="tabpanel">
+
+            <!-- Default form register  -->
+            <form id="register" class="text-center" action="https://mdbootstrap.com/education/react/agenda-9-conditional-rendering/register" method="post">
+
+              <input type="hidden" id="signonsecurity" name="signonsecurity" value="d3a7631bdd" /><input type="hidden" name="_wp_http_referer" value="/education/react/agenda-9-conditional-rendering/" />
+              <!-- Social login -->
+
+              <p class="status"></p>
+
+              <div class="my-3">
+                
+<!--
+	wsl_render_auth_widget
+	WordPress Social Login 2.3.3.
+	http://wordpress.org/plugins/wordpress-social-login/
+-->
+
+<style type="text/css">
+.wp-social-login-connect-with{}.wp-social-login-provider-list{}.wp-social-login-provider-list a{}.wp-social-login-provider-list img{}.wsl_connect_with_provider{}</style>
+
+<div class="wp-social-login-widget">
+
+	<div class="wp-social-login-connect-with">Connect with:</div>
+
+	<div class="wp-social-login-provider-list">
+
+		<a rel="nofollow" href="../../../wp-loginb5b0-2.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Facebook&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Facebook" class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+			Facebook
+		</a>
+
+		<a rel="nofollow" href="../../../wp-login27c3.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Google&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Google" class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+			Google
+		</a>
+
+		<a rel="nofollow" href="../../../wp-login50ff.html?action=wordpress_social_authenticate&amp;mode=login&amp;provider=Twitter&amp;redirect_to=https%3A%2F%2Fmdbootstrap.com%2Feducation%2Freact%2Fagenda-9-conditional-rendering%2F" title="Connect with Twitter" class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+			Twitter
+		</a>
+
+	</div>
+
+	<div class="wp-social-login-widget-clearing"></div>
+
+</div>
+
+<!-- wsl_render_auth_widget -->
+
+              </div>
+              <!-- Social login -->
+
+              <!-- Default input name -->
+              <input type="text" id="signonname" class="form-control" name="signonname">
+              <label for="signonname">Your name</label>
+
+              <br>
+
+              <!-- Default input username -->
+              <input type="text" id="signonusername" class="form-control" name="signonusername">
+              <label for="signonusername">Your username</label>
+
+              <br>
+
+              <!-- Default input email -->
+              <input type="text" id="email" class="form-control" name="email">
+              <label for="email">Your email</label>
+
+              <br>
+              <!-- Default input password -->
+              <input type="password" id="signonpassword" class="form-control" name="signonpassword">
+              <label for="signonpassword">Your password</label>
+
+              <br>
+
+              <!-- Default input password -->
+              <input type="password" id="password2" class="form-control" name="password2">
+              <label for="password2">Repeat password</label>
+
+              <div class="mt-4">
+              <p class="small grey-text">By signing up you agree to data processing by the administrator: StartupFlow s.c. located in Kijowska 7, Warsaw. The administrator processes data following the <a target="_blank" href="../../../privacy-policy/index.html">Privacy Policy</a>.
+              </p>
+                <button class="btn btn-info btn-md mb-4 waves-effect waves-light" id="AJAXAuthRegisterBtn" type="submit" value="SIGNUP">Sign up</button>
+              </div>
+
+            </form>
+            <!-- Default form register  -->
+
+          </div>
+          <!--/.Panel 2-->
+
+        </div>
+        <!-- Pills panels -->
+
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info btn-md waves-effect waves-light" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+
+
+<!-- Navbar-->
+<nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+  <!-- SideNav slide-out button -->
+  <div class="float-left">
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i><span class="sr-only" aria-hidden="true">Toggle side navigation</span></a>
+  </div>
+  <!-- Navbar links-->
+  <div class="mr-auto pl-2">
+    <span class="d-none d-md-inline-block">
+
+    <!-- Dynamic content wrapper -->
+    <span id="dynamicContentWrapper-mainNavbar" class="dynamic-content d-none d-lg-inline-block"></span>
+
+    <!--Angular-->
+            <a id="navbar-category-gettingstarted-react" class="btn btn-info btn-sm my-0" href="../../../docs/react/getting-started/download/index.html" role="button">
+        <span class="d-none d-lg-inline-block mr-1">Getting started</span>
+        <i class="fa fa-download"></i>
+      </a>
+      <a id="navbar-category-tutorial-react" class="btn btn-info btn-sm my-0" href="../index.html" role="button">
+        <span class="d-none d-lg-inline-block mr-1">Tutorial</span>
+        <i class="fa fa-graduation-cap"></i>
+      </a>
+      <span id="dynamicContentWrapper-mainNavbar3" class="dynamic-content"></span>
+      <a id="navbar-category-bundle-react" class="btn btn-info btn-sm my-0" href="../../../products/react-small-bundle/index.html" role="button">
+      <span class="badge red">New</span>
+        <span class="d-none d-xl-inline-block mr-1">React Bundle</span>
+        <i class="fa fa-gift"></i>
+      </a>
+
+    <!--Vue-->
+          </span>
+  </div>
+
+    <!--Navigation icons-->
+    <ul class="nav navbar-nav nav-flex-icons ml-auto">
+      
+        
+        <li class="nav-item">
+          <a href="../../../general/contact/index.html" class="nav-link waves-effect">
+          <i  id="navbar-static-contact" alt="Contact us" class="fas fa-envelope"></i><span class="sr-only">Contact us</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="../../../general/support/index.html" class="nav-link waves-effect">
+          <i  id="navbar-static-contact" alt="Contact us" class="fas fa-question-circle"></i><span class="d-none d-xl-inline-block ml-1">Support</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item ">
+          <a href="/profile/?id=0#messages" class="nav-link waves-effect headerNotifCountBadge">
+            <i class="fas fa-comments"></i><span class="sr-only">Direct messages</span>
+          </a>
+        </li> -->
+
+        
+        <!-- Tools -->
+         <li id="navbar-static-tools" class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" id="navbar-tools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-wrench"></i><span class="d-none d-lg-inline-block ml-1">Tools</span></a>
+           <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbar-tools">
+             <a class="dropdown-item" href="../../../snippets/index.html">Editor & Snippets</a>
+             <a class="dropdown-item" href="../../../articles/index.html">Articles</a>
+             <a class="dropdown-item" href="../../../news/frontend/index.html">News</a>
+             <a class="dropdown-item" href="../../../cli/index.html">MDB CLI <span class="badge badge-danger rounded">New</span></a>
+           </div>
+         </li>
+
+      <!-- Login / register -->
+              <a id="navbar-static-login" class="btn btn-info btn-rounded btn-sm waves-effect waves-light" data-toggle="modal" data-target="#navbarLogin">Log In
+          <i class="fas fa-sign-in-alt ml-2"></i>
+        </a>
+          </ul>
+</nav>
+<!-- /.Navbar-->
+  <div class="card card-intro sky-gradient">
+  <div class="card-body white-text rgba-black-light text-center">
+    <!--Grid row-->
+    <div class="row d-flex justify-content-center">
+      <!--Grid column-->
+      <div class="col-md-6">
+        <h1 class="font-weight-bold h2">Conditional rendering</h1>
+
+        
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</div>
+</header>
+
+<!-- Angular or not Angular? -->
+<div class="switch-version d-none d-md-block">
+  <a href="../../../docs/jquery/index.html"><span class="switch-to mdb-jquery " id="jQuery"></span></a>
+  <a href="../../../docs/angular/index.html"><span class="switch-to mdb-angular " id="Angular"></span></a>
+  <a href="../../../docs/react/index.html"><span class="switch-to mdb-react active" id="React"></span></a>
+  <a href="../../../docs/vue/index.html"><span class="switch-to mdb-vue " id="Vue"></span></a>
+
+</div>
+    <style>
+    .tutorial img {
+      margin-bottom: 2rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tutorial > .tab-content {
+      margin-bottom: 2rem;
+    }
+    .tutorial > h2,h3,h4{
+          margin-bottom: 2rem;
+    }
+    .tutorial  .code-toolbar{
+      margin: 1em 0;
+    }
+    </style>
+    <!--Main layout-->
+    <main class="pt-1 documentation mdb-com-tutorial">
+      <div class="container">
+
+        <!--Section: Post-->
+        <section class="mt-3">
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-8 col-md-12 mb-4">
+
+              <!-- Featured image -->
+              
+              <!--Section: Post data-->
+              <section>
+
+                <div class="row">
+
+                  <div class="col-md-6 pt-2">
+
+                    <p class="text-md-left text-center"><strong>Author:</strong>
+                      <a href="../../../index.html" target="_blank" rel="nofollow">Dawid Adach</a>
+                    </p>
+
+                  </div>
+
+                  <div class="col-md-6 text-center">
+
+                    <!--Facebook-->
+                    <a role="button" class="btn btn-fb btn-sm" href="https://www.facebook.com/sharer/sharer.php?u=mdbootstrap.com/education/react/agenda-9-conditional-rendering/" onclick="event.preventDefault();window.open(this.href, 'Share', 'width=500,height=500,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes')">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <span id="fb-share-count" class="counter counter-sm">-</span>
+
+                  </div>
+
+                </div>
+
+              </section>
+              <!--Section: Post data-->
+
+              <hr>
+
+              <h2>1. Using IF - ELSE</h2>
+  <div><br /></div>
+  <div>Currently, we have a list of events on our agenda:</div>
+  <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb37a6c23a88a0f675b0a685c79d06a1c9" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb37a6c23a88a0f675b0a685c79d06a1c9" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            events: [
+            {
+              id: 1,
+              time: &quot;10:00&quot;,
+              title: &quot;Breakfast with Simon&quot;,
+              location: &quot;Lounge Caffe&quot;,
+              description: &quot;Discuss Q3 targets&quot;
+            },
+            {
+              id: 2,
+              time: &quot;10:30&quot;,
+              title: &quot;Daily Standup Meeting (recurring)&quot;,
+              location: &quot;Warsaw Spire Office&quot;
+            },
+          [...]
+          ]
+          
+      </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <div>but for some of them the parameters like location or description are optional. Currently, our <mark>render()</mark> method doesn't check whether a value exists:</div>
+ <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb1a2a6dec7483b9b0121bf1cef0d9a588" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb1a2a6dec7483b9b0121bf1cef0d9a588" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            &lt;React.Fragment&gt;
+                &lt;h3&gt;
+                    {this.props.time} - {this.props.title}
+                &lt;/h3&gt;
+                &lt;h6&gt;Location: {this.props.location}&lt;/h6&gt;
+                &lt;p&gt;Desc: {this.props.description}&lt;/p&gt;
+            &lt;/React.Fragment&gt;                  
+     </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>As a result, we see empty values:</p>
+  <div> <img class="img-fluid" src="../../../wp-content/themes/mdbootstrap4/content/react/tutorials/agenda-app/9/image_3.png"  /><br /></div>
+  <div><br /></div>
+  <div>As you already know, we cannot use JS directly inside our render method. We could, however, offload the logic to separate     functions as below:</div>
+  <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb7003a34bfc34823bbada008ca8eecb19" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb7003a34bfc34823bbada008ca8eecb19" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            function Hello(props) {
+                const isLoggedIn = props.isLoggedIn;
+                if (isLoggedIn) {
+                  return &quot;Hello!&quot;;
+                }
+                return &quot;Please login first!&quot;;
+              }
+              ReactDOM.render(
+                // Try changing to isLoggedIn={true}:
+                &lt;Hello isLoggedIn={false} /&gt;,
+                document.getElementById(&quot;root&quot;)
+              );              
+      </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <div>That said, React provides us a more useful mechanism for conditional rendering called<span style="font-weight: bold;"> i</span><span
+      style=" font-weight: bold;">nline If with Logical &amp;&amp; Operator. </span></div>
+  <div><br /></div>
+
+  <h2>2. If with Logical &amp;&amp; Operator</h2>
+
+  <div><br /></div>
+  <p>How does it work? Let's replace or Location heading with the following code:</p>
+  <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb7cf2d0e9803be1d2ac8eb62bfde960c7" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb7cf2d0e9803be1d2ac8eb62bfde960c7" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            {this.props.location &amp;&amp; &lt;h6&gt;Location: {this.props.location}&lt;/h6&gt;}
+      </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>As you can see we have wrapped it with curly braces and added a logical check
+      followed by the logical &amp;&amp; operator.</p>
+
+
+  <p class="note note-info"> <strong>Note:</strong> <br /> 
+    You can read it as an <b>IF-THEN condition</b>:    <br />
+    "<b>IF </b>this.props.location exists <b>THEN </b>display content after
+      &amp;&amp;"</p>
+  <p>Let's also update our description code:</p>
+ <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdbe20818a37506c7fd887e4eb9132b2c65" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdbe20818a37506c7fd887e4eb9132b2c65" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            {this.props.description &amp;&amp; (
+                &lt;p className=&quot;p-2 mb-4  blue-grey lighten-5 blue-grey lighten-5&quot;&gt;
+                  {this.props.description}
+                &lt;/p&gt;
+              )}              
+     </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>Preview:</p>
+  <div> <img class="img-fluid" src="../../../wp-content/themes/mdbootstrap4/content/react/tutorials/agenda-app/9/image.png" alt="Conditional rendering" /><br /></div>
+  <div><br /></div>
+
+  <h2>3. Conditional blocks rendering</h2>
+
+  <div><span style="font-size: 14px;"><br /></span></div>
+  <p>You can also apply the same logic to bigger blocks of code. Let's import a few more
+      components from the MDB library: </p>
+   <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb565b6c04f3431cdb797a4d2f474e77ec" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb565b6c04f3431cdb797a4d2f474e77ec" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            import {MDBBtn, MDBInput, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBIcon, MDBBadge, MDBContainer, MDBRow, MDBCol} from &quot;mdbreact&quot;;
+       </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>and update our <mark>render()</mark> method ins the Event component: </p>
+ <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdbd4bed8a9d4017011a609fb3a1a16b2b0" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdbd4bed8a9d4017011a609fb3a1a16b2b0" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            render() {
+                return (
+                  &lt;React.Fragment&gt;
+                    &lt;div className=&quot;media mt-1&quot;&gt;
+                      &lt;h3 className=&quot;h3-responsive font-weight-bold mr-3&quot;&gt;
+                        {this.props.time}
+                      &lt;/h3&gt;
+                      &lt;div className=&quot;media-body mb-3 mb-lg-3&quot;&gt;
+                        &lt;MDBBadge color=&quot;danger&quot; className=&quot;ml-2 float-right&quot;&gt;
+                          -
+                        &lt;/MDBBadge&gt;
+                        &lt;h6 className=&quot;mt-0 font-weight-bold&quot;&gt;{this.props.title} &lt;/h6&gt;{&quot; &quot;}
+                        &lt;hr className=&quot;hr-bold my-2&quot; /&gt;
+                        {this.props.location &amp;&amp; (
+                          &lt;React.Fragment&gt;
+                            &lt;p className=&quot;font-smaller mb-0&quot;&gt;
+                              &lt;MDBIcon icon=&quot;location-arrow&quot; /&gt; {this.props.location}
+                            &lt;/p&gt;
+                          &lt;/React.Fragment&gt;
+                        )}
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                    {this.props.description &amp;&amp; (
+                      &lt;p className=&quot;p-2 mb-4  blue-grey lighten-5 blue-grey lighten-5&quot;&gt;
+                        {this.props.description}
+                      &lt;/p&gt;
+                    )}
+                  &lt;/React.Fragment&gt;
+                );
+              }
+            
+     </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>As you can see we are using <mark> &lt;React.Fragment&gt;</mark> in a conditional rendering of a location item. We have also added some styles to our app. Now it looks much better:</p>
+  <div> <img class="img-fluid" src="../../../wp-content/themes/mdbootstrap4/content/react/tutorials/agenda-app/9/image_1.png"  alt="Calendar app preview" /><br /></div>
+  <div>Let's update also the <mark>App Class</mark>: </div>
+  <!-- mdbsnippet --><div class="docs-pills">  <div class="d-flex justify-content-between">    <ul class="nav md-pills pills-grey"><li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#mdb6f3a9e7b7aa0699fe9aef20ab944b22b" role="tab">JSX</a></li></ul></div><div class="tab-content"><div class="tab-pane fade active show" id="mdb6f3a9e7b7aa0699fe9aef20ab944b22b" role="tabpanel"><pre class="grey lighten-3 px-3 mb-0 line-numbers language-php"><code>
+            render() {
+                return (
+                  &lt;React.Fragment&gt;
+                    &lt;MDBContainer&gt;
+                      &lt;MDBRow&gt;
+                        &lt;MDBCol md=&quot;9&quot; className=&quot;mb-r&quot;&gt;
+                          &lt;h2 className=&quot;text-uppercase my-3&quot;&gt;Today:&lt;/h2&gt;
+                          &lt;div id=&quot;schedule-items&quot;&gt;
+                            {this.state.events.map(event =&gt; (
+                              &lt;Event
+                                key={event.id}
+                                id={event.id}
+                                time={event.time}
+                                title={event.title}
+                                location={event.location}
+                                description={event.description}
+                              /&gt;
+                            ))}
+                          &lt;/div&gt;
+                          &lt;MDBRow className=&quot;mb-4&quot;&gt;
+                            &lt;MDBCol xl=&quot;3&quot; md=&quot;6&quot; className=&quot;mx-auto text-center&quot;&gt;
+                              &lt;MDBBtn color=&quot;info&quot; rounded&gt;
+                                Add Event
+                              &lt;/MDBBtn&gt;
+                            &lt;/MDBCol&gt;
+                          &lt;/MDBRow&gt;
+                        &lt;/MDBCol&gt;
+                        &lt;MDBCol md=&quot;3&quot;&gt;
+                          &lt;h3 className=&quot;text-uppercase my-3&quot;&gt;Schedule&lt;/h3&gt;
+                          &lt;h6 className=&quot;my-3&quot;&gt;
+                            It's going to be busy that today. You have{&quot; &quot;}
+                            &lt;b&gt;{this.state.events.length} events &lt;/b&gt; today.
+                          &lt;/h6&gt;
+                          &lt;h1 className=&quot;my-3&quot;&gt;
+                            &lt;MDBRow&gt;
+                                &lt;MDBCol xs=&quot;3&quot; className=&quot;text-center&quot;&gt;
+                                  &lt;MDBIcon icon=&quot;sun&quot; fixed /&gt;
+                                &lt;/MDBCol&gt;
+                                &lt;MDBCol xs=&quot;9&quot;&gt;Sunny&lt;/MDBCol&gt;
+                              &lt;/MDBRow&gt;
+                              &lt;MDBRow&gt;
+                                &lt;MDBCol xs=&quot;3&quot; className=&quot;text-center&quot;&gt;
+                                &lt;MDBIcon icon=&quot;thermometer-three-quarters&quot; fixed /&gt;                  
+                                &lt;/MDBCol&gt;
+                                &lt;MDBCol xs=&quot;9&quot;&gt;23&deg;C&lt;/MDBCol&gt;
+                              &lt;/MDBRow&gt;
+                          &lt;/h1&gt;
+                          &lt;p&gt;
+                            Don't forget your sunglasses. Today will dry and sunny, becoming
+                            warm in the afternoon with temperatures of between 20 and 25
+                            degrees.
+                          &lt;/p&gt;
+                        &lt;/MDBCol&gt;
+                      &lt;/MDBRow&gt;
+                    &lt;/MDBContainer&gt;
+                  &lt;/React.Fragment&gt;
+                );
+              }
+              
+      </pre></code></div></div></div><!-- /.mdbsnippet -->
+  <p>And remove any styles if they are present in the <code>index.css</code> file. Now our app looks
+      much better! </p>
+  <p>Preview:</p>
+  <div> <img class="img-fluid" src="../../../wp-content/themes/mdbootstrap4/content/react/tutorials/agenda-app/9/image_2.png" height="656" width="808" /><br /></div>
+  <div><br /></div>
+  <p">As you noticed we have added small buttons that we will use to remove items from
+      the list, as well as a button in the bottom which will show a new window to add events to our schedule. Let's move
+      on to the next lesson where we will learn how to add and delete events!</p>
+
+              <hr>
+
+              <div class="d-flex justify-content-center">
+                <span class="mt-1 mr-2">Rate this lesson</span>
+
+                <span class="popover-form-container" id="rateTooltip"  data-page-id="84293">
+
+                                      <i class='fas fa-star stars fa-sm py-2 px-1 popovers' data-page-template="tutorial" data-index="0" data-title="setPopoverTitle()" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                    data-content="" title=""></i>
+                                      <i class='fas fa-star stars fa-sm py-2 px-1 popovers' data-page-template="tutorial" data-index="1" data-title="setPopoverTitle()" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                    data-content="" title=""></i>
+                                      <i class='fas fa-star stars fa-sm py-2 px-1 popovers' data-page-template="tutorial" data-index="2" data-title="setPopoverTitle()" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                    data-content="" title=""></i>
+                                      <i class='fas fa-star stars fa-sm py-2 px-1 popovers' data-page-template="tutorial" data-index="3" data-title="setPopoverTitle()" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                    data-content="" title=""></i>
+                                      <i class='fas fa-star stars fa-sm py-2 px-1 popovers' data-page-template="tutorial" data-index="4" data-title="setPopoverTitle()" style='cursor: pointer' data-html="true" data-toggle="popover" data-placement="top"
+                    data-content="" title=""></i>
+                                  </span>
+              </div>
+              <div class="justify-content-center">
+                <div id="dynamicContentWrapper-Tutorial"></div>
+              </div>
+
+              
+                <!--Section: Lesson UI-->
+                <section class="text-center">
+                  <hr>
+
+                                      <a class="btn btn-info btn-rounded btn-sm" href="../../../index6dc5.html?page_id=84291" role="button">
+                      <i class="fas fa-arrow-left mr-2"></i>Previous lesson
+                    </a>
+                  
+                                      <a class="btn btn-info btn-sm btn-rounded" href="https://github.com/mdbootstrap/React-Tutorial-Agenda-App/archive/master.zip" role="button">Download
+                      <i class="fas fa-download ml-2"></i>
+                    </a>
+                  
+                  
+                                      <a class="btn btn-info btn-rounded btn-sm" href="../../../index18ff.html?page_id=84295" role="button">Next lesson
+                      <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                  
+                </section>
+                <!--Section: Lesson UI-->
+              
+              <!--Section: Share-->
+              <section class="text-center">
+
+                <hr>
+                <span>Spread the word: </span>
+
+                <!--Facebook-->
+                <a role="button" class="btn btn-fb btn-sm" href="https://www.facebook.com/sharer/sharer.php?u=mdbootstrap.com/education/react/agenda-9-conditional-rendering/" onclick="event.preventDefault();window.open(this.href, 'Share', 'width=500,height=500,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes')">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <!--Twitter-->
+                <a role="button" class="btn btn-tw btn-sm" href="https://twitter.com/intent/tweet?original_referer=mdbootstrap.com/education/react/agenda-9-conditional-rendering/&amp;url=mdbootstrap.com/education/react/agenda-9-conditional-rendering/" onclick="event.preventDefault();window.open(this.href, 'Share', 'width=500,height=500,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes')">
+                  <i class="fab fa-twitter"></i>
+                </a>
+
+                <!--Linkedin-->
+                <a role="button" class="btn btn-li btn-sm" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=mdbootstrap.com/education/react/agenda-9-conditional-rendering/" onclick="event.preventDefault();window.open(this.href, 'Share', 'width=500,height=500,menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes')">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <hr>
+
+              </section>
+              <!--Section: Share-->
+
+              <!--Section: Share-->
+              <section class="text-center">
+
+                <span>Do you need help? </span>
+
+                <a class="btn btn-primary btn-md" href="../../../support/index.html" role="button" target="_blank">Use our support forum</a>
+
+                <hr>
+
+              </section>
+              <!--Section: Share-->
+
+              <!--Section: Author Box-->
+              <section class="mb-4">
+
+                <!-- Card header -->
+                <div class="card-header border-0 font-weight-bold d-flex justify-content-between">
+                  <p class="mr-4 mb-0">About the author</p>
+                  <ul class="list-unstyled list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.facebook.com/dawid.adach.5" target="_blank" rel="nofollow">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://twitter.com/dawidadach" target="_blank" rel="nofollow">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#" target="_blank" rel="nofollow">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://pl.linkedin.com/in/dawid-adach-97435534" target="_blank" rel="nofollow">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="../../../index.html" target="_blank" rel="nofollow">
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!--Card content-->
+                <div class="card-body">
+
+                  <div class="media">
+                    <img alt="User avatar" src="../../../../lh5.googleusercontent.com/-yjhhmSY0ru0/AAAAAAAAAAI/AAAAAAAAIaw/BaC6vSZpzgI/photo7c1d.jpg?sz=200" class="avatar avatar-wordpress-social-login d-flex mr-3 z-depth-1 photo" height="100" width="100" />                    <div class="media-body">
+                      <h5 class="mt-0 font-weight-bold">
+                        <a href="#">Dawid Adach</a>
+                      </h5>
+                      For more than 5 years Dawid worked as an IT Consultant specializing in SOA/EAI/ESB in the banking domain. He gained experience working in countries like Netherlands, Belgium, Poland and India developing enterprise-class systems for the most prestigious companies.
+
+Since co-founding mdbootstrap.com &amp; brandflow.net in 2016 he has been using and teaching technologies such as Angular, TypeScript, PHP, AJAX, Mongo, SQL, Hadoop Stack, Virtualization, Automation and many others...                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+              <!--Section: Author Box-->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 mb-4 d-none d-lg-block">
+
+              <!-- Sticky content -->
+              <div class="sticky-long">
+
+              <p class="note note-danger"><strong>Install MDB CLI</strong><br>It's the fastest way to create and host MDB projects<br> <a href="../../../cli/index.html" class="btn btn-danger btn-sm ml-0" role="button">Free Download<i class="fas fa-download ml-2"></i></a></p>
+
+                
+<!--Card : User-->
+<div class="border mb-4 text-center">
+
+  <div class="card-header">Sign up to follow your progress and get additional benefits</div>
+
+  <!--Card content-->
+  <div class="card-body">
+
+    <div class="text-center">
+      <button id="tutorial-sidebar-login-btn" class="btn btn-info btn-md" data-toggle="modal" data-target="#navbarLogin">Sign up for free</button>
+    </div>
+
+  </div>
+
+</div>
+<!--/.Card : User-->
+
+<hr>
+
+<!--Card: progress-->
+<div class="card-progress  mb-4">
+
+  <!--Card content-->
+  <div class="card-body p-0">
+
+    <!--Accordion wrapper-->
+    <div class="accordion md-accordion" id="accordion-progress" role="tablist" aria-multiselectable="true">
+
+      
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="heading-1077">
+              <a data-toggle="collapse" href="#collapse-1077" aria-expanded="false" aria-controls="collapse-1077" class="collapsed">
+                <h5 class="mb-0">
+                  Introduction                  <i class="fa fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapse-1077" class="collapse " role="tabpanel" aria-labelledby="heading-1077" data-parent="#accordion-progress">
+
+              <!-- Lessons -->
+              <div class="list-group list-naked">
+
+                
+                  <a href="../index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>1.</strong> React tutorial - creating a React Bootstrap app, step by step                  </a>
+
+                
+                  <a href="../installation-1-npm/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>2.</strong> Prerequisites - npm                  </a>
+
+                
+              </div>
+              <!-- Lessons -->
+
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+        
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="heading-1117">
+              <a data-toggle="collapse" href="#collapse-1117" aria-expanded="true" aria-controls="collapse-1117" class="">
+                <h5 class="mb-0">
+                  Agenda App                  <i class="fa fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapse-1117" class="collapse show" role="tabpanel" aria-labelledby="heading-1117" data-parent="#accordion-progress">
+
+              <!-- Lessons -->
+              <div class="list-group list-naked">
+
+                
+                  <a href="../agenda-1-hello-world/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>1.</strong> Introduction - Hello React World                  </a>
+
+                
+                  <a href="../agenda-2-concept-review/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>2.</strong> Agenda App - concept and review                  </a>
+
+                
+                  <a href="../agenda-3-styles/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>3.</strong> Style React components                  </a>
+
+                
+                  <a href="../agenda-4-bootstrap/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>4.</strong> Using Bootstrap in React                  </a>
+
+                
+                  <a href="../agenda-5-classes-components/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>5.</strong> Classes and components                  </a>
+
+                
+                  <a href="../agenda-6-props/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>6.</strong> Properties                  </a>
+
+                
+                  <a href="../agenda-7-state/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>7.</strong> State                  </a>
+
+                
+                  <a href="../agenda-8-loops-iterations/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>8.</strong> Loops & iterations                  </a>
+
+                
+                  <a href="index.html" class="list-group-item list-group-item-action waves-effect active ">
+                    <strong>9.</strong> Conditional rendering                  </a>
+
+                
+                  <a href="../agenda-10-delete-event/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>10.</strong> Delete event                  </a>
+
+                
+                  <a href="../agenda-11-using-modals/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>11.</strong> Using Modals                  </a>
+
+                
+                  <a href="../agenda-12-add-event/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>12.</strong> Add event                  </a>
+
+                
+              </div>
+              <!-- Lessons -->
+
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+        
+          <!-- Accordion card -->
+          <div class="card">
+
+            <!-- Card header -->
+            <div class="card-header" role="tab" id="heading-1123">
+              <a data-toggle="collapse" href="#collapse-1123" aria-expanded="false" aria-controls="collapse-1123" class="collapsed">
+                <h5 class="mb-0">
+                  Progressive Web App                  <i class="fa fa-angle-down rotate-icon"></i>
+                </h5>
+              </a>
+            </div>
+
+            <!-- Card body -->
+            <div id="collapse-1123" class="collapse " role="tabpanel" aria-labelledby="heading-1123" data-parent="#accordion-progress">
+
+              <!-- Lessons -->
+              <div class="list-group list-naked">
+
+                
+                  <a href="../pwa-1-react-pwa-introduction/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>1.</strong> React PWA Introduction                  </a>
+
+                
+                  <a href="../pwa-2-deploying-to-firebase/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>2.</strong> Deploying to Firebase                  </a>
+
+                
+                  <a href="../pwa-3-making-an-app-installable/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>3.</strong> Making an app installable                  </a>
+
+                
+                  <a href="../pwa-4-https-and-service-workers/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>4.</strong> HTTPS and Service workers                  </a>
+
+                
+                  <a href="../pwa-5-working-offline/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>5.</strong> Working Offline                  </a>
+
+                
+                  <a href="../pwa-6-the-app-shell-model/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>6.</strong> The App Shell Model                  </a>
+
+                
+                  <a href="../pwa-7-support-for-ios-devices/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>7.</strong> Support for iOS devices                  </a>
+
+                
+                  <a href="../pwa-8-pwa-audit/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>8.</strong> PWA audit                  </a>
+
+                
+                  <a href="../pwa-9-tutorial-conclusion/index.html" class="list-group-item list-group-item-action waves-effect  ">
+                    <strong>9.</strong> Tutorial conclusion                  </a>
+
+                
+              </div>
+              <!-- Lessons -->
+
+            </div>
+          </div>
+          <!-- Accordion card -->
+
+            </div>
+    <!--/.Accordion wrapper-->
+
+  </div>
+
+</div>
+<!--Card: progress-->
+
+              </div>
+              <!-- Sticky content -->
+
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+        </section>
+        <!--Section: Post-->
+
+      </div>
+    </main>
+    <!--Main layout-->
+
+  <!--Footer-->
+<footer id="footer" class="page-footer center-on-small-only unique-color-dark pt-0">
+
+  <div class="info-color-dark text-center py-4">
+
+    <!--Newsletter-->
+    <a id="footer-link-react-newsletter" href="../../../docs/react/newsletter/index.html" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Newsletter
+      <i class="fas fa-envelope white-text ml-2"> </i>
+    </a>
+    <!--Newsletter-->
+    <a id="footer-link-react-affiliate" href="../../../mdb-affiliate-program/index.html" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Affiliate program
+      <i class="fas fa-money-bill-alt white-text ml-2"> </i>
+    </a>
+    <!--Contact-->
+    <a id="footer-link-react-contact" href="../../../contact/index.html" data-toggle="modal" data-target="#contactForm" class="border rounded p-2 px-3 mr-4 d-none d-md-inline-block">Contact
+      <i class="fas fa-envelope white-text ml-2"> </i>
+    </a>
+    <!--GitHub-->
+    <a rel="nofollow" target="_blank" id="footer-link-react-github" href="https://github.com/mdbootstrap/React-Bootstrap-with-Material-Design">
+      <i class="fab fa-github white-text mr-4"> </i>
+    </a>
+    <!--Youtube-->
+    <a rel="nofollow" target="_blank" href="https://www.youtube.com/watch?v=ozXDtSi5ByM">
+          <i class="fab fa-youtube white-text mr-4"> </i>
+        </a>
+    <!--Facebook-->
+    <a rel="nofollow" target="_blank" id="footer-link-react-facebook" href="https://www.facebook.com/mdbootstrap">
+      <i class="fab fa-facebook-f white-text mr-4"> </i>
+    </a>
+    <!--Twitter-->
+    <a rel="nofollow" target="_blank" id="footer-link-react-twitter" href="https://twitter.com/MDBootstrap">
+      <i class="fab fa-twitter white-text mr-4"> </i>
+    </a>
+
+  </div>
+
+  <!--Footer Links-->
+  <div class="container mt-5 mb-4 text-center text-md-left">
+    <div class="row mt-3">
+
+      <!--First column-->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+        <h6 class="spacing font-weight-bold">
+          <strong>Useful links</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-react-faq" href="../../../react/faq/index.html">Frequently Asked Questions</a>
+        </p>
+        <p>
+          <a id="footer-link-react-browsers" href="../../../general/browsers-and-devices/index.html">Browsers and devices</a>
+        </p>
+        <p>
+          <a id="footer-link-react-license" href="../../../general/license/index.html">License</a>
+        </p>
+        <p>
+          <a id="footer-link-react-changelog" href="../../../docs/react/changelog/index.html">ChangeLog</a>
+        </p>
+        <p>
+          <a id="footer-link-react-privacy" href="../../../general/privacy-policy/index.html">Privacy Policy</a>
+        </p>
+        <p>
+          <a id="footer-link-react-refund" href="../../../general/return-refund-policy/index.html">Return/Refund policy</a>
+        </p>
+        <p>
+          <a id="footer-link-react-students" href="../../../general/mdb-academy/index.html">Students and universities</a>
+        </p>
+      </div>
+      <!--/.First column-->
+
+       <!--Second column-->
+       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">
+          <strong>Resources</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-jquery" href="../../../docs/jquery/index.html">MDB jQuery</a>
+        </p>
+        <p>
+          <a id="footer-link-angular" href="../../../docs/angular/index.html">MDB Angular</a>
+        </p>
+        <p>
+          <a id="footer-link-react" href="../../../docs/react/index.html">MDB React</a>
+        </p>
+        <p>
+          <a id="footer-link-vue" href="../../../docs/vue/index.html">MDB Vue</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../support/index.html">Support forum</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../snippets/index.html">MDB Editor & Snippets </a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../articles/index.html">Articles</a>
+        </p>
+        <p>
+          <a id="footer-link-brandflow" href="../../../user/mdbootstrap/index.html">News</a>
+        </p>
+        <p>
+          <a id="footer-link-freebies" href="../../../freebies/index.html">Free templates</a>
+        </p>
+        <p>
+          <a id="footer-link-templates" href="../../../templates/index.html">Premium templates</a>
+        </p>
+      </div>
+      <!--/.Second column-->
+
+      <!--Third column-->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase font-weight-bold">
+          <strong>Free tutorials</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a id="footer-link-tutBootstrap" href="../../index.html">Basics (HTML/CSS/JS)</a>
+        </p>
+        <p>
+          <a id="footer-link-tutBootstrap" href="../../bootstrap/index.html">Bootstrap & web design</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../../angular/index.html">Angular</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../index.html">React</a>
+        </p>
+        <p>
+          <a id="footer-link-tutAngular" href="../../vue/index.html">Vue</a>
+        </p>
+        <p>
+          <a id="footer-link-tutWordpress" href="../../wordpress/index.html">WordPress</a>
+        </p>
+        <p>
+          <a id="footer-link-tutWebpush" href="../../../articles/index.html">Miscellaneous</a>
+        </p>
+      </div>
+      <!--/.Third column-->
+
+      <!--Fourth column-->
+      <div class="col-md-4 col-lg-3 col-xl-3">
+        <h6 class="spacing font-weight-bold">
+          <strong>Company</strong>
+        </h6>
+        <hr class="info-color mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-envelope mr-3"></i> contact@mdbootstrap.com</p>
+        <!-- <p>
+              <i class="fa fa-building mr-3"></i> Our story</p> -->
+        <p>
+          <a id="footer-link-react-team" href="../../../general/our-team/index.html">
+            <i class="fas fa-users mr-3"></i> Our team</a>
+        </p>
+        <p>
+          <a id="footer-link-react-company" href="../../../general/contact/index.html">
+            <i class="fas fa-bullhorn mr-3"></i> Company data</a>
+        </p>
+        <p>
+          <a id="footer-link-react-media" href="../../../general/press-pack/index.html">
+            <i class="fas fa-bullhorn mr-3"></i> For media</a>
+        </p>
+      </div>
+      <!--/.Fourth column-->
+
+    </div>
+  </div>
+  <!--/.Footer Links-->
+
+  <!-- Copyright-->
+  <div class="footer-copyright py-1 text-center">
+    &copy; 2019 Copyright:
+    <a id="footer-link-react-copyright" href="../../../index.html">
+      <strong> MDBootstrap.com</strong>
+    </a>
+  </div>
+  <!--/.Copyright -->
+
+</footer>
+<!--/.Footer-->
+
+<style>
+
+  main input[type=email]:focus,
+  main input[type=password]:focus,
+  main input[type=text]:focus,
+  main input[type=url]:focus,
+  main textarea:focus {
+    border: 0;
+  }
+
+  .embed-responsive-16by9-fix-contact-form::before {
+    height: 450px;
+  }
+
+  @media (min-width:580px) {
+
+    .modal-contact-form-fix,
+    .modal-contact-form-fix * {
+
+      box-sizing: content-box !important;
+    }
+
+  }
+
+</style>
+
+<!-- Contact Form -->
+<div class="modal fade" id="contactForm" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content modal-contact-form-fix px-3">
+      <div class="modal-header border border-dark p-2 my-3 d-flex justify-content-center">
+        <p class="font-weight-bold p-3 mb-0">For technical questions use our <a target="_blank" href="../../../support/index.html">Support Forum</a></p>
+      </div>
+
+      <div class="modal-body modal-body-fix text-center col-12">
+        <div class="embed-responsive embed-responsive-16by9 embed-responsive-16by9-fix-contact-form" style="overflow: hidden">
+          <iframe id="contact-form-id-iframe" width="100%" height="100%" src="https://mdbootstrap.agilecrm.com/forms/5712893068705792" frameborder="0"></iframe>
+        </div>
+      </div>
+
+      <!-- <div id="mdbootstrap_5712893068705792" class="agile_crm_form_embed">
+      <span style="display:none">Fill out my <a href="https://mdbootstrap.agilecrm.com/forms/5712893068705792">online form</a>
+      </span>
+      </div> -->
+
+    </div>
+  </div>
+</div>
+<!--/. Contact Form -->
+
+<!-- Modal: modalSnippetSettings -->
+<div class="modal fade" id="modalSnippetSettings" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+      <div id="snippets-settings-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="settings-modal">Snippet settings</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden=true>&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <!--Grid row-->
+        <div class="row">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!--Name-->
+            <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-technology">
+              <option value="" disabled>MDB Technology</option>
+            </select>
+
+            <!--Name-->
+            <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-version">
+              <option value="" disabled>MDB Version</option>
+            </select>
+
+            <!--Grid row-->
+            <div class="row">
+
+              <!--Grid column-->
+              <div class="col-md-7 mb-4">
+
+                <!--Name-->
+                <select class="mdb-select colorful-select dropdown-primary" id="snippet-package-type">
+                  <option value="" disabled>Type</option>
+                </select>
+
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 mb-4">
+
+                <a role="button" href="../../../product/material-design-for-bootstrap-pro/index.html" class="btn btn-info btn-md" target="_blank">Go Pro</a>
+
+              </div>
+              <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+            <div class="switch mb-2">
+              <label>
+                Public
+                <input id="snippet-status" type="checkbox">
+                <span class="lever"></span> Private
+              </label>
+            </div>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Snippet title -->
+            <input type="text" class="form-control mb-3" id="snippet-title" placeholder="Snippet title">
+
+            <!-- Snippet description -->
+            <div class="form-group">
+              <textarea class="form-control" id="snippet-description" rows="5" placeholder="Snippet description"></textarea>
+            </div>
+
+            <!-- Snippet tags -->
+            <div class="chips chips-initial mb-0"></div>
+            <span id="tags-invalid-feedback" class="small red-text d-none">You can add max. 10 tags with min. length of 2 each</span>
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+            <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-elegant" data-dismiss="modal">Close</button>
+        <a role="button" class="btn btn-info" id="save-snippet-settings" data-action="" data-user-nicename="new">Save</a>
+      </div>
+    </div>
+    <!-- Modal content -->
+  </div>
+</div>
+<!-- Modal: modalSnippetSettings -->
+
+<!-- Modal: modalOpenSnippet -->
+<div class="modal fade" id="modalOpenSnippet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div id="open-modal-preloader" class="checkout-preloader-container d-none">
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Open snippet</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Your snippet is ready. Click to open</p>
+      </div>
+      <div class="modal-footer m-auto">
+        <a type="button" class="btn btn-primary open-snippet" target="_blank">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal: modalOpenSnippet -->
+
+<div id="dom-target-fb" style="display: none;">
+</div>
+<div id="dom-target-tw" style="display: none;">
+</div>
+<div id="dom-target-gp" style="display: none;">
+</div>
+
+<!-- Compiled JS -->
+
+    <!--BrandFlow for WordPress loading script-->
+
+    <script>
+
+        (function(){
+
+            
+
+
+            var scripts = ["/static/general/bf-core.min.js", "../../../static/containers/NLX453.html", "/static/general/push-init-code.js"];
+
+
+
+            
+
+
+            for(var i = 0; i < scripts.length; i++) {
+
+                var script   = document.createElement("script");
+
+                script.src   = "https://brandflow.net" + scripts[i] + "?ts=" + Date.now() + "#";
+
+                script.async = false;
+
+                document.head.appendChild(script);
+
+            }
+
+
+
+        })();
+
+    </script>
+
+    <!--/.BrandFlow for WordPress loading script-->
+
+    <link rel='stylesheet' id='woocommerce-currency-switcher-css'  href='../../../wp-content/plugins/woocommerce-currency-switcher/css/front7752.css?ver=5.2.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/mdbootstrap.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https:\/\/mdbootstrap.com","ajax_url":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php","queue_url":"https:\/\/mdbootstrap.com\/wp-json\/mailchimp-for-woocommerce\/v1\/queue\/work","queue_should_fire":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var example_ajax_obj = {"ajaxurl":"https:\/\/mdbootstrap.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../../wp-admin/load-scriptsb327.php?c=gzip&amp;load%5B%5D=wp-embed,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-slider&amp;ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/compiled-4.8.2.min4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/footer-functions3aec.js?ver=4.8.2-update.1'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/contact-form-7/includes/js/scriptsbdeb.js?ver=5.1.3'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min5aed.js?ver=3.6.4'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min4e10.js?ver=2.1.16'></script>
+<script type='text/javascript' src='../../../../chimpstatic.com/mcjs-connected/js/users/461480655ccce528d909d3f42/05e1abaa17c4f479182ad31474e10.js?ver=2.1.16'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/snippets-behavior4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../wp-content/themes/mdbootstrap4/js/pages-rates4a41.js?ver=4.8.2'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min5aed.js?ver=3.6.4'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce-currency-switcher/js/price-slider_337752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce-currency-switcher/js/jquery.ddslick.min7752.js?ver=5.2.1'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/woocommerce-currency-switcher/js/front7752.js?ver=5.2.1'></script>
+<script id="_agile_min_js" type="text/javascript" src="../../../../mdbootstrap.agilecrm.com/stats/min/agile-min.js"> </script><script> if(typeof _agile != "undefined") { _agile.set_account("rvnkji5gd7c5c74136umt99rcv","mdbootstrap");_agile.track_page_view() } </script>
+<script>
+
+  
+</script>
+
+<script>
+  $(".button-collapse").sideNav();
+  var el = document.querySelector('.custom-scrollbar');
+  var ps = new PerfectScrollbar(el);
+</script>
+                                                                                                                        <!-- Agile CRM API
+<script id="_agile_min_js" async type="text/javascript" src="https://mdbootstrap.agilecrm.com/stats/min/agile-min.js"> </script>
+<script type="text/javascript" >
+var Agile_API = Agile_API || {}; Agile_API.on_after_load = function(){
+_agile.set_account('8tsva545o547r732truup1icmg', 'mdbootstrap', false);
+_agile.track_page_view();
+_agile_execute_web_rules();};
+</script>
+Agile CRM API-->
+
+</body>
+
+
+<!-- Mirrored from mdbootstrap.com/education/react/agenda-9-conditional-rendering/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Jun 2019 16:18:37 GMT -->
+</html>

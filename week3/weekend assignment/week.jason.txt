@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./jquery-3.4.1.js"></script>
+    <!-- <script type="text/javascript" src="./jQuery.js"></script> -->
+
+    <title>Document</title>
+
+
+    <script>
+     $(document).ready(function(){
+        $('ul#users').click(function(){
+            
+    $.get("jason.html",function(data,status){
+       $("#t").html(data);
+    //     alert(status);
+    });
+        });
+     });
+     var jason
+     [{"name":"wiskers",
+      "species":"cat","Meowsy is a cat"
+      "name":"woof",
+       "species":"dog", "Barky is a Dog"},
+      {"name":"fluffy",
+      "species": "cat"}, "Purrpaws is a cat"]
+    </script>
+    </head>
+
+    <body>
+    <button id="ul#users">click me</button>
+    <p id="t"></p>
+    
+</body>
+
+</html>

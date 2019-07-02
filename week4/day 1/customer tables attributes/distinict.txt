@@ -1,0 +1,5 @@
+SELECT DISTINCT Address FROM Customer; SELECT * FROM `Customer` WHERE 1
+
+
+
+this one selects all the address from my customer table

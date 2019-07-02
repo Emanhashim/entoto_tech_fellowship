@@ -1,0 +1,37 @@
+    body {
+    background-color :white;
+}
+header {
+    background-color :black;
+   margin-bottom :0%;
+   height :110px;
+}
+.image {
+border-radius: 100px;
+margin-left: 0%;
+margin-top:-80px;
+margin-bottom:0%;
+}
+.navigation{
+   height:100px;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+    align-content: space-between;
+    margin-right: 20px;
+   
+}
+a{
+    text-decoration: none;
+}
+nav p{
+    margin-left: 30px;
+}
+
+.box{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}

@@ -1,0 +1,5 @@
+ALTER TABLE personsnotnull
+ADD PRIMARY KEY (P_Id)
+
+
+this make my p_id to be unique and primary key

@@ -1,0 +1,2 @@
+SELECT MID(Employee_id,1,3) AS eman_hashim FROM employee;
+this  selects the from employee id, andput it it as eman_hasim 

@@ -1,0 +1,4 @@
+DELETE FROM Customer
+WHERE CustomerName='eman'; 
+
+this one deletes it but before deletion it asks me if am sure then delete

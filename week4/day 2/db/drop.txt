@@ -1,0 +1,4 @@
+ALTER TABLE Persons
+DROP CONSTRAINT uc_PersonID
+
+this drops the column person_id, however it isnt working on my browser

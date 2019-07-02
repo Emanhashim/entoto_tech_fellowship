@@ -1,0 +1,5 @@
+SELECT ProductName, Price FROM Products
+WHERE Price>(SELECT AVG(Price) FROM Products);
+
+this brings me both my productname and there price respectively
+greater than the average price to the price

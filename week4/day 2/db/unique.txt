@@ -1,0 +1,4 @@
+ALTER TABLE personsnotnull
+ADD CONSTRAINT uc_PersonID UNIQUE (P_Id,LastName)
+
+this make my p_id to unique value

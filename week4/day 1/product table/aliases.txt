@@ -1,0 +1,5 @@
+SELECT CustomerName, Address+', '+City+', '+PostalCode+', '+Country AS Address
+FROM Customers;
+
+
+this relocates me CustomerNAame,Address,City,PostalCode,and Country as an address

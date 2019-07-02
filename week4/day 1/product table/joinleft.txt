@@ -1,0 +1,7 @@
+SELECT Customer.CustomerName, products.ProductID
+FROM Customer
+LEFT JOIN products
+ON Customer.CustomerID=products.CustomerID
+ORDER BY Customer.CustomerName; 
+
+this also joins the two tabale inside also in the left side

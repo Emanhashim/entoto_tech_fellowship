@@ -1,0 +1,5 @@
+SELECT ProductName FROM Products
+ORDER BY ProductID DESC
+LIMIT 1;
+
+this shows up the last by its product name

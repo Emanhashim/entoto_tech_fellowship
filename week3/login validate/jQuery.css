@@ -1,0 +1,25 @@
+div {
+    height: 100px;
+    width: 100px;
+     display: inline-block; 
+}
+
+#red {
+    background-color: #FF0000;
+}
+
+#green {
+    background-color: #00FF00;
+}
+
+#blue {
+    background-color: #0000FF;
+}
+
+#yellow {
+    background-color: #FFFF00;
+}
+
+p {
+    font-family: Roboto, Sans-Serif;
+} 

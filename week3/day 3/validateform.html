@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./Week2-Project.css">
+    <script src="./validateform.js"></script>
+    <!-- <script>
+       
+    var info = {
+        username: "Lemlem",
+        password: "1234"
+    }
+    function user(){
+       
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('psw').value;
+      if (username == info.username && password == info.password){
+          window.open("./Week2-Project Home Page.html")
+        //   alert('correct username or password');
+       } else {
+           alert('incorrect username or password');
+       }
+    }
+    </script> -->
+</head>
+ <style>     
+
+
+</style>
+
+<body>
+
+    <div class="LoginBorder">
+        <img class= "key" src="Login key.gif" alt=""> 
+        
+        <h1 style="color: rgb(6, 6, 10);">Login</h1>     
+        UserName: <input type="username" id="username" placeholder=""><br><br>
+        Password: <input type="password" id="psw" placeholder=""><br><br>
+       <button onclick="user()">Submit</button><br><br>
+       <!-- <input type = "button" value ="login" onclick="user()"> -->
+     
+        <a href="www.google.com">Forget Password</a><br><br>
+        <a href="./Week2-Project Create new account.html">Create new account</a>
+    
+    </div>
+</body>
+</html>

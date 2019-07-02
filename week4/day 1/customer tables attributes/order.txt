@@ -1,0 +1,13 @@
+SELECT * FROM Customer
+ORDER BY Country, CustomerName;
+
+
+
+
+
+
+
+SELECT * FROM Customer
+ORDER BY Country ASC, CustomerName DESC;
+
+this one brings me the country by ascending order and customername by descending order

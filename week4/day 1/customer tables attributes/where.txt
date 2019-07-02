@@ -1,0 +1,6 @@
+SELECT * FROM Customers
+WHERE CustomerID=1;
+
+this one selects by specific that row found by id 1
+
+it also uses different operators othere than "="

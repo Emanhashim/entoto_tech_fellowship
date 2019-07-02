@@ -1,0 +1,3 @@
+SELECT UPPER(lastname) FROM employee;
+
+i have select my employee table and latname fields to be uppercase and its changed to uppercase indeed

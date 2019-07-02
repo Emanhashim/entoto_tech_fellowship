@@ -1,0 +1,13 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+mdbootstrap.com	TRUE	/	FALSE	1999999999	PHPSESSID	4809q8i6l6ge589hnkt7koqb0v
+mdbootstrap.com	TRUE	/	FALSE	1999999999	mdb_from_url	http%3A%2F%2Fmdbootstrap.com%2F
+mdbootstrap.com	TRUE	/	FALSE	1999999999	mdb_come_date	2019-06-19
+mdbootstrap.com	TRUE	/	FALSE	1999999999	mailchimp_landing_site	https%3A%2F%2Fmdbootstrap.com%2Fwp-json%2Foembed%2F1.0%2Fembed%3Furl%3Dhttps%253A%252F%252Fmdbootstrap.com%252Fproducts%252Fjquery-ui-kit%252F
+mdbootstrap.com	TRUE	/	FALSE	1999999999	utm_ref_id	123xxx
+mdbootstrap.com	TRUE	/	FALSE	1999999999	gdpr_country	ET
+mdbootstrap.com	TRUE	/	FALSE	1999999999	gdpr_mandatory	1
+mdbootstrap.com	TRUE	/	FALSE	1999999999	gdpr_functional	1
+mdbootstrap.com	TRUE	/	FALSE	1999999999	gdpr_ga	1
+mdbootstrap.com	TRUE	/	FALSE	1999999999	gdpr_fbp	1
+

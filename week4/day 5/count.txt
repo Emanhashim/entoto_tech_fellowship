@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS NumberOfOrders FROM products;
+
+this brings me the number of rowa i hv un the form of numberoforders

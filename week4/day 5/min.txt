@@ -1,0 +1,2 @@
+SELECT MIN(Price) AS SmallestOrderPrice FROM Products;
+this is for minimum value i been given=25

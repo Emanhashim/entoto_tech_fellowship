@@ -1,0 +1,7 @@
+SELECT City FROM Customer
+UNION
+SELECT Unit FROM products
+ORDER BY City; 
+
+
+this one also bring me the union of the two tables by city and unit

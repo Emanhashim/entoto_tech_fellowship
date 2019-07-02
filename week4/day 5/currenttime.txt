@@ -1,0 +1,4 @@
+SELECT customer_id, shipped_id, Now() AS PerDate
+FROM orders;
+
+this displays the two columns date and times
